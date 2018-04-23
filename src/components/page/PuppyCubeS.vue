@@ -1,5 +1,5 @@
 <template>
-  <div id="puppyindex">
+  <div id="PuppyCubeS">
       Puppy Cube S
     <div>
         test

@@ -1,5 +1,5 @@
 <template>
-  <div id="puppyindex">
+  <div id="PuppyIndex">
       首页
     <div>
         test

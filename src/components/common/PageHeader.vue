@@ -23,12 +23,12 @@
             <li>
                 <a herf="">AI机器人</a>
                 <ul>
-                 <router-link to="/puppycubes">
+                 <router-link to="/puppyrobot">
                     <li>
                         <a herf="">家用机器人</a>
                     </li>    
                 </router-link>
-                <router-link to="/puppycube">
+                <router-link to="/puppycubes">
                     <li>
                         <a herf="">送货机器人</a>
                     </li>    
@@ -74,7 +74,7 @@
                         <a herf="">机器人技术</a>
                     </li>    
                     </router-link>
-                     <router-link to="/puppycube">
+                     <router-link to="/puppycubes">
                     <li>
                         <a herf="">智能视觉</a>
                     </li>    
@@ -151,10 +151,6 @@
         position: relative;
     }
 
-    ul li:hover > ul {
-        display: block;
-    }
-
     ul ul {
         position: absolute;
         top: 45px;
@@ -162,6 +158,10 @@
         padding: 0px;
         text-align: left;
         display: none;
+    }
+
+    ul li:hover > ul {
+        display: block;
     }
 
     ul ul li {

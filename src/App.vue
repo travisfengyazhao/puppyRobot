@@ -5,38 +5,32 @@
     </div>
     <div id="mainPart">
       <!-- <img src="./assets/logo.png"> -->
-      <div v-show="navIndex === '1'"> 
+      <!-- <div v-show="navIndex === '1'"> 
         <PuppyCubeS />
       </div>
       <div v-show="navIndex === '2'"> 
         <PuppyRobot />
-      </div>
+      </div> -->
+      <router-view/>
     </div>
+    
     <div id='footer'>
       <PageFooter/>
     </div>
-    <!-- <router-view/> -->
+    
   </div>
 </template>
 
 <script type="text/ecmascript-6">
 import PageHeader from './components/common/pageheader'
 import PageFooter from './components/common/pagefooter'
-import PuppyIndex from './components/page/puppyindex'
-import PuppyCubeS from './components/page/puppycubes'
-import PuppyCube from './components/page/puppycube'
-import PuppyRobot from './components/page/puppyrobot'
 import bus from './lib/bus';
 
 export default {
   name: 'App',
   components: {
     PageHeader,
-    PageFooter,
-    PuppyIndex,
-    PuppyCubeS,
-    PuppyCube,
-    PuppyRobot
+    PageFooter
   },
     data(){
         return {
@@ -45,8 +39,6 @@ export default {
         }
     },
     mounted(){
-      var curRouter =  this.$route.path.slice(1);
-      this.navIndex = getCurDisplayIndex(curRouter);
       console.log(222);
       // 通过$refs获取dom元素
       this.box = this.$refs.viewBox;
@@ -59,15 +51,15 @@ export default {
       this.box.removeEventListener('scroll', this.handleScroll); // 销毁页面时清除
     },
 
-    watch:{
-        '$route': 'fetchData',
-    },
-    methods:{
-         fetchData:function(){
-            var curRouter =  this.$route.path.slice(1);
-            this.navIndex = getCurDisplayIndex(curRouter);
-        }
-    }
+    // watch:{
+    //     '$route': 'fetchData',
+    // },
+    // methods:{
+    //      fetchData:function(){
+    //         // var curRouter =  this.$route.path.slice(1);
+    //         // this.navIndex = getCurDisplayIndex(curRouter);
+    //     }
+    // }
 
     
 }
@@ -88,28 +80,28 @@ function handleScroll() {
   }     
 }
 
-function getCurDisplayIndex(curRouter) {
-  switch(curRouter) {
-    case 'puppycubes':
-      return '1';
-      break;
-    case 'puppycube':
-      return '2';
-      break;
-    case 'hqintell':
-      return '3';
-      break;
-    case 'aitech':
-      return '4';
-      break;
-    case 'about':
-      return '5';
-      break;
-    default:
-      return '1';
-      break;
-  }
-}
+// function getCurDisplayIndex(curRouter) {
+//   switch(curRouter) {
+//     case 'puppycubes':
+//       return '1';
+//       break;
+//     case 'puppycube':
+//       return '2';
+//       break;
+//     case 'hqintell':
+//       return '3';
+//       break;
+//     case 'aitech':
+//       return '4';
+//       break;
+//     case 'about':
+//       return '5';
+//       break;
+//     default:
+//       return '1';
+//       break;
+//   }
+// }
 </script>
 
 <style>

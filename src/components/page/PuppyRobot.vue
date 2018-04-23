@@ -1,5 +1,5 @@
 <template>
-  <div id="puppyrobot">智能家居
+  <div id="PuppyRobot">智能家居
     <div class="newsblock">
       <News />
     </div>
