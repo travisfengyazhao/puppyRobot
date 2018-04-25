@@ -1,23 +1,14 @@
 <template>
-  <div id="app" ref="viewBox">
+  <div id="app">
     <div id="navBar" :class="{isFixed:istabBar}">
       <PageHeader/>
     </div>
     <div id="mainPart">
-      <!-- <img src="./assets/logo.png"> -->
-      <!-- <div v-show="navIndex === '1'"> 
-        <PuppyCubeS />
-      </div>
-      <div v-show="navIndex === '2'"> 
-        <PuppyRobot />
-      </div> -->
       <router-view/>
     </div>
-    
     <div id='footer'>
       <PageFooter/>
     </div>
-    
   </div>
 </template>
 
@@ -34,74 +25,40 @@ export default {
   },
     data(){
         return {
-            navIndex: "1",
             istabBar: false
         }
     },
     mounted(){
-      console.log(222);
-      // 通过$refs获取dom元素
-      this.box = this.$refs.viewBox;
       // 监听这个dom的scroll事件
-      this.box.addEventListener('scorll', this.handleScroll); // Dom树加载完毕
-      console.log(333);
+      const _this = this;
+      window.addEventListener('scroll', _this.handleScroll); // Dom树加载完毕
     },
+
     destroyed () {
-      this.box = this.$refs.viewBox;
-      this.box.removeEventListener('scroll', this.handleScroll); // 销毁页面时清除
+      const _this = this;
+      window.removeEventListener('scroll', _this.handleScroll); // 销毁页面时清除
     },
 
-    // watch:{
-    //     '$route': 'fetchData',
-    // },
-    // methods:{
-    //      fetchData:function(){
-    //         // var curRouter =  this.$route.path.slice(1);
-    //         // this.navIndex = getCurDisplayIndex(curRouter);
-    //     }
-    // }
-
+    methods: {
+      handleScroll : function () {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+                
+        // 固定导航栏
+        let navBar = document.querySelector("#navBar");
+        let mainPart = document.querySelector("#mainPart");
+        if (scrollTop > navBar.offsetHeight){
+            this.istabBar = true
+            mainPart.style.paddingTop = navBar.offsetHeight + "px";
+        } else {
+            this.istabBar = false
+            mainPart.style.paddingTop = "0px";
+        }     
+      }
+    }
     
 }
 
-function handleScroll() {
-  console.log(1111);
-  let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-          
-  // 固定导航栏
-  let navBar = document.querySelector("#navBar");
-  let mainPart = document.querySelector("#mainPart");
-  if (scrollTop > nvaBar.offsetHeight){
-      this.istabBar = true
-      mainPart.style.paddingTop = navBar.offsetHeight + "px";
-  } else {
-      this.istabBar = false
-      mainPart.style.paddingTop = "0px";
-  }     
-}
 
-// function getCurDisplayIndex(curRouter) {
-//   switch(curRouter) {
-//     case 'puppycubes':
-//       return '1';
-//       break;
-//     case 'puppycube':
-//       return '2';
-//       break;
-//     case 'hqintell':
-//       return '3';
-//       break;
-//     case 'aitech':
-//       return '4';
-//       break;
-//     case 'about':
-//       return '5';
-//       break;
-//     default:
-//       return '1';
-//       break;
-//   }
-// }
 </script>
 
 <style>
@@ -118,6 +75,7 @@ function handleScroll() {
   .isFixed {
     position: fixed;
     top: 0;
-    z-index: 10;
+    width: 100%;
+    /* z-index: 10; */
   }
 </style>

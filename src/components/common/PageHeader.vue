@@ -3,24 +3,24 @@
     <div id='divLogo'>
         <img id='pageheaderlogo' src="./../../assets/puppyheaderlogo.svg">
     </div>
-    <div id='divNav'>
+    <div id='divPCNav' v-show="pcMode">
         <ul>
             <li>
-                <a herf="">Puppy Cube</a>
+                <a herf="">puppy cube</a>
                 <ul>
                     <router-link to="/puppycubes">
                     <li>
-                        <a herf="">Puppy Cube S</a>
+                        <a herf="">puppy cube s</a>
                     </li>    
                     </router-link>
                     <router-link to="/puppycube">
                     <li>
-                        <a herf="">Puppy Cube</a>
+                        <a herf="">puppy cube</a>
                     </li>    
                     </router-link>
                 </ul>
             </li>
-            <li>
+            <!-- <li>
                 <a herf="">AI机器人</a>
                 <ul>
                  <router-link to="/puppyrobot">
@@ -34,7 +34,7 @@
                     </li>    
                 </router-link>
                 </ul>    
-            </li>
+            </li> -->
             <li>
                 <a herf="">哈奇智能</a>
                 <ul>
@@ -60,7 +60,6 @@
                     </router-link>
                 </ul>
             </li>
-
             <li>
                 <a herf="">AI技术方案</a>
                 <ul>
@@ -81,30 +80,140 @@
                     </router-link>
                 </ul>
             </li>
-            <li><a herf="">关于Puppy</a></li>
+            <li>
+                <a herf="">关于puppy</a>
+                <ul>
+                    <router-link to="/puppycubes">
+                    <li>
+                        <a herf="">品牌理念</a>
+                    </li>  
+                    </router-link>
+                    <router-link to="/puppycube">
+                    <li>
+                        <a herf="">公司介绍</a>
+                    </li>    
+                    </router-link>
+                    <router-link to="/puppycubes">
+                    <li>
+                        <a herf="">品牌历程</a>
+                    </li>    
+                    </router-link>
+                    <router-link to="/puppycubes">
+                    <li>
+                        <a herf="">团队介绍</a>
+                    </li>    
+                    </router-link>
+                </ul>
+            </li>
+            <li>
+                <a herf="">联系我们</a>
+                <ul>
+                    <router-link to="/puppycubes">
+                    <li>
+                        <a herf="">招商合作</a>
+                    </li>  
+                    </router-link>
+                    <router-link to="/puppycube">
+                    <li>
+                        <a herf="">销售渠道</a>
+                    </li>    
+                    </router-link>
+                    <router-link to="/puppycubes">
+                    <li>
+                        <a herf="">加入我们</a>
+                    </li>    
+                    </router-link>
+                    <!-- <router-link to="/puppycubes">
+                    <li>
+                        <a herf="">客户服务</a>
+                    </li>    
+                    </router-link> -->
+                </ul>
+            </li>
+            <li>
+                <a herf="">媒体中心</a>
+                <ul>
+                    <router-link to="/puppycubes">
+                    <li>
+                        <a herf="">新闻中心</a>
+                    </li>  
+                    </router-link>
+                    <router-link to="/puppycube">
+                    <li>
+                        <a herf="">视频</a>
+                    </li>    
+                    </router-link>
+                    <router-link to="/puppycubes">
+                    <li>
+                        <a herf="">行业评测</a>
+                    </li>    
+                    </router-link>
+                    <router-link to="/puppycubes">
+                    <li>
+                        <a herf="">产品图鉴</a>
+                    </li>    
+                    </router-link>
+                </ul>
+            </li>
         </ul>
-        <!-- <menu :default-active="navIndex">
-            <router-link to="/puppytouch"><li index="1">Puppy Touch</li></router-link>
-            <router-link to="/airobot"><li index="2">AI机器人</li></router-link>
-            <router-link to="/hqintell"><li index="3">哈奇智能</li></router-link>
-            <router-link to="/aitech"><li index="4">AI技术方案</li></router-link>
-            <router-link to="/about"><li index="5">关于Puppy</li></router-link>
-        </menu> -->
+    </div>
+    <div id='divMobileNav' v-show="!pcMode">
+        <div class="mobileMenu" @click="mobileMenuDisplay()"> 
+            <div class="mobileMenuLine menuLine1"> </div>
+            <div class="mobileMenuLine"> </div>
+            <div class="mobileMenuLine menuLine3"> </div>
+        </div>
+        <!-- <ul :class="'mobileMenuDisplay', isDisplay"> -->
+    </div>
+    <div v-show="isDisplay" @touchmove.prevent>
+        <ul id="mobileMenuList">    
+            <router-link to="/puppycubes">
+            <li @click="mobileMenuDisplay()">
+                <a herf="">puppy cube s</a>
+            </li>    
+            </router-link>
+            <router-link to="/puppycube">
+            <li @click="mobileMenuDisplay()">
+                <a herf="">puppy cube</a>
+            </li>    
+            </router-link>
+            <router-link to="/puppycube">
+            <li @click="mobileMenuDisplay()">
+                <a herf="">puppy cube ssss</a>
+            </li>    
+            </router-link>
+        </ul>
     </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
-    // import bus from './../../lib/bus';
 
     export default {
         name: 'PageHeader',
         data () {
             return {
-                navIndex: 1
+                pcMode: window.innerWidth >= 1000,
+                isDisplay: false
             }
         },
 
+        mounted() {
+            const that = this;
+            window.onresize = function temp() {
+                that.pcMode = window.innerWidth >= 1000;
+            };
+        },
+
+        methods: {
+            mobileMenuDisplay: function() {
+                this.isDisplay = !this.isDisplay;
+                if(this.isDisplay) {
+                    document.querySelector("#mobileMenuList").style.height = 
+                    window.innerHeight - document.querySelector("#pageheader").style.height + 'px';
+                }
+            }
+        }
     }
 </script>
 
@@ -125,6 +234,11 @@
         height: 40px;
     }
 
+    #divPCNav {
+        float: right;
+        margin-right: 80px;
+    }
+
     li { 
         display: inline-block;
         cursor: pointer;
@@ -135,7 +249,6 @@
         top: 0px;
         bottom: 0px;
         list-style-type: none;
-        
     } 
 
     li:hover {
@@ -149,6 +262,10 @@
 
     ul li {
         position: relative;
+    }
+
+    ul {
+        margin: 0px;
     }
 
     ul ul {
@@ -168,7 +285,7 @@
         width: 120px;
         position: relative;
         margin: 0px;
-        background-color: darkgray;
+        background-color: gray;
         opacity: 0.9;
     }
 
@@ -176,5 +293,54 @@
         color: black;
     }
 
+    #divMobileNav {
+        float: right;
+        margin-right: 12px;
+    }
+
+    .mobileMenu {
+        height: 30px;
+        width: 30px;
+        margin: 7.5px 0px 7.5px 0px;
+        float: right;
+    }
+
+    .mobileMenuLine {
+        height: 2.5px;
+        width: 22px;
+        top: 21.25px;
+        right: 16.8px;
+        position: absolute;
+        background-color: #000;
+        border-radius: 2px;
+        -webkit-transition: -webkit-transform .2s;
+        transition: transform .2s;
+    }
+
+    .menuLine1 {
+        top: 13px;
+    }
+
+    .menuLine3 {
+        top: 29px;
+    }
+
+    #mobileMenuList {
+        position: absolute;
+        top: 45px;
+        margin-right: 0px;
+        padding: 0px;
+        text-align: left;
+        width:100%;
+        background-color: gray;
+        opacity: 0.8;
+    }
+
+    #mobileMenuList li{
+        width: 100%;
+        position: relative;
+        margin: 0px;
+
+    }
 </style>
 
