@@ -1,101 +1,81 @@
 <template>
-  <div id="news">
-      <div id="newsTop">
-
-      </div>
+  <div :id="newsId" class="newsClass">
       <div id="newsBtm">
-        <div id="newsBtmLeft">
-            111
+        <div class="newsImageContainer">
+            <div id="newsBtmImage" :style="{backgroundImage:`url(${newsContent?newsContent.img:''})` }">
+            </div>
         </div>
-
-        <div id="newsBtmRight">
-            222
+        <div class="newsTitle">
+            <div class="title">
+                {{newsContent? newsContent.title : ''}}
+            </div>
         </div>
       </div>
-
   </div>
 </template>
 
 <script>
 export default {
-  name: 'news',
-
-  data() {
-      return {
-        topMO: false,
-        btmLeftMO: false,
-        btmRightMO: false
-      }
-  },
-
-  methods:{
-    },
-
-  mounted(){
-
-  }
-
+  name: 'News',
+  props: ['newsId', 'newsContent', 'newsWidth'],
 }
 
 </script>
 
-
 <style scoped>
-    #news {
+    #newsClass {
         width: 100%;
-        height: 300px;
+        height: 220px;
     }
 
-    #newsTop {
+    .newsImageContainer {
         width: 100%;
-        height: 145px;
-        margin-bottom: 5px;
-        background-color: red;
-        opacity: 0.5;
-    }
-
-    #newsTop:hover {
-        height: 300px;
-        margin-bottom: 0px;
-    }
-
-    #newsTop:hover ~div {
-        display: none;
+        height: 163px;
+        overflow: hidden;
     }
 
     #newsBtm {
         width: 100%;
-        height: 150px;
+        height: 220px;
+        overflow: hidden;  
     }
 
-    #newsBtmLeft {
-        float:left;
-        width: 50%;
-        height: 150px;
+    #newsBtmImage {
+        width: 100%;
+        height: 163px;
         background-color: gray;
-        opacity: 0.5;
+        background-repeat:no-repeat; 
+        transition: all 1s;    
+        background-size:100% 100%;
+        -moz-background-size:100% 100%;
     }
 
-    #newsBtmLeft:hover {
+    #newsBtmImage:hover {
         width: 100%;
+        height: 163px;
+        transform: scale(1.1);  
     }
 
-    #newsBtmLeft:hover ~div{
-        display: none;
-    }
-
-    #newsBtmRight {
-        float:left;
-        width: 50%;
-        height: 150px;
-        background-color: green;
-        opacity: 0.5;
-    }
-
-    #newsBtmRight:hover {
+    .newsTitle {
         width: 100%;
+        line-height: 57px;
+        text-align: center;
+        height: 57px;
+        background-color: white;
+        color: black;
     }
 
+    .title {
+        font-size: 10pt;
+        line-height: 20px;
+        text-align: left;
+        margin: 8px 15px 8px 15px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
     
 
 </style>

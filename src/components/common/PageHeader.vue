@@ -1,24 +1,30 @@
 <template>
   <div id='pageheader'>
     <div id='divLogo'>
+        <router-link to="/">
         <img id='pageheaderlogo' src="./../../assets/puppyheaderlogo.svg">
+        </router-link>
     </div>
     <div id='divPCNav' v-show="pcMode">
         <ul>
-            <li>
+            <li @mouseover="cubeSecMenuDisplay()" @mouseout="cubeSecMenuHide()">
                 <a herf="">puppy cube</a>
-                <ul>
-                    <router-link to="/puppycubes">
-                    <li>
-                        <a herf="">puppy cube s</a>
-                    </li>    
-                    </router-link>
-                    <router-link to="/puppycube">
-                    <li>
-                        <a herf="">puppy cube</a>
-                    </li>    
-                    </router-link>
-                </ul>
+                <div class="divCubeSecMenu">
+                    <ul>
+                        <router-link to="/puppycubes">
+                        <li>
+                            <img src="./../../assets/images/icon_puppy-cube-s.png">
+                            <a herf="">puppy cube s</a>
+                        </li>    
+                        </router-link>
+                        <router-link to="/puppycube">
+                        <li>
+                            <img src="./../../assets/images/icon_puppy-cube-s.png">
+                            <a herf="">puppy cube</a>
+                        </li>    
+                        </router-link>
+                    </ul>
+                </div>
             </li>
             <!-- <li>
                 <a herf="">AI机器人</a>
@@ -36,13 +42,8 @@
                 </ul>    
             </li> -->
             <li>
-                <a herf="">哈奇智能</a>
+                <a herf="">Hachi哈奇智能</a>
                 <ul>
-                    <router-link to="/puppycubes">
-                    <li>
-                        <a herf="">智能家居</a>
-                    </li>  
-                    </router-link>
                     <router-link to="/puppycube">
                     <li>
                         <a herf="">解决方案</a>
@@ -50,12 +51,12 @@
                     </router-link>
                      <router-link to="/puppycube">
                     <li>
-                        <a herf="">成功案例</a>
+                        <a herf="">产品中心</a>
                     </li>    
                     </router-link>
                      <router-link to="/puppycube">
                     <li>
-                        <a herf="">关于哈奇</a>
+                        <a herf="">应用案例</a>
                     </li>    
                     </router-link>
                 </ul>
@@ -103,31 +104,11 @@
                         <a herf="">团队介绍</a>
                     </li>    
                     </router-link>
-                </ul>
-            </li>
-            <li>
-                <a herf="">联系我们</a>
-                <ul>
                     <router-link to="/puppycubes">
                     <li>
-                        <a herf="">招商合作</a>
-                    </li>  
-                    </router-link>
-                    <router-link to="/puppycube">
-                    <li>
-                        <a herf="">销售渠道</a>
+                        <a herf="">联系我们</a>
                     </li>    
                     </router-link>
-                    <router-link to="/puppycubes">
-                    <li>
-                        <a herf="">加入我们</a>
-                    </li>    
-                    </router-link>
-                    <!-- <router-link to="/puppycubes">
-                    <li>
-                        <a herf="">客户服务</a>
-                    </li>    
-                    </router-link> -->
                 </ul>
             </li>
             <li>
@@ -155,15 +136,26 @@
                     </router-link>
                 </ul>
             </li>
+             <li>
+                <a herf="">puppy社区</a>
+            </li>
         </ul>
     </div>
+
     <div id='divMobileNav' v-show="!pcMode">
-        <div class="mobileMenu" @click="mobileMenuDisplay()"> 
-            <div class="mobileMenuLine menuLine1"> </div>
-            <div class="mobileMenuLine"> </div>
-            <div class="mobileMenuLine menuLine3"> </div>
+        <div class="headerMobileMenu" @click="mobileMenuDisplay()">
+            <div class="mobileMenu"> 
+                <span class="line-t">
+                    <span class="mobileMenuLine"> </span>
+                </span>
+                <span class="line-m">
+                    <span class="mobileMenuLine"> </span>
+                </span>
+                <span class="line-b">
+                    <span class="mobileMenuLine"> </span>
+                </span>
+            </div>
         </div>
-        <!-- <ul :class="'mobileMenuDisplay', isDisplay"> -->
     </div>
     <div v-show="isDisplay" @touchmove.prevent>
         <ul id="mobileMenuList">    
@@ -193,15 +185,16 @@
         name: 'PageHeader',
         data () {
             return {
-                pcMode: window.innerWidth >= 1000,
-                isDisplay: false
+                pcMode: window.innerWidth >= 1280,
+                isDisplay: false,
+                cubeSecMenuDisp: false,
             }
         },
 
         mounted() {
             const that = this;
             window.onresize = function temp() {
-                that.pcMode = window.innerWidth >= 1000;
+                that.pcMode = window.innerWidth >= 1280;
             };
         },
 
@@ -211,53 +204,82 @@
                 if(this.isDisplay) {
                     document.querySelector("#mobileMenuList").style.height = 
                     window.innerHeight - document.querySelector("#pageheader").style.height + 'px';
+                    document.querySelector(".line-t").style.transform = 'rotate(45deg)';
+                    document.querySelector(".line-b").style.transform = 'rotate(135deg)';
+                    document.querySelector(".line-t .mobileMenuLine").style.transform = 'translateY(0px)';
+                    document.querySelector(".line-b .mobileMenuLine").style.transform = 'translateY(0px)';
+                    document.querySelector(".line-m .mobileMenuLine").style.opacity = '0';
+                } else {
+                    document.querySelector(".line-t").style.transform = 'rotate(180deg)';
+                    document.querySelector(".line-b").style.transform = 'rotate(180deg)';
+                    document.querySelector(".line-t .mobileMenuLine").style.transform = 'translateY(-8px)';
+                    document.querySelector(".line-b .mobileMenuLine").style.transform = 'translateY(8px)';
+                    document.querySelector(".line-m .mobileMenuLine").style.opacity = '1';
                 }
+            },
+
+            cubeSecMenuDisplay: function() {
+                this.cubeSecMenuDisp = true;
+            },
+
+            cubeSecMenuHide: function() {
+                this.cubeSecMenuDisp = false;
             }
         }
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss" type="text/css">
+    $headerHeight: 46px;
+    $menuSec: 44px;
+    $headerColor: #f1f1f1;
+
     #pageheader {
-        background-color: gray;
-        opacity: 0.8;
+        background-color: $headerColor;
+        // opacity: 0.9;
         width: 100%;
-        height: 45px;
+        height: $headerHeight;
+        z-index: 9999;
     }
 
     #divLogo {
         float: left;
         margin-left: 30px;
+        height: $headerHeight;
     }
 
     #pageheaderlogo {
         height: 40px;
+        margin-top: $headerHeight/2 - 40px/2; 
     }
 
     #divPCNav {
         float: right;
-        margin-right: 80px;
+        margin-right: 30px;
     }
 
     li { 
         display: inline-block;
         cursor: pointer;
-        line-height: 45px;
+        line-height: $headerHeight;
         padding-left: 15px;
         padding-right: 15px;
         right: 0;
         top: 0px;
         bottom: 0px;
+        width: 110px;
         list-style-type: none;
+        border-top: none;
     } 
 
     li:hover {
-        background-color:black;
-        opacity: 0.8;
+        background-color:white;
+        // box-shadow: 1px 1px 1px #e6e6e6;
+        // opacity: 1;
     }
 
     ul li:hover>a{
-        color: orange;
+        color: #929497;
     }
 
     ul li {
@@ -270,77 +292,200 @@
 
     ul ul {
         position: absolute;
-        top: 45px;
+        top: $headerHeight;
         margin-left: -15px;
         padding: 0px;
-        text-align: left;
+        text-align: center;
+        line-height: 44px !important;
         display: none;
+        z-index: 9999;
+        box-shadow: 2px 2px 2px #e6e6e6;
+    }
+
+    .divCubeSecMenu {
+        position: fixed;
+        top: $headerHeight;
+        margin-top: -1px;
+        border-top: none;
+        left: 0px;
+        padding: 0px;
+        text-align: center;
+        width: 100%;
+        // height: 200px;
+        z-index: 9999;
+        display: none;
+        // box-shadow: 1px 1px 1px #e6e6e6;
+
+        img {
+            margin: 30px 10px -30px 0px;
+        }
+        ul li {
+            width: 120px !important;
+        }
     }
 
     ul li:hover > ul {
         display: block;
     }
 
+    ul li:hover .divCubeSecMenu{
+        display: block;
+    }
+
     ul ul li {
-        width: 120px;
+        width: 110px;
+        height: $menuSec;
         position: relative;
         margin: 0px;
-        background-color: gray;
-        opacity: 0.9;
+        background-color: white;
+        display: inline-block;
+        line-height: $menuSec !important;
+        padding-left: 15px;
+        padding-right: 15px;
+        right: 0;
+        top: 0px;
+        bottom: 0px;
+        list-style-type: none;
+        // opacity: 0.9;
+        z-index: 9999;
+    }
+
+    .divCubeSecMenu ul {
+        width: 100%;
+        height: 180px;
+        position: absolute;
+        margin: 0px;
+        background-color: white;
+        display: inline-block;
+        line-height: $menuSec !important;
+        padding-left: 15px;
+        padding-right: 15px;
+        right: 0;
+        top: 0px;
+        bottom: 0px;
+        list-style-type: none;
+        // opacity: 0.9;
+        z-index: 9999;
+    }
+
+    .divCubeSecMenu ul li {
+        width: 100%;
+        height: $menuSec;
+        position: relative;
+        margin: 0px;
+        background-color: white;
+        display: inline-block;
+        line-height: $menuSec !important;
+        padding-left: 15px;
+        padding-right: 15px;
+        right: 0;
+        top: 0px;
+        bottom: 0px;
+        list-style-type: none;
+        // opacity: 0.9;
+        z-index: 9999;
     }
 
     a {
+        font-size: 12pt;
         color: black;
     }
 
     #divMobileNav {
         float: right;
-        margin-right: 12px;
+        width: $headerHeight;
+    }
+
+    .headerMobileMenu {
+        position:absolute;
+        height: $headerHeight;
+        width: $headerHeight;
+        float: right;
     }
 
     .mobileMenu {
-        height: 30px;
-        width: 30px;
-        margin: 7.5px 0px 7.5px 0px;
-        float: right;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $headerColor;
+        -webkit-transition-property: all;
+        transition-property: all;
+        -webkit-transition-duration: 200ms;
+        transition-duration: 200ms;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+
+    .mobileMenu>span {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        -webkit-transition: -webkit-transform .25s,opacity .25s;
+        transition: transform .25s,opacity .25s;
+        -webkit-transition-timing-function: cubic-bezier(0.4,.01,.165,.99);
+        transition-timing-function: cubic-bezier(0.4,.01,.165,.99);
     }
 
     .mobileMenuLine {
         height: 2.5px;
-        width: 22px;
-        top: 21.25px;
-        right: 16.8px;
+        width: 24px;
+        top: $headerHeight/2 - 2.5px/2;
+        right: $headerHeight/2 - 24px/2;
         position: absolute;
         background-color: #000;
         border-radius: 2px;
-        -webkit-transition: -webkit-transform .2s;
         transition: transform .2s;
-    }
-
-    .menuLine1 {
-        top: 13px;
-    }
-
-    .menuLine3 {
-        top: 29px;
     }
 
     #mobileMenuList {
         position: absolute;
-        top: 45px;
+        top: $headerHeight;
         margin-right: 0px;
         padding: 0px;
         text-align: left;
         width:100%;
-        background-color: gray;
-        opacity: 0.8;
+        background-color: $headerColor;
+        opacity: 0.9;
     }
 
     #mobileMenuList li{
         width: 100%;
         position: relative;
         margin: 0px;
-
     }
+
+    .line-t {
+        position: absolute;
+        top: $headerHeight;
+        margin-right: 0px;
+        padding: 0px;
+        text-align: center;
+        width:100%;
+    }
+
+    .line-b {
+        position: absolute;
+        top: $headerHeight;
+        margin-right: 0px;
+        padding: 0px;
+        text-align: center;
+        width:100%;
+    }
+
+    .line-t .mobileMenuLine {
+        -webkit-transform: translateY(-8px); 
+        transform: translateY(-8px); 
+    }
+
+    .line-b .mobileMenuLine {
+        -webkit-transform: translateY(8px); 
+        transform: translateY(8px); 
+    }
+
 </style>
 

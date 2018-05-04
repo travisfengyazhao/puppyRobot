@@ -15,7 +15,6 @@
 <script type="text/ecmascript-6">
 import PageHeader from './components/common/pageheader'
 import PageFooter from './components/common/pagefooter'
-import bus from './lib/bus';
 
 export default {
   name: 'App',
@@ -42,7 +41,6 @@ export default {
     methods: {
       handleScroll : function () {
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-                
         // 固定导航栏
         let navBar = document.querySelector("#navBar");
         let mainPart = document.querySelector("#mainPart");
@@ -63,19 +61,22 @@ export default {
 
 <style>
   #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    /* font-family: 'Avenir', Helvetica, Arial, sans-serif; */
     /* -webkit-font-smoothing: antialiased; */
     /* -moz-osx-font-smoothing: grayscale; */
     text-align: center;
     vertical-align: middle;
-    color: #2c3e50;
     /* margin-top: 60px; */
   }
 
+  #navBar {
+    z-index: 9999;
+    position: relative;
+  }
+
   .isFixed {
-    position: fixed;
+    position: fixed !important;
     top: 0;
     width: 100%;
-    /* z-index: 10; */
   }
 </style>

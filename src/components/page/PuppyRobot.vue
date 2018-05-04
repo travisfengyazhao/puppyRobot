@@ -1,18 +1,18 @@
 <template>
   <div id="PuppyRobot">智能家居
     <div class="newsblock">
-      <News />
+      <!-- <News /> -->
     </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
-import News from './../common/news'
+// import News from './../common/news'
 
 export default {
   name: 'PuppyRobot',
   components: {
-    News
+    // News
   },
 }
 </script>
