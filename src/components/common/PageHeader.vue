@@ -1,180 +1,177 @@
 <template>
   <div id='pageheader'>
-    <div id='divLogo'>
-        <router-link to="/">
-        <img id='pageheaderlogo' src="./../../assets/puppyheaderlogo.svg">
-        </router-link>
-    </div>
-    <div id='divPCNav' v-show="pcMode">
-        <ul>
-            <li @mouseover="cubeSecMenuDisplay()" @mouseout="cubeSecMenuHide()">
-                <a herf="">puppy cube</a>
-                <div class="divCubeSecMenu">
+    <div :class="pcMode? 'pageheaderMid' : 'pageheaderMid_mobile'">
+        <div id='divLogo'>
+            <router-link to="/">
+            <img id='pageheaderlogo' src="./../../assets/images/header/puppy_logo.svg">
+            </router-link>
+        </div>
+        <div id='divPCNav' v-show="pcMode">
+            <ul>
+                <li @mouseover="cubeSecMenuDisplay()" @mouseout="cubeSecMenuHide()">
+                    <a herf="">puppy cube</a>
+                    <div class="divCubeSecMenu">
+                        <ul>
+                            <router-link to="/puppycubes">
+                            <li>
+                                <img src="./../../assets/images/icon_puppy-cube-s.png">
+                                <a herf="">puppy cube s</a>
+                            </li>    
+                            </router-link>
+                            <router-link to="/puppycube">
+                            <li>
+                                <img src="./../../assets/images/icon_puppy-cube-s.png">
+                                <a herf="">puppy cube</a>
+                            </li>    
+                            </router-link>
+                        </ul>
+                    </div>
+                </li>
+                <!-- <li>
+                    <a herf="">AI机器人</a>
                     <ul>
-                        <router-link to="/puppycubes">
+                    <router-link to="/puppyrobot">
                         <li>
-                            <img src="./../../assets/images/icon_puppy-cube-s.png">
-                            <a herf="">puppy cube s</a>
+                            <a herf="">家用机器人</a>
+                        </li>    
+                    </router-link>
+                    <router-link to="/puppycubes">
+                        <li>
+                            <a herf="">送货机器人</a>
+                        </li>    
+                    </router-link>
+                    </ul>    
+                </li> -->
+                <li>
+                    <a herf="">Hachi哈奇智能</a>
+                    <ul>
+                        <router-link to="/hachisolution">
+                        <li>
+                            <a herf="">解决方案</a>
                         </li>    
                         </router-link>
-                        <router-link to="/puppycube">
+                        <router-link to="">
                         <li>
-                            <img src="./../../assets/images/icon_puppy-cube-s.png">
-                            <a herf="">puppy cube</a>
+                            <a herf="">产品中心</a>
+                        </li>    
+                        </router-link>
+                        <router-link to="">
+                        <li>
+                            <a herf="">应用案例</a>
                         </li>    
                         </router-link>
                     </ul>
-                </div>
-            </li>
-            <!-- <li>
-                <a herf="">AI机器人</a>
-                <ul>
-                 <router-link to="/puppyrobot">
-                    <li>
-                        <a herf="">家用机器人</a>
-                    </li>    
-                </router-link>
-                <router-link to="/puppycubes">
-                    <li>
-                        <a herf="">送货机器人</a>
-                    </li>    
-                </router-link>
-                </ul>    
-            </li> -->
-            <li>
-                <a herf="">Hachi哈奇智能</a>
-                <ul>
-                    <router-link to="/puppycube">
-                    <li>
-                        <a herf="">解决方案</a>
-                    </li>    
-                    </router-link>
-                     <router-link to="/puppycube">
-                    <li>
-                        <a herf="">产品中心</a>
-                    </li>    
-                    </router-link>
-                     <router-link to="/puppycube">
-                    <li>
-                        <a herf="">应用案例</a>
-                    </li>    
-                    </router-link>
-                </ul>
-            </li>
-            <li>
-                <a herf="">AI技术方案</a>
-                <ul>
-                    <router-link to="/puppycubes">
-                    <li>
-                        <a herf="">AI交互技术</a>
-                    </li>  
-                    </router-link>
-                    <router-link to="/puppycube">
-                    <li>
-                        <a herf="">机器人技术</a>
-                    </li>    
-                    </router-link>
-                     <router-link to="/puppycubes">
-                    <li>
-                        <a herf="">智能视觉</a>
-                    </li>    
-                    </router-link>
-                </ul>
-            </li>
-            <li>
-                <a herf="">关于puppy</a>
-                <ul>
-                    <router-link to="/puppycubes">
-                    <li>
-                        <a herf="">品牌理念</a>
-                    </li>  
-                    </router-link>
-                    <router-link to="/puppycube">
-                    <li>
-                        <a herf="">公司介绍</a>
-                    </li>    
-                    </router-link>
-                    <router-link to="/puppycubes">
-                    <li>
-                        <a herf="">品牌历程</a>
-                    </li>    
-                    </router-link>
-                    <router-link to="/puppycubes">
-                    <li>
-                        <a herf="">团队介绍</a>
-                    </li>    
-                    </router-link>
-                    <router-link to="/puppycubes">
-                    <li>
-                        <a herf="">联系我们</a>
-                    </li>    
-                    </router-link>
-                </ul>
-            </li>
-            <li>
-                <a herf="">媒体中心</a>
-                <ul>
-                    <router-link to="/puppycubes">
-                    <li>
-                        <a herf="">新闻中心</a>
-                    </li>  
-                    </router-link>
-                    <router-link to="/puppycube">
-                    <li>
-                        <a herf="">视频</a>
-                    </li>    
-                    </router-link>
-                    <router-link to="/puppycubes">
-                    <li>
-                        <a herf="">行业评测</a>
-                    </li>    
-                    </router-link>
-                    <router-link to="/puppycubes">
-                    <li>
-                        <a herf="">产品图鉴</a>
-                    </li>    
-                    </router-link>
-                </ul>
-            </li>
-             <li>
-                <a herf="">puppy社区</a>
-            </li>
-        </ul>
-    </div>
+                </li>
+                <li>
+                    <a herf="">AI技术方案</a>
+                    <ul>
+                        <router-link to="">
+                        <li>
+                            <a herf="">AI交互技术</a>
+                        </li>  
+                        </router-link>
+                        <router-link to="">
+                        <li>
+                            <a herf="">机器人技术</a>
+                        </li>    
+                        </router-link>
+                        <router-link to="">
+                        <li>
+                            <a herf="">智能视觉技术</a>
+                        </li>    
+                        </router-link>
+                    </ul>
+                </li>
+                <li>
+                    <a herf="">关于puppy</a>
+                    <ul>
+                        <router-link to="">
+                        <li>
+                            <a herf="">品牌理念</a>
+                        </li>  
+                        </router-link>
+                        <router-link to="">
+                        <li>
+                            <a herf="">公司介绍</a>
+                        </li>    
+                        </router-link>
+                        <router-link to="">
+                        <li>
+                            <a herf="">品牌历程</a>
+                        </li>    
+                        </router-link>
+                        <router-link to="">
+                        <li>
+                            <a herf="">团队介绍</a>
+                        </li>    
+                        </router-link>
+                        <router-link to="">
+                        <li>
+                            <a herf="">联系我们</a>
+                        </li>    
+                        </router-link>
+                    </ul>
+                </li>
+                <li>
+                    <a herf="">媒体中心</a>
+                    <ul>
+                        <router-link to="">
+                        <li>
+                            <a herf="">新闻中心</a>
+                        </li>  
+                        </router-link>
+                        <router-link to="">
+                        <li>
+                            <a herf="">产品视频</a>
+                        </li>    
+                        </router-link>
+                        <router-link to="">
+                        <li>
+                            <a herf="">产品评测</a>
+                        </li>    
+                        </router-link>
+                        <router-link to="">
+                        <li>
+                            <a herf="">产品图鉴</a>
+                        </li>    
+                        </router-link>
+                    </ul>
+                </li>
+                <li>
+                    <a herf="">puppy社区</a>
+                </li>
+            </ul>
+        </div>
 
-    <div id='divMobileNav' v-show="!pcMode">
-        <div class="headerMobileMenu" @click="mobileMenuDisplay()">
-            <div class="mobileMenu"> 
-                <span class="line-t">
-                    <span class="mobileMenuLine"> </span>
-                </span>
-                <span class="line-m">
-                    <span class="mobileMenuLine"> </span>
-                </span>
-                <span class="line-b">
-                    <span class="mobileMenuLine"> </span>
-                </span>
+        <div id='divMobileNav' v-show="!pcMode">
+            <div class="headerMobileMenu" @click="mobileMenuDisplay()">
+                <div class="mobileMenu"> 
+                    <span class="line-t">
+                        <span class="mobileMenuLine"> </span>
+                    </span>
+                    <span class="line-m">
+                        <span class="mobileMenuLine"> </span>
+                    </span>
+                    <span class="line-b">
+                        <span class="mobileMenuLine"> </span>
+                    </span>
+                </div>
             </div>
         </div>
-    </div>
-    <div v-show="isDisplay" @touchmove.prevent>
-        <ul id="mobileMenuList">    
-            <router-link to="/puppycubes">
-            <li @click="mobileMenuDisplay()">
-                <a herf="">puppy cube s</a>
-            </li>    
-            </router-link>
-            <router-link to="/puppycube">
-            <li @click="mobileMenuDisplay()">
-                <a herf="">puppy cube</a>
-            </li>    
-            </router-link>
-            <router-link to="/puppycube">
-            <li @click="mobileMenuDisplay()">
-                <a herf="">puppy cube ssss</a>
-            </li>    
-            </router-link>
-        </ul>
+        <div v-show="isDisplay" @touchmove.prevent>
+            <ul id="mobileMenuList">    
+                <router-link to="/puppycubes">
+                <li @click="mobileMenuDisplay()">
+                    <a herf="">puppy cube s</a>
+                </li>    
+                </router-link>
+                <router-link to="">
+                <li @click="mobileMenuDisplay()">
+                    <a herf="">puppy cube</a>
+                </li>    
+                </router-link>
+            </ul>
+        </div>
     </div>
   </div>
 </template>
@@ -240,22 +237,32 @@
         width: 100%;
         height: $headerHeight;
         z-index: 9999;
+        text-align: center;
+    }
+
+    .pageheaderMid {
+        width: 1280px;
+        margin: 0 auto;
+    }
+
+    .pageheaderMid_mobile {
+        width: 100%;
     }
 
     #divLogo {
         float: left;
-        margin-left: 30px;
+        // margin-left: 30px;
         height: $headerHeight;
     }
 
     #pageheaderlogo {
-        height: 40px;
-        margin-top: $headerHeight/2 - 40px/2; 
+        height: 35px;
+        margin-top: $headerHeight/2 - 35px/2; 
     }
 
     #divPCNav {
         float: right;
-        margin-right: 30px;
+        // margin-right: 30px;
     }
 
     li { 
@@ -269,7 +276,6 @@
         bottom: 0px;
         width: 110px;
         list-style-type: none;
-        border-top: none;
     } 
 
     li:hover {

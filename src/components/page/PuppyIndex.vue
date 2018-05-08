@@ -1,29 +1,9 @@
 <template>
   <div id="PuppyIndex">
     <div>
-      <Banner :listImg="imageList"></Banner>
+      <Banner :slideLists="slideLists" :isAutoplay="true"></Banner>
     </div>
-    <div :class="pcMode? 'mediaReport' : 'mediaReport_mobile'">
-      <div :class="pcMode? 'mediaContainer':'mediaContainer_mobile'">
-        <div class="titleLine"></div>
-        <div class="mediaTitle">
-          媒体报道
-            <div class="moreInfo">
-              <a herf="">+更多</a>
-            </div>
-        </div>
-        <div>
-          <div :class="pcMode? 'mediaMain' : 'mediaMain_mobile'">
-            <Media :mediaContent="mediaLists[0]" :mediaHeight="430"/>
-          </div>
-          <div :class="pcMode? 'mediaSub' : 'mediaSub_mobile'">
-            <div class="mediaSub1"><Media :mediaContent="mediaLists[1]" :mediaHeight="200"/></div>  
-            <div :class="pcMode?'mediaSub2':'mediaSub2_mobile'"><Media :mediaContent="mediaLists[2]" :mediaHeight="200"/></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div :class="pcMode?'newsCol':'newsCol_mobile'">
+     <div :class="pcMode?'newsCol':'newsCol_mobile'">
       <div :class="pcMode?'newsContainer':'newsContainer_mobile'">
         <div :class="pcMode?'techContainer':'techContainer_mobile'">
           <div class="titleLine"></div>
@@ -37,7 +17,7 @@
            
           </div>
           <div v-for="(newsContent) in newsContents" :key="newsContent.id">
-            <div :class="pcMode? 'newsTabPC' : 'newTabMobile'">
+            <div :class="pcMode? 'newsTabPC' : 'newsTabMobile'">
               <News :newsContent="newsContent" />
             </div>
             <div class="newsSpace" v-if="pcMode"> 
@@ -53,7 +33,7 @@
             </div>
           </div>
           <div v-for="(product, index) in productLists" :key="product.id">
-            <div :class="pcMode? 'newsTabPC' : 'newTabMobile'">
+            <div :class="pcMode? 'newsTabPC' : 'newsTabMobile'">
               <News :newsContent="product"/>
             </div>
             <div class="newsSpace" v-if="pcMode && (index < 1)"> 
@@ -62,6 +42,27 @@
         </div>
       </div>
     </div>
+    <div :class="pcMode? 'mediaReport' : 'mediaReport_mobile'">
+      <div :class="pcMode? 'mediaContainer':'mediaContainer_mobile'">
+        <div class="titleLine"></div>
+        <div class="mediaTitle">
+          媒体报道
+            <div class="moreInfo">
+              <a herf="">+更多</a>
+            </div>
+        </div>
+        <div>
+          <div :class="pcMode? 'mediaMain' : 'mediaMain_mobile'">
+            <Media :mediaContent="mediaLists[0]" :mediaHeight="430"/>
+          </div>
+          <div :class="pcMode? 'mediaSub' : 'mediaSub_mobile'">
+            <div :class="pcMode?'mediaSub1':'mediaSub1_mobile'"><Media :mediaContent="mediaLists[1]" :mediaHeight="200"/></div>  
+            <div :class="pcMode?'mediaSub2':'mediaSub2_mobile'"><Media :mediaContent="mediaLists[2]" :mediaHeight="200"/></div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
   </div>
 
 </template>
@@ -75,58 +76,72 @@ export default {
   name: "PuppyIndex",
   data() {
     return {
-       imageList: [
-         require("./../../assets/1.jpg"),
-         require("./../../assets/2.jpg"),
-         require("./../../assets/3.jpg"),
+       slideLists: [
+         {
+            id: 1,
+            img: require("./../../assets/images/index/focus-image_01.png"),
+            backgroundColor: "#C7C7C7",
+            router: "/puppycubes"
+         },
+          {
+            id: 2,
+            img: require("./../../assets/images/index/focus-image_02.png"),
+            backgroundColor: "#231f20",
+            router: "/puppycube"
+         },
+        //   {
+        //     id: 3,
+        //     img: require("./../../assets/3.jpg"),
+        //     router: "/puppycubes"
+        //  },
        ],
        pcMode: window.innerWidth >= 1280,
        newsContents: [
           {
             id: 1,
-            title: '小狗机器人1发布111111111111111111111111111111111111111111111111111111111',
+            title: 'puppy亮相AI无人车技术，不只是无人车这么简单',
             subtitle: '新款小狗机器人1已发布',
-            img: require("./../../assets/1.jpg"),
+            img: require("./../../assets/images/index/jsfa_01.png"),
           },
           {
             id: 2,
-            title: '小狗机器人2发布小狗机器人2发布小狗机器人2发布小狗机器人2发布小狗机器人2发布小狗机器人2发布小狗机器人2发布小狗机器人2发布小狗机器人2发布小狗机器人2发布',
+            title: '小狗机器人技术，未来人工智能机器人的数量真的会超过人类？',
             subtitle: '新款小狗机器人2已发布',
-            img: require("./../../assets/2.jpg"),
+            img: require("./../../assets/images/index/jsfa_02.png"),
           }
        ],
        productLists: [
          {
             id: 1,
-            title: '小狗机器人3发布',
+            title: '无论身在何处，哈奇智家APP都可掌控家中一切',
             subtitle: '新款小狗机器人3已发布',
-            img: require("./../../assets/3.jpg"),
+            img: require("./../../assets/images/index/cplb_01.png"),
           },
           {
             id: 2,
-            title: '小狗机器人2发布',
+            title: '哈奇智能让生活更智慧',
             subtitle: '新款小狗机器人2已发布',
-            img: require("./../../assets/2.jpg"),
+            img: require("./../../assets/images/index/cplb_02.png"),
           }
        ],
        mediaLists: [
          {
             id: 1,
-            title: '小狗机器人3发布小狗机器人3发布小狗机器人3发布小狗机器人3发布小狗机器人3发布小狗机器人3发布小狗机器人3发布小狗机器人3发布小狗机器人3发布小狗机器人3发布小狗机器人3发布小狗机器人3发布小狗机器人3发布小狗机器人3发布',
+            title: '小狗机器人创新模式让智慧家居走进社区，企业参与热情高涨',
             subtitle: '新款小狗机器人3已发布',
-            img: require("./../../assets/3.jpg"),
+            img: require("./../../assets/images/index/mtbd_01.png"),
           },
           {
             id: 2,
-            title: '小狗机器人2发布',
+            title: 'puppy cube 智能投影仪上市，最有料的深度测评',
             subtitle: '新款小狗机器人2已发布',
-            img: require("./../../assets/2.jpg"),
+            img: require("./../../assets/images/index/mtbd_02.png"),
           },
           {
             id: 3,
-            title: '小狗机器人1发布',
+            title: 'puppy cube s 发布会倒计时',
             subtitle: '新款小狗机器人1已发布',
-            img: require("./../../assets/1.jpg"),
+            img: require("./../../assets/images/index/mtbd_03.png"),
           }
        ]
     }
@@ -136,7 +151,6 @@ export default {
     window.onresize = function temp() {
         that.pcMode = window.innerWidth >= 1280;
     };
-    // console.log(this.newsConent);
   },
   components: {
     Banner,
@@ -180,7 +194,7 @@ export default {
 }
 
 .mediaReport_mobile {
-  height: 890px;
+  height: 675px;
   width: 100%;
   text-align: center;
 }
@@ -225,6 +239,12 @@ export default {
   height: 200px;
 }
 
+.mediaSub1_mobile {
+  width: 50%;
+  height: 200px;
+  float: left;
+}
+
 .mediaSub2 {
   width: 100%;
   height: 200px;
@@ -232,33 +252,32 @@ export default {
 }
 
 .mediaSub2_mobile {
-  width: 100%;
+  width: 50%;
   height: 200px;
+  float:left;
 }
 
 .newsCol {
-  margin-top: 10px;
   width: 100%;
-  height: 320px;
+  height: 290px;
   text-align: center;
 }
 
 .newsCol_mobile {
-  margin-top: 10px;
   width: 100%;
-  height: 1050px;
+  height: 576px;
   text-align: center;
 }
 
 .newsContainer {
   width: 1280px;
-  height: 220px;
+  height: 290px;
   margin:0 auto;
 }
 
 .newsContainer_mobile {
   width: 100%;
-  height: 220px;
+  height: 576px;
   margin:0 auto;
 }
 
@@ -301,7 +320,7 @@ export default {
 }
 
 .newsTabMobile {
-  width: 100%;
+  width: 50%;
   float: left;
 }
 

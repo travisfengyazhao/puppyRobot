@@ -55,6 +55,7 @@ export default {
         transition: all 1s;    
         background-size:100% 100%;
         -moz-background-size:100% 100%;
+        cursor: pointer;
     }
 
     #newsBtmImage:hover {
@@ -91,14 +92,14 @@ export default {
 
     .title {
         font-size: 11pt;
-        line-height: 20px;
+        line-height: 41px;
         text-align: left;
         margin: 8px 15px 8px 15px;
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
     }
-    
+
 </style>

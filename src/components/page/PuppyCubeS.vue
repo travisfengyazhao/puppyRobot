@@ -9,19 +9,19 @@
         <div class="divMp4Words">
             <div class="div_txt_btn">
                 
-                <span class="span_t">puppy cube s 光影魔屏</span>
+                <img src="./../../assets/images/puppy_cube_s/focus_title_01.png">
                 <br />
-                <span class="span_m">智慧生活，触手可及</span>
                 <br />
                 <div class="video_btn1">
                     <div class="video_btns" >
                         <div class="video_btn2" @mouseover="btnMouseOver('.video_btn2')" @mouseout="btnMouseOut('.video_btn2')"
                         @click="PlayVideo()">
-                            <img class="imgPlay" src="./../../assets/images/puppy_cube_s/u298.png">
+                            <img class="imgPlay" src="./../../assets/images/puppy_cube_s/button_wzsp.png">
                             <span class="span_b">观看完整视频</span>   
                         </div>
                         <div class="video_space"></div>
                         <div class="video_btn3" @mouseover="btnMouseOver('.video_btn3')" @mouseout="btnMouseOut('.video_btn3')">
+                            <img class="imgPlay" src="./../../assets/images/puppy_cube_s/button_kqyy.png">
                             <span class="span_b">开启预约</span>   
                         </div>
                     </div>
@@ -41,27 +41,16 @@
             <img class="videoImage2" src="./../../assets/images/puppy_cube_s/video2.jpg" @click="selectVideo(2)">
         </div>
     </div>
-    <div class="designImg"><img src="./../../assets/images/puppy_cube_s/u287.png"></div>
-    <div class="designImg"><Banner :listImg="designImgList"></Banner></div>
-    <div><Banner :listImg="designImgList"></Banner></div>
-    <div><Banner :listImg="designImgList"></Banner></div>
-    <div>SSSSSSS</div>
-    <div>SSSSSSS</div>
-    <div>SSSSSSS</div>
-    <div>SSSSSSS</div>
-    <div>SSSSSSS</div>
-    <div>SSSSSSS</div>
-    <div>SSSSSSS</div>
-    <div>SSSSSSS</div>
-    <div>SSSSSSS</div>
-    <div>SSSSSSS</div>
-    <div>SSSSSSS</div>
-    <div>SSSSSSS</div>
-    <div>SSSSSSS</div>
-    <div>SSSSSSS</div>
-    <div>SSSSSSS</div>
-    <div>SSSSSSS</div>
-
+    <div class="designImg" style="background-color:black; margin-top:-6px;"><img src="./../../assets/images/puppy_cube_s/div_cpxt.jpg"></div>
+    <div class="designImg"><Banner :slideLists="designList" :swiperHeight="'680px'"></Banner></div>
+    <div><Banner :slideLists="smartHomeList" :swiperHeight="'680px'"></Banner></div>
+    <div><Banner :slideLists="smartOfficeList" :swiperHeight="'680px'"></Banner></div>
+    <div class="designImg" style="background-color:#FFFFFF;"><img src="./../../assets/images/puppy_cube_s/div_aick.jpg"></div>
+    <div class="designImg" style="background-color:#ff5a2b;"><img src="./../../assets/images/puppy_cube_s/div_aiyy.jpg"></div>
+    <div class="designImg" style="background-color:#090b0c;"><img src="./../../assets/images/puppy_cube_s/div_cdj.jpg"></div>
+    <div class="designImg" style="background-color:#FFFFFF;"><img src="./../../assets/images/puppy_cube_s/div_cpts.jpg"></div>
+    <div class="designImg" style="background-color:#000000;"><img src="./../../assets/images/puppy_cube_s/div_cpcs_01.jpg"></div>
+    <div class="designImg" style="background-color:#000000;"><img src="./../../assets/images/puppy_cube_s/div_cpcs_02.jpg"></div>
   </div>
 
 </template>
@@ -73,11 +62,68 @@ export default {
     data() {
         return {
             videoPlay: false,
-            designImgList: [
-                require("./../../assets/1.jpg"),
-                require("./../../assets/2.jpg"),
-                require("./../../assets/3.jpg"),
+            designList: [
+            {            
+                id: 1,
+                img: require("./../../assets/images/puppy_cube_s/div_sj_01.jpg"),
+                backgroundColor: "#ffffff",
+            },
+             {            
+                id: 2,
+                img: require("./../../assets/images/puppy_cube_s/div_sj_02.png"),
+                backgroundColor: "#000000",
+            }, 
+            {            
+                id: 3,
+                img: require("./../../assets/images/puppy_cube_s/div_sj_03.png"),
+                backgroundColor: "#F5F5F5",
+            },
             ],
+            smartHomeList: [
+            {            
+                id: 1,
+                img: require("./../../assets/images/puppy_cube_s/div_zhjt_01.png"),
+                backgroundColor: "#F5F5F5",
+            },
+             {            
+                id: 2,
+                img: require("./../../assets/images/puppy_cube_s/div_zhjt_02.png"),
+                backgroundColor: "#F5F5F5",
+            }, 
+            {            
+                id: 3,
+                img: require("./../../assets/images/puppy_cube_s/div_zhjt_03.png"),
+                backgroundColor: "#e5e4ea",
+            },
+            {            
+                id: 4,
+                img: require("./../../assets/images/puppy_cube_s/div_zhjt_04.png"),
+                backgroundColor: "#000000",
+            },
+            {            
+                id: 5,
+                img: require("./../../assets/images/puppy_cube_s/div_zhjt_05.png"),
+                backgroundColor: "#000000",
+            },
+            ],
+            smartOfficeList: [
+            {            
+                id: 1,
+                img: require("./../../assets/images/puppy_cube_s/div_zhbg_01.png"),
+                backgroundColor: "#262a30",
+            },
+             {            
+                id: 2,
+                img: require("./../../assets/images/puppy_cube_s/div_zhbg_02.png"),
+                backgroundColor: "#262a30",
+            }, 
+            {            
+                id: 3,
+                img: require("./../../assets/images/puppy_cube_s/div_zhbg_03.png"),
+                backgroundColor: "#262a30",
+            },
+            ],
+            
         }
     },
     components: {
@@ -99,7 +145,7 @@ export default {
         window.onresize = function temp() {
             //根据视频高宽比计算div的高度
             document.querySelector(".divMp4Front").style.height = (window.document.body.offsetWidth * (1080 /1920)).toFixed(2) + "px";
-            document.querySelector(".divMp4Words").style.height = (window.document.body.offsetWidth * (1080 /1920)).toFixed(2) + "px";
+            if(document.querySelector(".divMp4Words").style){document.querySelector(".divMp4Words").style.height = (window.document.body.offsetWidth * (1080 /1920)).toFixed(2) + "px";}
             document.querySelector(".div_txt_btn").style.height = document.querySelector(".divMp4Words").style.height;
             document.querySelector(".videoSelect").style.top = (document.querySelector(".divMp4Front").style.height + 46 - 108) + "px" ;
             document.querySelector(".videoSelect").style.left = (window.document.body.offsetWidth - 192) + "px" ;
@@ -257,16 +303,8 @@ export default {
         display:inline-block;
     }
 
-    .span_t {
-        font-size: 1.8vw;
-    }
-
-    .span_m {
-        font-size: 5vw;
-    }
-
     .span_b {
-        font-size: 1vw;
+        font-size: 11pt;
         line-height: 40px;
         color: black;
         white-space: nowrap;
@@ -324,7 +362,7 @@ export default {
        -webkit-filter: grayscale(1);  
        filter: grayscale(100%);  
        filter: gray;  
-       margin-bottom: 10px;
+       margin-bottom: 7px;
     }
 
     .closeBtn {
@@ -339,10 +377,20 @@ export default {
         font-size: 25px;
     }
     .designImg {
-        margin-top: -6px;
+        text-align: center;
+        img {
+            width: 1280px;
+            display: block;  
+            margin: 0 auto;
+        }
+    }
 
+    .designImg_mobile {
+        text-align: center;
         img {
             width: 100%;
+            display: block;  
+            margin: 0 auto;
         }
     }
 

@@ -1,58 +1,83 @@
 <template>
   <div id="pagefooter">
-        <div :class="pcMode?'footerInfo':'footerInfo-mobile'" :v-if="pcMode">
-            <div :class="pcMode?'footerLeft':'footerLeft-mobile'">
-                <div class="footerLeft_div">
-                    <span>售后服务</span>
-                    <div>
-                        <a herf="#">客服邮箱</a>
-                    </div>
-                </div>
-                <div class="footerLeft_div">
-                    <span>在线购买</span>
-                    <div>
-                    <a herf="#">京东旗舰店</a>
-                    </div>
-                </div>
-                <div class="footerLeft_div">
-                    <span>站点地图</span>
-                    <div>
-                    <a herf="#">友情链接</a>
-                    </div>
-                    <div>
-                    <a herf="#">法律声明</a>
-                    </div>
-                </div>
-            </div>
-            <div :class="pcMode?'footerMid':'footerMid-mobile'">
-                <div class="footerMid_1">
-                    <div class="footerMid_img">
-                        <div class="footerMid_left">
-                            <img src="./../../assets/images/footer/Wechat.jpeg">
-                            <br/>
-                            <span>官方微信</span>
+      <div class="pagefooterTop">
+        <div :class="pcMode ? 'pagefooterMid':'pagefooterMid_mobile'">
+            <div :class="pcMode?'footerInfo':'footerInfo-mobile'" :v-if="pcMode">
+                <div :class="pcMode?'footerLeft':'footerLeft-mobile'">
+                    <div class="footerLeft_div">
+                        <span>售后服务</span>
+                        <div>
+                            <router-link to="/">
+                                <a herf="#">客服邮箱</a>
+                            </router-link>
                         </div>
                     </div>
-                    <div class="footerMid_img">
-                        <div class="footerMid_right">
-                            <img src="./../../assets/images/footer/WeiBo.png">
-                            <br/>
-                            <span>官方微博</span>
+                    <div class="footerLeft_div">
+                        <span>在线购买</span>
+                        <div>
+                            <router-link to="/">
+                                <a herf="#">京东旗舰店</a>
+                            </router-link>
+                        </div>
+                    </div>
+                    <div class="footerLeft_div">
+                        <span>站点地图</span>
+                        <div>
+                            <router-link to="/">
+                                <a herf="#">友情链接</a>
+                            </router-link>
+                        </div>
+                        <div>
+                            <router-link to="/">
+                                <a herf="#">法律声明</a>
+                            </router-link>
+                        </div>
+                    </div>
+                    <div class="footerLeft_div">
+                        <span>关于我们</span>
+                        <div>
+                        <router-link to="/">
+                            <a herf="#">公司介绍</a>
+                        </router-link>
+                        </div>
+                        <div>
+                        <router-link to="/joinus">
+                            <a herf="#">加入我们</a>
+                        </router-link>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div :class="pcMode?'footerRight':'footerRight-mobile'">
-                <div>
-                    <a herf="#">全国统一服务热线：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                    <span class="serviceNum">400-0008-360&nbsp;</span>
-                    <br/>
-                    <a herf="#">工作时间：周一至周日 9:00-18:00（仅收市话费）</a>
+                <div :class="pcMode?'footerMid':'footerMid-mobile'">
+                    <div class="footerMid_1">
+                        <div class="footerMid_img">
+                            <div class="footerMid_left">
+                                <img src="./../../assets/images/footer/QR-code_WeChat.png">
+                                <br/>
+                                <span>官方微信</span>
+                            </div>
+                        </div>
+                        <div class="footerMid_img">
+                            <div class="footerMid_right">
+                                <img src="./../../assets/images/footer/QR-code_Weibo.png">
+                                <br/>
+                                <span>官方微博</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div :class="pcMode?'footerRight':'footerRight-mobile'">
+                    <div>
+                        <a herf="#">全国统一服务热线：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                        <span class="serviceNum">400-0008-360&nbsp;</span>
+                        <br/>
+                        <a herf="#">工作时间：周一至周日 9:00-18:00（仅收市话费）</a>
+                    </div>
+
                 </div>
 
             </div>
-
         </div>
+      </div>
         <div class="recordInfo">
             <p v-if="pcMode">Copyright © 2018 Puppy Robot  |  京公网络备案号 | 网络文化经营许可证备案号</p>
             <p v-else>Copyright © 2018 Puppy Robot  <br />  京公网络备案号 | 网络文化经营许可证备案号</p>
@@ -70,7 +95,6 @@ export default {
         mounted() {
             const that = this;
             window.onresize = function temp() {
-                // console.log(window.innerWidth);
                 that.pcMode = window.innerWidth >= 1280;
             };
         },
@@ -85,6 +109,23 @@ export default {
     #pagefooter {
         width: 100%;
         z-index: -1;
+        // margin-top: 20px;
+        
+    }
+
+    .pagefooterTop {
+        width: 100%;
+        text-align: center;
+        background-color: $footerColor;
+    }
+
+    .pagefooterMid {
+        width: 1280px;
+        margin: 0 auto;
+    }
+
+    .pagefooterMid_mobile {
+        width: 100%;
     }
 
     .footerInfo {
@@ -99,17 +140,17 @@ export default {
     }
 
     .recordInfo {
+        background-color: white;
         width: 100%;
-        font-size: 8pt;
+        font-size: 10pt;
     }
 
     .footerLeft {
         height: $footerHeight;
         float: left;
-        width: 30%;
-        margin-left: 3%;
+        width: 35%;
         .footerLeft_div {
-            width: 30%;
+            width: 20%;
             margin-top: 20px;
             height: 140px;
             float: left;
@@ -120,15 +161,20 @@ export default {
             font-family: 'PingFangSC-Regular', 'PingFang SC';
             font-weight: 400;
             font-style: normal;
-            color: #169BD5;
-            font-size: 15px;
+            // color: #169BD5;
+            font-size: 11pt;
+        }
+
+        span {
+            font-size: 12pt;
+            font-weight: bold;
         }
     }
 
     .footerMid {
         height: $footerHeight;
         float: left;
-        width: 34%;
+        width: 30%;
 
 
         .footerMid_1 {
@@ -155,13 +201,16 @@ export default {
             float: left;
             margin: 0px 5px 0px 5px
         }
+
+        span {
+            font-size: 12pt;
+        }
     }
 
     .footerRight {
         height: $footerHeight;
         float: right;
-        width: 30%;
-        margin-right: 3%;
+        width: 35%;
         div {
             width: 100%;
             margin-top: 20px;
@@ -170,12 +219,12 @@ export default {
             text-align: right;
 
             span {
-                font-size: 14pt;
+                font-size: 16pt;
                 font-weight:bold;
             }
 
             a {
-                font-size: 10pt;
+                font-size: 11pt;
             }
         }
         
@@ -184,8 +233,6 @@ export default {
     .footerLeft-mobile {
         height: $footerHeight;
         width: 100%;
-        margin-left: 3%;
-
         .footerLeft_div {
             width: 30%;
             margin-top: 20px;
@@ -207,7 +254,6 @@ export default {
         width: 100%;
         .footerMid_1 {
             width: 100%;
-
             .footerMid_img {
             width: 100%;
             margin-top: 20px;
@@ -225,17 +271,24 @@ export default {
 
     .footerRight-mobile {
         width: 100%;
-        margin-right: 3%;
         div {
             width: 100%;
             margin-top: 20px;
             height: 140px;
 
             span {
-                font-size: 14pt;
+                font-size: 16pt;
                 font-weight:bold;
             }
         }
         
+    }
+
+    a {
+        text-decoration-line: none;
+        color: black;
+        :hover {
+            color: #929497;
+        }
     }
 </style>

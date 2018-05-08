@@ -5,6 +5,9 @@
             <div id="newsBtmImage" :style="{backgroundImage:`url(${newsContent?newsContent.img:''})` }">
             </div>
         </div>
+        <div class="imageBtn">
+            <img src="./../../assets/images/index/button_01.png">
+        </div>
         <div class="newsTitle">
             <div class="title">
                 {{newsContent? newsContent.title : ''}}
@@ -38,6 +41,7 @@ export default {
         width: 100%;
         height: 220px;
         overflow: hidden;  
+        position: relative;
     }
 
     #newsBtmImage {
@@ -48,6 +52,7 @@ export default {
         transition: all 1s;    
         background-size:100% 100%;
         -moz-background-size:100% 100%;
+        cursor: pointer;
     }
 
     #newsBtmImage:hover {
@@ -75,6 +80,13 @@ export default {
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
+    }
+
+    .imageBtn {
+        position: absolute;
+        top: 105px;
+        left: 20px;
+        cursor: pointer;
     }
     
 
