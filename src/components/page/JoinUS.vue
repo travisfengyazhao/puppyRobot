@@ -34,32 +34,32 @@
 			 		<p>自动驾驶系统算法工程师</p>
 			 		<i></i>
 			 	</li>
-			 	<!-- <li>
-			 		<a href="#anchor-julebu"></a>
-			 		<p>俱乐部运营经理</p>
+			    <li>
+			 		<a href="#anchor_android_dev"></a>
+			 		<p>Android系统开发工程师</p>
 			 		<i></i>
 			 	</li>
 			 	<li>
-			 		<a href="#anchor-xiaoshouzongjian"></a>
-			 		<p>销售总监</p>
+			 		<a href="#anchor_cplus_senior"></a>
+			 		<p>C++高级工程师</p>
 			 		<i></i>
 			 	</li>
 			 	<li>
-			 		<a href="#anchor-gaojixiaoshou"></a>
-			 		<p>高级销售经理</p>
+			 		<a href="#anchor_tech_director"></a>
+			 		<p>技术总监</p>
 			 		<i></i>
 			 	</li>
 			 	<li>
-			 		<a href="#anchor-cehua"></a>
-			 		<p>整合营销策划经理</p>
+			 		<a href="#anchor_java_dev"></a>
+			 		<p>JAVA研发工程师</p>
 			 		<i></i>
 			 	</li>
 			 	<li>
-			 		<a href="#anchor-houqi"></a>
-			 		<p>视频后期</p>
+			 		<a href="#anchor_industrial_designer"></a>
+			 		<p>工业设计师</p>
 			 		<i></i>
 			 	</li>
-			 	<li>
+			 	<!--<li>
 			 		<a href="#anchor-zhizuo"></a>
 			 		<p>视频节目制作人</p>
 			 		<i></i>
@@ -136,7 +136,7 @@
             </div>
             <div class="anchor_ability">优先考虑:</div>
             <div class="anchor_detail">
-                •	熟悉开源机器人操作系统ROS，有相关开发经验
+                •	熟悉开源机器人操作系统ROS，有相关开发经验者
             </div>
             <div class="anchor_return_top">
                 <a href="#joinus">返回顶部</a>
@@ -177,7 +177,7 @@
             </div>
             <div class="anchor_ability">优先考虑:</div>
             <div class="anchor_detail">
-                •	熟悉常用的计算机视觉、深度学习算法
+                •	熟悉常用的计算机视觉、深度学习算法者
             </div>
             <div class="anchor_return_top">
                 <a href="#joinus">返回顶部</a>
@@ -225,8 +225,237 @@
             </div>
             <div class="anchor_ability">优先考虑:</div>
             <div class="anchor_detail">
-               •	熟练掌握MATLAB和Dspace等整车系统仿真工作，具有基于模型开发经验
+               •	熟练掌握MATLAB和Dspace等整车系统仿真工作，具有基于模型开发经验者
             </div>
+            <div class="anchor_return_top">
+                <a href="#joinus">返回顶部</a>
+            </div>
+        </div>
+	</div>
+    <div id="anchor_android_dev" class="anchorClass">
+        <div class="anchor_left">
+            <div class="left_1">
+                <div class="anchor_title">Android系统<br/>开发工程师</div>
+                <div>AIoT事业部</div>
+            </div>
+            <div class="left_2"> 
+                <div class="speratLine">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="anchor_right">
+            <div class="anchor_description">
+                •	进行Android智能硬件项目的Android ROM定制和修改
+                <br/>
+                •	配合方案厂商及产品团队，进行新功能设计中服务的框架架构设计和实现
+                <br/>
+                •	对Android系统原生应用，如Launcher、Setting、Music等进行维护并根据产品定义进行修改
+                <br/>
+                •	配合BSP团队和后台服务团队，进行新功能构架和设计，并未HAL的设计提供接口和方案设计
+                <br/>
+                •	在Android 4.4及以上版本的Framework新功能构建时，进行良好的可移植性和松耦合的代码架构设计，保证产品及软件方案的良好平台兼容性和快速部署
+
+            </div>
+            <div class="anchor_ability">任职条件：</div>
+            <div>
+                •	三年及以上Android系统开发经验
+                <br/>
+                •	熟悉Android中Audio、Surface、Power Manager、Input Manager、Activity Manager等相关服务的设计流程、具体实现及架构分析
+                <br/>
+                •	熟悉Android框架及各服务在不同平台的启动流程
+                <br/>
+                •	熟悉JNI的接口设计架构，精通Android的框架要素、Binder及进程通讯等相关机制
+                <br/>
+                •	25~35岁，电子工程、计算机或通讯相关专业毕业
+            </div>
+            <div class="anchor_ability">优先考虑:</div>
+            <div class="anchor_detail">
+                •	熟练掌握C，C++者
+                •	有手机、TV、投影或其他Android系统智能硬件厂商开发经验者
+                •	三年以上框架团队领导经验者
+
+            </div>
+            <div class="anchor_return_top">
+                <a href="#joinus">返回顶部</a>
+            </div>
+        </div>
+	</div>
+    <div id="anchor_cplus_senior" class="anchorClass anchor_background">
+        <div class="anchor_left">
+            <div class="left_1">
+                <div class="anchor_title">C++高级工程师</div>
+                <div>机器人事业部</div>
+            </div>
+            <div class="left_2"> 
+                <div class="speratLine">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="anchor_right">
+            <div class="anchor_description">
+                •	负责自动驾驶算法的系统集成设计、开发和调试
+                <br/>
+                •	负责自动驾驶算法在嵌入式车载平台上的移植优化
+            </div>
+            <div class="anchor_ability">任职条件：</div>
+            <div>
+                 •	计算机、电子、自动化、汽车等相关专业，本科及以上学历
+                 <br/>
+                 •	3年以上Linux软件开发或系统集成工作经验
+                 <br/>
+                 •	有强烈的上进心和求知欲，自我驱动学习能力，充满激情
+                 <br/>
+                 •	具有嵌入式操作系统和实时操作系统的经验，精通C/C++编程语言
+
+            </div>
+            <div class="anchor_ability">优先考虑:</div>
+            <div class="anchor_detail">
+                •	具有自动驾驶相关算法研发经验者
+                <br/>
+                •	2年以上ROS开发经验
+            </div>
+            <div class="anchor_return_top">
+                <a href="#joinus">返回顶部</a>
+            </div>
+        </div>
+	</div>
+    <div id="anchor_tech_director" class="anchorClass">
+        <div class="anchor_left">
+            <div class="left_1">
+                <div class="anchor_title">技术总监</div>
+                <div>智能视觉产品事业部</div>
+            </div>
+            <div class="left_2"> 
+                <div class="speratLine">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="anchor_right">
+            <div class="anchor_description">
+                •	打造核心业务的基础服务模块，封装算法搭建AI计算引擎，服务上层产品及业务。  
+                <br/>
+                •	领导基础架构团队，基于产品和业务，设计、实现并不断优化基础架构的各个模块 。
+                <br/>
+                •	培养团队，使团队成员不断提高技术技能。
+            </div>
+            <div class="anchor_ability">任职条件：</div>
+            <div>
+                •	本科及以上学历，计算机等相关专业。
+                <br/>
+                •	5年及以上前后端技术开发经验，2年及以上技术团队管理经验。
+                <br/>
+                •	作为主要技术，参与过基础架构的设计、实现及优化，在其中关键环节起重要作用。
+                <br/>
+                •	对软件工程有较深理解，有较强的系统架构设计能力，有丰富服务器端开发经验，熟悉常用的开发框架。
+                <br/>
+                •	有高并发，分布式计算及存储实战经验，熟悉数据库、缓存、消息队列等中间件的原理及使用，熟悉常用的开源框架及项目。
+                <br/>
+                •	开朗上进，积极沟通，善于团队协作。
+            </div>
+            <div class="anchor_ability">优先考虑:</div>
+            <div class="anchor_detail">
+                •	有云服务开发经验，熟悉云端项目的部署和维护，有开发云服务API，对接外部客户和平台的经验。
+                <br/>
+                •	有机器学习／图像处理／计算机视觉／数据挖掘任一领域相关项目经验。
+            </div>
+            <div class="anchor_return_top">
+                <a href="#joinus">返回顶部</a>
+            </div>
+        </div>
+	</div>
+    <div id="anchor_java_dev" class="anchorClass anchor_background">
+        <div class="anchor_left">
+            <div class="left_1">
+                <div class="anchor_title">JAVA研发工程师</div>
+                <div>AIoT事业部</div>
+            </div>
+            <div class="left_2"> 
+                <div class="speratLine">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="anchor_right">
+            <div class="anchor_description">
+                •	本科及以上学历，计算机、软件工程、信息技术、或其他相关专业
+                <br />
+                •	根据业务需求进行需求分析和软件概要设计
+                <br />
+                •	进行软件详细设计和编码实现
+                <br />
+                •	模块单元测试确保质量和性能； 维护和升级现有软件项目，快速定位并修复现有软件缺陷。
+            </div>
+            <div class="anchor_ability">任职条件：</div>
+            <div>
+                •	3年以上web 项目开发经验,了解软件过程
+                <br />
+                •	了解设计模式，具备面向对象分析与设计能力
+                <br />
+                •	熟悉Spring、Struts2、myBatis 等主流框架；熟悉Java编程：集合框架、多线程并发、IO/NIO、网络通信等 
+                <br />
+                •	熟练掌握SQL，熟悉mySql、Oracle关系型数据库
+                <br />
+                •	熟悉Linux，有Linux系统开发
+            </div>
+            <!-- <div class="anchor_ability">优先考虑:</div>
+            <div class="anchor_detail">
+                •	具有自动驾驶相关算法研发经验者优先；
+                <br/>
+                •	2年以上ROS开发经验.
+            </div> -->
+            <div class="anchor_return_top">
+                <a href="#joinus">返回顶部</a>
+            </div>
+        </div>
+	</div>
+    <div id="anchor_industrial_designer" class="anchorClass">
+        <div class="anchor_left">
+            <div class="left_1">
+                <div class="anchor_title">工业设计师</div>
+                <div>AIoT事业部
+                </div>
+            </div>
+            <div class="left_2"> 
+                <div class="speratLine">
+                </div>
+            </div>
+        </div>
+        <div class="anchor_right">
+            <div class="anchor_description">
+                •	完成量产级别机器人产品开发和设计工作
+                <br />
+                •	了解完整的设计流程，可独立完成设计工作
+                <br />
+                •	参与产品定义以及前期调研工作，参与系统方案设计，进行产品工业设计及独立提案
+                <br />
+                •	负责产品创意、效果图、建模、配合产品特点把握设计方向和设计元素
+                <br />
+                •	负责产品外观配色及确认，协同结构工程师负责产品材料、工艺、成本规划 
+                <br />
+                •	协助解决生产中存在的各种产品外观问题及产品后续跟踪改善。
+
+            </div>
+            <div class="anchor_ability">任职条件：</div>
+            <div>
+                •	至少具有3年以上的量产产品设计开发经验
+                <br />
+                •	按照团队的实际需求，可高效的完成产品设计工作
+                <br />
+                •	对金属和塑胶件有深刻的理解及运用能力，了解各种材料加工工艺及表面处理工艺
+                <br />
+                •	具备良好的手绘设计表达能力
+                <br />
+                •	精通2D及3D等建模软件，能进行复杂曲面的造型，有A级曲面设计能力
+            </div>
+            <!-- <div class="anchor_ability">优先考虑:</div>
+            <div class="anchor_detail">
+                •	有云服务开发经验，熟悉云端项目的部署和维护，有开发云服务API，对接外部客户和平台的经验。
+                <br/>
+                •	有机器学习／图像处理／计算机视觉／数据挖掘任一领域相关项目经验。
+            </div> -->
             <div class="anchor_return_top">
                 <a href="#joinus">返回顶部</a>
             </div>

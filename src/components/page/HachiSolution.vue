@@ -1,51 +1,69 @@
 <template>
   <div id="HachiSolution">
-      <div class="hachiheader">
-          <div class="headerContent">
-            <div class="hachiHT">
-                <div class="hachiThridMenu" @click="currDispaly(0)">
-                    <div id='divHachiLogo'>
-                        <img id='hachiheaderlogo' src="./../../assets/images/hachi/logo_Hachi.svg">
-                    </div>
-                    <div class="solutionName">解决方案</div>
-                </div>
-                <div id='divHachiPCNav'>
-                    <ul>
-                        <li @click="currDispaly(1)">
-                            <div class="hoverbackground">
-                            <a herf="">智慧家庭</a>
-                            </div>
-                        </li>
-                        <li @click="currDispaly(2)">
-                            <a herf="">智慧社区</a>
-                        </li>
-                        <li @click="currDispaly(3)">
-                            <a herf="">智慧酒店</a>
-                        </li>
-                        <li @click="currDispaly(4)">
-                            <a herf="">智慧办公</a>
-                        </li>
-                        <li @click="currDispaly(5)">
-                            <a herf="">智慧商业</a>
-                        </li>
-                    </ul>
-                </div>
+    <div class="hachiheader">
+      <div class="headerContent">
+        <div class="hachiHT">
+          <div class="hachiThridMenu" @click="currDispaly(0)">
+            <div id='divHachiLogo'>
+              <img id='hachiheaderlogo' src="./../../assets/images/hachi/logo_Hachi.svg">
             </div>
-            <div class="headerLine"> 
-            </div>
+            <div class="solutionName">解决方案</div>
+          </div>
+          <div id='divHachiPCNav'>
+            <ul>
+              <li @click="currDispaly(1)">
+                <div class="hoverbackground">
+                  <a herf="">智慧家庭</a>
+                </div>
+              </li>
+              <li @click="currDispaly(2)">
+                <a herf="">智慧社区</a>
+              </li>
+              <li @click="currDispaly(3)">
+                <a herf="">智慧酒店</a>
+              </li>
+              <li @click="currDispaly(4)">
+                <a herf="">智慧办公</a>
+              </li>
+              <li @click="currDispaly(5)">
+                <a herf="">智慧商业</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="headerLine">
         </div>
       </div>
-      <div class="pageConent">
-          <div class="conentMain">
-              <div class="designImg" style="background-image:url('./../../assets/images/hachi/div_bg_01.png');background-repeat: repeat-y;">
-              <img src="./../../assets/images/hachi/Hachi_jjfa_01.jpg"></div>
-              <div class="designImg" style="background-color:#ffffff">
-                  <img src="./../../assets/images/hachi/Hachi_jjfa_02.jpg">
+    </div>
+    <div class="pageConent">
+      <div class="conentMain">
+        <div id="hachiMain" v-show="currDisIndex==0">
+            <div class="designImg">
+                <div class="hachi_jjfa_01">
+                    <img src="./../../assets/images/hachi/Hachi_jjfa_01.jpg">
+                </div>
             </div>
-          </div>
+            <div class="designImg" style="background-color: #060b11;">
+                <div class="hachi_jjfa_02">
+                </div>
+            </div>
+        </div>
+        <div id="hachiSmartHome" v-show="currDisIndex==1">
+            <div class="designImg">
+                <div class="hachi_smarthome_01">
+                    <img src="./../../assets/images/hachi/smarthome/div_01.jpg">
+                </div>
+            </div>
+           <div class="designImg" style="background-color:#c6251d;"><img src="./../../assets/images/hachi/smarthome/div_02.jpg"></div>
+           <div class="designImg" style="background-color:#FFFFFF;"><img src="./../../assets/images/hachi/smarthome/div_03.jpg"></div>
+           <div class="designImg" style="background-color:#FFFFFF;"><img src="./../../assets/images/hachi/smarthome/div_04.jpg"></div>
+           <div class="designImg" style="background-color:#FFFFFF;"><img src="./../../assets/images/hachi/smarthome/div_05.jpg"></div>
+        </div>
       </div>
+    </div>
   </div>
 </template>
+
 
 <script type="text/ecmascript-6">
 export default {
@@ -146,10 +164,42 @@ $hachiSMB: 46px;
         text-align: center;
         width: 100%;
         img {
-            width: 1280px;
-            display: block;
-            margin: 0 auto;  
+            display: block;  
+            margin: 0 auto;
+
         }
+    }
+
+    .hachi_jjfa_02 {
+        min-width: 1280px;
+        max-width: 2580px;
+        min-height: 800px;
+        background-image: url("./../../assets/images/hachi/Hachi_jjfa_02.jpg");
+        background-size: cover;
+        background-position: 50% 50%;
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .hachi_jjfa_01 {
+        background-image:url('./../../assets/images/hachi/div_bg_01.png'); 
+        background-repeat: repeat-y;
+        background-size: 100% 100%;
+        height: 810px;
+        position: relative;
+        overflow: hidden;
+        
+    }
+
+    .hachi_smarthome_01 {
+        background-image:url('./../../assets/images/hachi/smarthome/div_06.png'); 
+        background-repeat: repeat-y;
+        background-size: 100% 100%;
+        height: 810px;
+        position: relative;
+        overflow: hidden;
+        
     }
 
     .pageConent {

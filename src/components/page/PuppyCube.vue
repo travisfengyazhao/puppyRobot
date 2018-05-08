@@ -46,8 +46,8 @@
     <div><Banner :slideLists="smartHomeList" :swiperHeight="'680px'"></Banner></div>
     <div><Banner :slideLists="smartOfficeList" :swiperHeight="'680px'"></Banner></div>
     <div class="designImg" style="background-color:#FFFFFF;"><img src="./../../assets/images/puppy_cube_s/div_aick.jpg"></div>
-    <div class="designImg" style="background-color:#ff5a2b;"><img src="./../../assets/images/puppy_cube_s/div_aiyy.jpg"></div>
-    <div class="designImg" style="background-color:#090b0c;"><img src="./../../assets/images/puppy_cube_s/div_cdj.jpg"></div>
+    <div class="designImg" style="background-color:#f65b23;"><img src="./../../assets/images/puppy_cube_s/div_aiyy.jpg"></div>
+    <div class="designImg" style="background-color:#121315;"><img src="./../../assets/images/puppy_cube_s/div_cdj.jpg"></div>
         <div class="designImg" style="background-color:#FFFFFF;"><img src="./../../assets/images/puppy_cube/div_cpts.jpg"></div>
     <div class="designImg" style="background-color:#000000;"><img src="./../../assets/images/puppy_cube/div_cpcs_01.jpg"></div>
     <div class="designImg" style="background-color:#000000;"><img src="./../../assets/images/puppy_cube/div_cpcs_02.jpg"></div>
