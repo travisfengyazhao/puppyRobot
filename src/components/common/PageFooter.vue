@@ -1,13 +1,13 @@
 <template>
   <div id="pagefooter">
       <div class="pagefooterTop">
-        <div :class="pcMode ? 'pagefooterMid':'pagefooterMid_mobile'">
-            <div :class="pcMode?'footerInfo':'footerInfo-mobile'" :v-if="pcMode">
-                <div :class="pcMode?'footerLeft':'footerLeft-mobile'">
+        <div :class="_isMobile() ? 'pagefooterMid_mobile' : 'pagefooterMid'">
+            <div :class="!_isMobile()?'footerInfo':'footerInfo-mobile'">
+                <div :class="!_isMobile()?'footerLeft':'footerLeft-mobile'">
                     <div class="footerLeft_div">
                         <span>售后服务</span>
                         <div>
-                            <router-link to="/">
+                            <router-link to="">
                                 <a herf="#">客服邮箱</a>
                             </router-link>
                         </div>
@@ -15,7 +15,7 @@
                     <div class="footerLeft_div">
                         <span>在线购买</span>
                         <div>
-                            <router-link to="/">
+                            <router-link to="">
                                 <a herf="#">京东旗舰店</a>
                             </router-link>
                         </div>
@@ -23,12 +23,12 @@
                     <div class="footerLeft_div">
                         <span>站点地图</span>
                         <div>
-                            <router-link to="/">
+                            <router-link to="">
                                 <a herf="#">友情链接</a>
                             </router-link>
                         </div>
                         <div>
-                            <router-link to="/">
+                            <router-link to="">
                                 <a herf="#">法律声明</a>
                             </router-link>
                         </div>
@@ -36,7 +36,7 @@
                     <div class="footerLeft_div">
                         <span>关于我们</span>
                         <div>
-                        <router-link to="/">
+                        <router-link to="">
                             <a herf="#">公司介绍</a>
                         </router-link>
                         </div>
@@ -47,7 +47,7 @@
                         </div>
                     </div>
                 </div>
-                <div :class="pcMode?'footerMid':'footerMid-mobile'">
+                <div :class="!_isMobile()?'footerMid':'footerMid-mobile'">
                     <div class="footerMid_1">
                         <div class="footerMid_img">
                             <div class="footerMid_left">
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                 </div>
-                <div :class="pcMode?'footerRight':'footerRight-mobile'">
+                <div :class="!_isMobile()?'footerRight':'footerRight-mobile'">
                     <div>
                         <a herf="#">全国统一服务热线：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
                         <span class="serviceNum">400-0008-360&nbsp;</span>
@@ -79,25 +79,19 @@
         </div>
       </div>
         <div class="recordInfo">
-            <p v-if="pcMode">Copyright © 2018 Puppy Robot  |  京公网络备案号 | 网络文化经营许可证备案号</p>
+            <p v-if="!_isMobile()">Copyright © 2018 Puppy Robot  |  京公网络备案号 | 网络文化经营许可证备案号</p>
             <p v-else>Copyright © 2018 Puppy Robot  <br />  京公网络备案号 | 网络文化经营许可证备案号</p>
         </div>
   </div>
 </template>
 <script>
 export default {
-        data () {
-            return {
-                pcMode: window.innerWidth >= 1280
-            }
+    methods: {
+            _isMobile() {
+            let flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+            return flag;
         },
-
-        mounted() {
-            const that = this;
-            window.onresize = function temp() {
-                that.pcMode = window.innerWidth >= 1280;
-            };
-        },
+    }
 }
 </script>
 
@@ -155,14 +149,6 @@ export default {
             height: 140px;
             float: left;
             text-align: center;
-        }
-
-        a {
-            font-family: 'PingFangSC-Regular', 'PingFang SC';
-            font-weight: 400;
-            font-style: normal;
-            // color: #169BD5;
-            font-size: 11pt;
         }
 
         span {
@@ -234,19 +220,16 @@ export default {
         height: $footerHeight;
         width: 100%;
         .footerLeft_div {
-            width: 30%;
+            width: 25%;
             margin-top: 20px;
             height: 140px;
             float: left;
             text-align: center;
         }
 
-        a {
-            font-family: 'PingFangSC-Regular', 'PingFang SC';
-            font-weight: 400;
-            font-style: normal;
-            color: #169BD5;
-            font-size: 15px;
+        span {
+            font-size: 12pt;
+            font-weight: bold;
         }
     }
 
@@ -274,7 +257,8 @@ export default {
         div {
             width: 100%;
             margin-top: 20px;
-            height: 140px;
+            // height: 140px;
+            padding-bottom: 20px;
 
             span {
                 font-size: 16pt;

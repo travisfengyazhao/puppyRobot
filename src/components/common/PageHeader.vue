@@ -1,12 +1,12 @@
 <template>
   <div id='pageheader'>
-    <div :class="pcMode? 'pageheaderMid' : 'pageheaderMid_mobile'">
+    <div :class="this._isMobile()? 'pageheaderMid_mobile' : 'pageheaderMid'">
         <div id='divLogo'>
             <router-link to="/">
             <img id='pageheaderlogo' src="./../../assets/images/header/puppy_logo.svg">
             </router-link>
         </div>
-        <div id='divPCNav' v-show="pcMode">
+        <div id='divPCNav' v-show="!_isMobile()">
             <ul>
                 <li @mouseover="cubeSecMenuDisplay()" @mouseout="cubeSecMenuHide()">
                     <a herf="">puppy cube</a>
@@ -50,12 +50,12 @@
                             <a herf="">解决方案</a>
                         </li>    
                         </router-link>
-                        <router-link to="">
+                        <router-link to="/hachiproduct">
                         <li>
                             <a herf="">产品中心</a>
                         </li>    
                         </router-link>
-                        <router-link to="">
+                        <router-link to="/hachicases">
                         <li>
                             <a herf="">应用案例</a>
                         </li>    
@@ -85,11 +85,11 @@
                 <li>
                     <a herf="">关于puppy</a>
                     <ul>
-                        <router-link to="">
+                        <!-- <router-link to="">
                         <li>
                             <a herf="">品牌理念</a>
                         </li>  
-                        </router-link>
+                        </router-link> -->
                         <router-link to="">
                         <li>
                             <a herf="">公司介绍</a>
@@ -113,16 +113,16 @@
                     </ul>
                 </li>
                 <li>
-                    <a herf="">媒体中心</a>
+                    <a herf="">资讯中心</a>
                     <ul>
-                        <router-link to="">
+                        <router-link to="/newscenter">
                         <li>
                             <a herf="">新闻中心</a>
                         </li>  
                         </router-link>
-                        <router-link to="">
+                        <router-link to="/videocenter">
                         <li>
-                            <a herf="">产品视频</a>
+                            <a herf="">视频中心</a>
                         </li>    
                         </router-link>
                         <router-link to="">
@@ -138,12 +138,12 @@
                     </ul>
                 </li>
                 <li>
-                    <a herf="">puppy社区</a>
+                    <a href="http://bbs.puppyrobot.com/" target="_blank">puppy社区</a>
                 </li>
             </ul>
         </div>
 
-        <div id='divMobileNav' v-show="!pcMode">
+        <div id='divMobileNav' v-show="_isMobile()">
             <div class="headerMobileMenu" @click="mobileMenuDisplay()">
                 <div class="mobileMenu"> 
                     <span class="line-t">
@@ -182,20 +182,16 @@
         name: 'PageHeader',
         data () {
             return {
-                pcMode: window.innerWidth >= 1280,
                 isDisplay: false,
                 cubeSecMenuDisp: false,
             }
         },
 
-        mounted() {
-            const that = this;
-            window.onresize = function temp() {
-                that.pcMode = window.innerWidth >= 1280;
-            };
-        },
-
         methods: {
+            _isMobile() {
+                let flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+                return flag;
+            },
             mobileMenuDisplay: function() {
                 this.isDisplay = !this.isDisplay;
                 if(this.isDisplay) {
@@ -395,6 +391,8 @@
     a {
         font-size: 12pt;
         color: black;
+        text-decoration: none;
+        font-family: 'Pingfang SC','Microsoft YaHei',Arial,Helvetica,sans-serif; 
     }
 
     #divMobileNav {

@@ -56,7 +56,7 @@
                         el: '.swiper-pagination',
                         type: 'bullets',
                         clickable: true,
-                        bulletClass: 'my-bullet',
+                        // bulletClass: 'my-bullet',
                     },
                 });
             }
@@ -99,6 +99,8 @@
 
         img {
             width: 1280px;
+            display: block;
+            margin: 0 auto;
         }
     }
 

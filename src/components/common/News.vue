@@ -1,11 +1,11 @@
 <template>
-  <div :id="newsId" class="newsClass">
-      <div id="newsBtm">
-        <div class="newsImageContainer">
-            <div id="newsBtmImage" :style="{backgroundImage:`url(${newsContent?newsContent.img:''})` }">
+  <div :id="newsId" class="newsClass" :style="{height:`${newsImageHeight + 57}px !important`}">
+      <div id="newsBtm" :style="{height:`${newsImageHeight + 57}px !important`}">
+        <div class="newsImageContainer" :style="{height:`${newsImageHeight}px !important`}">
+            <div id="newsBtmImage" :style="{backgroundImage:`url(${newsContent?newsContent.img:''})`, height:`${newsImageHeight}px !important`} ">
             </div>
         </div>
-        <div class="imageBtn">
+        <div class="imageBtn" v-if="!newsBtnHide">
             <img src="./../../assets/images/index/button_01.png">
         </div>
         <div class="newsTitle">
@@ -20,7 +20,7 @@
 <script>
 export default {
   name: 'News',
-  props: ['newsId', 'newsContent', 'newsWidth'],
+  props: ['newsId', 'newsContent', 'newsWidth', 'newsImageHeight', 'newsBtnHide'],
 }
 
 </script>

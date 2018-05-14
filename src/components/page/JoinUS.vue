@@ -17,7 +17,7 @@
         <p class="red_text">
             简历请投递至：recruiting@puppyrobot.com
         </p>
-       <div class="anchor">
+       <div :class="!_isMobile()?'anchor':'anchor_mobile'">
 			 <ul>
 			 	<li>
 			 		<a href="#anchor_slam"></a>
@@ -103,7 +103,7 @@
 			 </ul>
 		 </div>
     </div>
-    <div id="anchor_slam" class="anchorClass anchor_background">
+    <div id="anchor_slam" :class="!_isMobile()? 'anchorClass anchor_background':'anchorClass_mobile anchor_background'">
         <div class="anchor_left">
             <div class="left_1">
                 <div class="anchor_title">SLAM算法工程师</div>
@@ -143,7 +143,7 @@
             </div>
         </div>
 	</div>
-    <div id="anchor_highperformance" class="anchorClass">
+    <div id="anchor_highperformance" :class="!_isMobile()? 'anchorClass':'anchorClass_mobile'">
         <div class="anchor_left">
             <div class="left_1">
                 <div class="anchor_title">高性能计算工程师</div>
@@ -184,7 +184,7 @@
             </div>
         </div>
 	</div>
-    <div id="anchor_autodrivecalc" class="anchorClass anchor_background">
+    <div id="anchor_autodrivecalc" :class="!_isMobile()? 'anchorClass anchor_background':'anchorClass_mobile anchor_background'">
         <div class="anchor_left">
             <div class="left_1">
                 <div class="anchor_title">自动驾驶系统<br/>算法工程师</div>
@@ -232,7 +232,7 @@
             </div>
         </div>
 	</div>
-    <div id="anchor_android_dev" class="anchorClass">
+    <div id="anchor_android_dev" :class="!_isMobile()? 'anchorClass':'anchorClass_mobile'">
         <div class="anchor_left">
             <div class="left_1">
                 <div class="anchor_title">Android系统<br/>开发工程师</div>
@@ -281,7 +281,7 @@
             </div>
         </div>
 	</div>
-    <div id="anchor_cplus_senior" class="anchorClass anchor_background">
+    <div id="anchor_cplus_senior" :class="!_isMobile()? 'anchorClass anchor_background':'anchorClass_mobile anchor_background'">
         <div class="anchor_left">
             <div class="left_1">
                 <div class="anchor_title">C++高级工程师</div>
@@ -321,7 +321,7 @@
             </div>
         </div>
 	</div>
-    <div id="anchor_tech_director" class="anchorClass">
+    <div id="anchor_tech_director" :class="!_isMobile()? 'anchorClass':'anchorClass_mobile'">
         <div class="anchor_left">
             <div class="left_1">
                 <div class="anchor_title">技术总监</div>
@@ -366,7 +366,7 @@
             </div>
         </div>
 	</div>
-    <div id="anchor_java_dev" class="anchorClass anchor_background">
+    <div id="anchor_java_dev" :class="!_isMobile()? 'anchorClass anchor_background':'anchorClass_mobile anchor_background'">
         <div class="anchor_left">
             <div class="left_1">
                 <div class="anchor_title">JAVA研发工程师</div>
@@ -400,18 +400,15 @@
                 <br />
                 •	熟悉Linux，有Linux系统开发
             </div>
-            <!-- <div class="anchor_ability">优先考虑:</div>
+            <!-- <div class="anchor_ability">优先考虑:</div> -->
             <div class="anchor_detail">
-                •	具有自动驾驶相关算法研发经验者优先；
-                <br/>
-                •	2年以上ROS开发经验.
-            </div> -->
+            </div>
             <div class="anchor_return_top">
                 <a href="#joinus">返回顶部</a>
             </div>
         </div>
 	</div>
-    <div id="anchor_industrial_designer" class="anchorClass">
+    <div id="anchor_industrial_designer" :class="!_isMobile()? 'anchorClass':'anchorClass_mobile'">
         <div class="anchor_left">
             <div class="left_1">
                 <div class="anchor_title">工业设计师</div>
@@ -450,12 +447,9 @@
                 <br />
                 •	精通2D及3D等建模软件，能进行复杂曲面的造型，有A级曲面设计能力
             </div>
-            <!-- <div class="anchor_ability">优先考虑:</div>
+            <!-- <div class="anchor_ability">优先考虑:</div> -->
             <div class="anchor_detail">
-                •	有云服务开发经验，熟悉云端项目的部署和维护，有开发云服务API，对接外部客户和平台的经验。
-                <br/>
-                •	有机器学习／图像处理／计算机视觉／数据挖掘任一领域相关项目经验。
-            </div> -->
+            </div>
             <div class="anchor_return_top">
                 <a href="#joinus">返回顶部</a>
             </div>
@@ -466,9 +460,12 @@
 
 <script>
 export default {
-  
-  methods: {
-  }
+    methods: {
+        _isMobile() {
+            let flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+            return flag;
+        },
+    }
 }
 </script>
 
@@ -510,6 +507,55 @@ export default {
         li {
             position: relative;
             width: 45%;
+            float: left;
+            border-bottom: 1px solid #e2e2e2;
+            margin-right: 5%;
+
+            a{
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                display: block;
+                transition: all .5s;
+            }
+
+            p {
+                color: #000;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 70px;
+            }
+
+            i {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                display: block;
+                background: url(./../../assets/images/arrow.png) no-repeat center;
+                background-size: 50%;
+                width: 14px;
+                height: 24px;
+                transform: translateY(-50%);
+                -webkit-transform: translateY(-50%);
+            }
+        }
+    }
+
+    .anchor_mobile {
+        position: relative;
+        margin-top: 30px;
+
+        ul {
+            overflow: hidden;
+            margin-right: -5%;  
+            list-style: none;
+        }
+
+        li {
+            position: relative;
+            width: 95%;
             float: left;
             border-bottom: 1px solid #e2e2e2;
             margin-right: 5%;
@@ -633,6 +679,85 @@ export default {
         }
     }
     
+    .anchorClass_mobile {
+        height: 100%;
+        width: 100%;
+        min-height: 450px;
+        position: relative;
+        border-top: 1px solid #f2f2f2;
+
+        .anchor_left {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            margin-bottom: 40px;
+            // position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            background-position: center center;
+            background-size: cover;
+            overflow: hidden;
+            background-repeat: no-repeat;
+
+            .left_1 {
+                width: 100%;
+                text-align: center;
+
+            }
+
+            .left_2 {
+                display: none;
+            }
+
+            /* background-attachment: fixed; */
+            .anchor_title {
+                font-size: 20pt;
+                padding-top: 80px;
+            }
+        }
+
+        .anchor_right {
+            height: 100%;
+            position: relative;
+            margin-left: 20px;
+            min-height: 450px;
+            margin-right: 20px;
+            text-align: left;
+
+            .anchor_description {
+                padding-top: 0px;
+            }
+
+            .anchor_ability {
+                padding-top: 40px;
+                font-size: 14pt;
+                padding-bottom: 20px;
+            }
+
+            .anchor_detail {
+                margin-bottom: 40px;
+            }
+
+            .anchor_return_top {
+                height: 15px;
+                line-height: 15px;
+                text-align: right;
+                margin-bottom: 25px;
+                a {
+                    text-decoration-line: none;
+                    color: black;
+
+                    :hover {
+                        color: #929497;
+                    }
+                }
+            }
+
+        }
+    }
+
+
     .anchor_background {
         background-color: #fefefe;
     }

@@ -1,35 +1,34 @@
 <template>
   <div id="PuppyCubeS">
-    <div class="box">
-
-        <video src="./../../assets/puppy_demo.mp4" id="bgvideo" autoplay loop width="100%" muted="true">
-        </video>
-        <div class="divMp4Front">
-        </div> 
-        <div class="divMp4Words">
-            <div class="div_txt_btn">
-                
-                <img src="./../../assets/images/puppy_cube/focus_title_01.png">
-                <br />
-                <br />
-                <div class="video_btn1">
-                    <div class="video_btns" >
-                        <div class="video_btn2" @mouseover="btnMouseOver('.video_btn2')" @mouseout="btnMouseOut('.video_btn2')"
-                        @click="PlayVideo()">
-                            <img class="imgPlay" src="./../../assets/images/puppy_cube_s/button_wzsp.png">
-                            <span class="span_b">观看完整视频</span>   
-                        </div>
-                        <div class="video_space"></div>
-                        <div class="video_btn3" @mouseover="btnMouseOver('.video_btn3')" @mouseout="btnMouseOut('.video_btn3')">
-                            <img class="imgPlay" src="./../../assets/images/puppy_cube/button_jdzc.png">
-                            <span class="span_b">京东众筹</span>   
+    <div class="video_container">
+        <div class="box">
+            <video src="./../../assets/puppy_demo.mp4" id="bgvideo" autoplay loop width="100%" muted="true">
+            </video>
+            <div class="divMp4Front">
+            </div> 
+            <div class="divMp4Words">
+                <div class="div_txt_btn">
+                    
+                    <img src="./../../assets/images/puppy_cube/focus_title_01.png">
+                    <br />
+                    <br />
+                    <div class="video_btn1">
+                        <div class="video_btns" >
+                            <div class="video_btn2" @click="PlayVideo()">
+                                <img class="imgPlay" src="./../../assets/images/puppy_cube_s/button_wzsp.png">
+                                <span class="span_b">观看完整视频</span>   
+                            </div>
+                            <div class="video_space"></div>
+                            <div class="video_btn3">
+                                <img class="imgPlay" src="./../../assets/images/puppy_cube/button_jdzc.png">
+                                <span class="span_b">京东众筹</span>   
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>       
+                </div>       
+            </div>
         </div>
     </div>
-
     <div class="divVideoPlayer" v-show="videoPlay" @click="displayVideoSelecter()">
         <div class="closeBtn" @click="PlayVideo()">
             X
@@ -41,16 +40,44 @@
             <img class="videoImage2" src="./../../assets/images/puppy_cube_s/video2.jpg" @click="selectVideo(2)">
         </div>
     </div>
-    <div class="designImg" style="background-color:black; margin-top:-6px;"><img src="./../../assets/images/puppy_cube_s/div_cpxt.jpg"></div>
+    <div class="designImg" style="background-color:black; margin-top:-6px;">
+        <img src="./../../assets/images/puppy_cube_s/div_cpxt.jpg">
+        <!-- <div class="div_image_common" style="background-image: url('./../../assets/images/puppy_cube_s/div_cpxt.jpg');">
+        </div> -->
+    </div>
     <div class="designImg"><Banner :slideLists="designList" :swiperHeight="'680px'"></Banner></div>
     <div><Banner :slideLists="smartHomeList" :swiperHeight="'680px'"></Banner></div>
     <div><Banner :slideLists="smartOfficeList" :swiperHeight="'680px'"></Banner></div>
-    <div class="designImg" style="background-color:#FFFFFF;"><img src="./../../assets/images/puppy_cube_s/div_aick.jpg"></div>
-    <div class="designImg" style="background-color:#f65b23;"><img src="./../../assets/images/puppy_cube_s/div_aiyy.jpg"></div>
-    <div class="designImg" style="background-color:#121315;"><img src="./../../assets/images/puppy_cube_s/div_cdj.jpg"></div>
-        <div class="designImg" style="background-color:#FFFFFF;"><img src="./../../assets/images/puppy_cube/div_cpts.jpg"></div>
-    <div class="designImg" style="background-color:#000000;"><img src="./../../assets/images/puppy_cube/div_cpcs_01.jpg"></div>
-    <div class="designImg" style="background-color:#000000;"><img src="./../../assets/images/puppy_cube/div_cpcs_02.jpg"></div>
+<div class="designImg" style="background-color:#FFFFFF;">
+        <img src="./../../assets/images/puppy_cube_s/div_aick.jpg">
+        <!-- <div class="div_image_common" style="background-image: url('./../../assets/images/puppy_cube_s/div_aick.jpg');">
+        </div> -->
+    </div>
+    <div class="designImg" style="background-color:#f65b23;">
+        <img src="./../../assets/images/puppy_cube_s/div_aiyy.jpg">
+        <!-- <div class="div_image_common" style="background-image: url('./../../assets/images/puppy_cube_s/div_aiyy.jpg');">
+        </div> -->
+    </div>
+    <div class="designImg" style="background-color:#121315;">
+        <img src="./../../assets/images/puppy_cube_s/div_cdj.jpg">
+        <!-- <div class="div_image_common" style="background-image: url('./../../assets/images/puppy_cube_s/div_cdj.jpg');">
+        </div> -->
+    </div>
+    <div class="designImg" style="background-color:#FFFFFF;">
+        <img src="./../../assets/images/puppy_cube_s/div_cpts.jpg">
+        <!-- <div class="div_image_common" style="background-image: url('./../../assets/images/puppy_cube/div_cpts.jpg');">
+        </div> -->
+    </div>
+    <div class="designImg" style="background-color:#000000;">
+        <img src="./../../assets/images/puppy_cube_s/div_cpcs_01.jpg">
+        <!-- <div class="div_image_common" style="background-image: url('./../../assets/images/puppy_cube/div_cpcs_01.jpg'); height：860px !important;">
+        </div> -->
+    </div>
+    <div class="designImg" style="background-color:#000000;">
+        <img src="./../../assets/images/puppy_cube_s/div_cpcs_02.jpg">
+        <!-- <div class="div_image_common" style="background-image: url('./../../assets/images/puppy_cube/div_cpcs_02.jpg'); height：910px !important;">
+        </div> -->
+    </div>
   </div>
 
 </template>
@@ -130,38 +157,48 @@ export default {
         Banner
     },
     mounted() {
-        document.querySelector(".divMp4Front").style.height = (window.document.body.offsetWidth * (1080 /1920)).toFixed(2) + "px";
-        document.querySelector(".divMp4Words").style.height = (window.document.body.offsetWidth * (1080 /1920)).toFixed(2) + "px";
+        document.querySelector(".divMp4Front").style.height = ((window.document.body.offsetWidth<1920?window.document.body.offsetWidth:1920) * (1080 /1920)).toFixed(2) + "px";
+        document.querySelector(".divMp4Words").style.height = ((window.document.body.offsetWidth<1920?window.document.body.offsetWidth:1920) * (1080 /1920)).toFixed(2) + "px";
         document.querySelector(".div_txt_btn").style.height = document.querySelector(".divMp4Words").style.height;
         document.querySelector(".videoSelect").style.width = (window.document.body.offsetWidth / 1920 * 192 * 2).toFixed(2) + "px";
         document.querySelector(".videoSelect").style.height = ((window.document.body.offsetWidth / 1920 * 192 * 2) * (1080 /1920) * 2).toFixed(2) + "px"; 
         document.querySelector(".videoSelect").style.top = (window.document.body.offsetWidth * (1080 /1920) - 
-                                                        (window.document.body.offsetWidth / 1920 * 192 * 2) * (1080 /1920) * 2 + 46 - 35) + "px" ;
+                                                        (window.document.body.offsetWidth / 1920 * 192 * 2) * (1080 /1920) * 2 -30) + "px" ;
         document.querySelector(".videoSelect").style.left = (window.document.body.offsetWidth - (window.document.body.offsetWidth / 1920 * 192 * 2) - 2) + "px" ;
         document.querySelector(".videoImage1").style.width = (window.document.body.offsetWidth / 1920 * 192 * 2).toFixed(2) + "px";
         document.querySelector(".videoImage1").style.height = ((window.document.body.offsetWidth / 1920 * 192 * 2) * (1080 /1920)).toFixed(2) + "px"; 
         document.querySelector(".videoImage2").style.width = (window.document.body.offsetWidth / 1920 * 192 * 2).toFixed(2) + "px";
         document.querySelector(".videoImage2").style.height = ((window.document.body.offsetWidth / 1920 * 192 * 2) * (1080 /1920)).toFixed(2) + "px"; 
         window.onresize = function temp() {
-            //根据视频高宽比计算div的高度
-            document.querySelector(".divMp4Front").style.height = (window.document.body.offsetWidth * (1080 /1920)).toFixed(2) + "px";
-            if(document.querySelector(".divMp4Words").style){document.querySelector(".divMp4Words").style.height = (window.document.body.offsetWidth * (1080 /1920)).toFixed(2) + "px";}
-            document.querySelector(".div_txt_btn").style.height = document.querySelector(".divMp4Words").style.height;
-            document.querySelector(".videoSelect").style.top = (document.querySelector(".divMp4Front").style.height + 46 - 108) + "px" ;
-            document.querySelector(".videoSelect").style.left = (window.document.body.offsetWidth - 192) + "px" ;
-            document.querySelector(".videoSelect").style.width = (window.document.body.offsetWidth / 1920 * 192 * 2).toFixed(2) + "px";
-            document.querySelector(".videoSelect").style.height = ((window.document.body.offsetWidth / 1920 * 192 * 2) * (1080 /1920) * 2).toFixed(2) + "px"; 
-            document.querySelector(".videoSelect").style.top = (window.document.body.offsetWidth * (1080 /1920) - 
-                                                            window.document.body.offsetWidth / 1920 * 192 * 2 - 5) + "px" ;
-            document.querySelector(".videoSelect").style.left = (window.document.body.offsetWidth - (window.document.body.offsetWidth / 1920 * 192 * 2) - 10) + "px" ;
-            document.querySelector(".videoImage1").style.width = (window.document.body.offsetWidth / 1920 * 192 * 2).toFixed(2) + "px";
-            document.querySelector(".videoImage1").style.height = ((window.document.body.offsetWidth / 1920 * 192 * 2) * (1080 /1920)).toFixed(2) + "px"; 
-            document.querySelector(".videoImage2").style.width = (window.document.body.offsetWidth / 1920 * 192 * 2).toFixed(2) + "px";
-            document.querySelector(".videoImage2").style.height = ((window.document.body.offsetWidth / 1920 * 192 * 2) * (1080 /1920)).toFixed(2) + "px";
+            if(document.querySelector(".divMp4Front")){
+                document.querySelector(".divMp4Front").style.height = ((window.document.body.offsetWidth<1920?window.document.body.offsetWidth:1920) * (1080 /1920)).toFixed(2) + "px";
+                }
+            if(document.querySelector(".divMp4Words")){
+                document.querySelector(".divMp4Words").style.height = ((window.document.body.offsetWidth<1920?window.document.body.offsetWidth:1920) * (1080 /1920)).toFixed(2) + "px";
+            }
+            if(document.querySelector(".div_txt_btn")){document.querySelector(".div_txt_btn").style.height = document.querySelector(".divMp4Words").style.height;}
+            if(document.querySelector(".videoSelect")){
+                document.querySelector(".videoSelect").style.width = (window.document.body.offsetWidth / 1920 * 192 * 2).toFixed(2) + "px";
+                document.querySelector(".videoSelect").style.height = ((window.document.body.offsetWidth / 1920 * 192 * 2) * (1080 /1920) * 2).toFixed(2) + "px"; 
+                document.querySelector(".videoSelect").style.top = (window.document.body.offsetWidth * (1080 /1920) - 
+                                                                (window.document.body.offsetWidth / 1920 * 192 * 2) * (1080 /1920) * 2 - 30) + "px" ;
+                document.querySelector(".videoSelect").style.left = (window.document.body.offsetWidth - (window.document.body.offsetWidth / 1920 * 192 * 2) - 2) + "px" ;
+            }
+            if(document.querySelector(".videoImage1") && document.querySelector(".videoImage2")) {
+                document.querySelector(".videoImage1").style.width = (window.document.body.offsetWidth / 1920 * 192 * 2).toFixed(2) + "px";
+                document.querySelector(".videoImage1").style.height = ((window.document.body.offsetWidth / 1920 * 192 * 2) * (1080 /1920)).toFixed(2) + "px"; 
+                document.querySelector(".videoImage2").style.width = (window.document.body.offsetWidth / 1920 * 192 * 2).toFixed(2) + "px";
+                document.querySelector(".videoImage2").style.height = ((window.document.body.offsetWidth / 1920 * 192 * 2) * (1080 /1920)).toFixed(2) + "px";
+            }
 
         };
     },
     methods: {
+
+        _isMobile() {
+            let flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+            return flag;
+        },
         PlayVideo: function(){
             this.videoPlay = !this.videoPlay;
             if(this.videoPlay) {
@@ -233,9 +270,12 @@ export default {
     #fullVideo {
         margin-bottom: -8px;
     }
-    
+    .video_container {
+        background-color: black;
+    }
     .box {
         display: inline-block;
+        background-color: black;
     }
 
     .videoImage1, .videoImage2 {
@@ -288,6 +328,7 @@ export default {
         vertical-align: middle;
         color: white;
         display: table;
+        left: 0px;
     }
 
     .puppy_txt1{
@@ -326,6 +367,9 @@ export default {
         height: 40px;
         text-align: center;
         margin: 0 auto;
+        span:hover {
+            color: #929497;
+        }
     }
 
     .video_btn2 {
@@ -394,5 +438,17 @@ export default {
         }
     }
 
+    .div_image_common {
+        // min-width: 1280px;
+        max-width: 1280px;
+        height: 680px;
+        background-size: cover;
+        display: block;
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
 </style>
 
