@@ -4,14 +4,14 @@
         <div :class="_isMobile() ? 'pagefooterMid_mobile' : 'pagefooterMid'">
             <div :class="!_isMobile()?'footerInfo':'footerInfo-mobile'">
                 <div :class="!_isMobile()?'footerLeft':'footerLeft-mobile'">
-                    <div class="footerLeft_div">
+                    <!-- <div class="footerLeft_div">
                         <span>售后服务</span>
                         <div>
                             <router-link to="">
                                 <a herf="#">客服邮箱</a>
                             </router-link>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="footerLeft_div">
                         <span>在线购买</span>
                         <div>
@@ -22,21 +22,26 @@
                     </div>
                     <div class="footerLeft_div">
                         <span>站点地图</span>
-                        <div>
+                        <!-- <div>
                             <router-link to="">
                                 <a herf="#">友情链接</a>
                             </router-link>
+                        </div> -->
+                        <div>
+                            <router-link to="/legalnotices">
+                                <a herf="#">法律声明</a>
+                            </router-link>
                         </div>
                         <div>
-                            <router-link to="">
-                                <a herf="#">法律声明</a>
+                            <router-link to="/privacyprotection">
+                                <a herf="#">隐私保护</a>
                             </router-link>
                         </div>
                     </div>
                     <div class="footerLeft_div">
                         <span>关于我们</span>
-                        <div>
-                        <router-link to="">
+                        <div v-if="!_isMobile()">
+                        <router-link to="/aboutus">
                             <a herf="#">公司介绍</a>
                         </router-link>
                         </div>
@@ -68,7 +73,7 @@
                 <div :class="!_isMobile()?'footerRight':'footerRight-mobile'">
                     <div>
                         <a herf="#">全国统一服务热线：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                        <span class="serviceNum">400-0008-360&nbsp;</span>
+                        <span class="serviceNum">400-000-1320&nbsp;</span>
                         <br/>
                         <a herf="#">工作时间：周一至周日 9:00-18:00（仅收市话费）</a>
                     </div>
@@ -79,8 +84,9 @@
         </div>
       </div>
         <div class="recordInfo">
-            <p v-if="!_isMobile()">Copyright © 2018 Puppy Robot  |  京公网络备案号 | 网络文化经营许可证备案号</p>
-            <p v-else>Copyright © 2018 Puppy Robot  <br />  京公网络备案号 | 网络文化经营许可证备案号</p>
+            <p>Copyright © 2018 Puppy Robot</p>
+            <!-- <p v-if="!_isMobile()">Copyright © 2018 Puppy Robot  |  京公网络备案号 | 网络文化经营许可证备案号</p>
+            <p v-else>Copyright © 2018 Puppy Robot  <br />  京公网络备案号 | 网络文化经营许可证备案号</p> -->
         </div>
   </div>
 </template>
@@ -144,7 +150,7 @@ export default {
         float: left;
         width: 35%;
         .footerLeft_div {
-            width: 20%;
+            width: 25%;
             margin-top: 20px;
             height: 140px;
             float: left;
@@ -220,7 +226,7 @@ export default {
         height: $footerHeight;
         width: 100%;
         .footerLeft_div {
-            width: 25%;
+            width: 33.3%;
             margin-top: 20px;
             height: 140px;
             float: left;

@@ -33,7 +33,16 @@ module.exports = {
     // https://vue-loader.vuejs.org/en/options.html#cachebusting
     cacheBusting: true,
 
-    cssSourceMap: true
+    cssSourceMap: true,
+    proxyTable: {
+      '/api': {
+        target: 'http://bbs.puppyrobot.com/api/',  // 通过本地服务器将你的请求转发到这个地址
+        changeOrigin: true,  // 设置这个参数可以避免跨域
+        pathRewrite: {
+          '/api': '/'  //可用/api来代替服务器地址
+        }
+      },
+    },
   },
 
   build: {

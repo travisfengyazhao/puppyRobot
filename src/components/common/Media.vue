@@ -3,6 +3,7 @@
       <!-- <div id="newsTop">
 
       </div> -->
+    <router-link :to="{path:'/newsdetail', query: {id: mediaContent.id}}" target="_blank" class="clickable">
       <div id="newsBtm" :style="{height:`${mediaHeight}px !important`}">
         <div class="newsImageContainer" :style="{height:`${mediaHeight}px !important`}">
             <div id="newsBtmImage" :style="{backgroundImage:`url(${mediaContent?mediaContent.img:''})`,height:`${mediaHeight}px !important`}">
@@ -16,6 +17,7 @@
             </div>
         </div>
       </div>
+    </router-link>
   </div>
 </template>
 

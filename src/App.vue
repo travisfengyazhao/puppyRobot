@@ -15,6 +15,7 @@
 <script type="text/ecmascript-6">
 import PageHeader from './components/common/pageheader'
 import PageFooter from './components/common/pagefooter'
+let _ = require('lodash')
 
 export default {
   name: 'App',
@@ -31,6 +32,16 @@ export default {
       // 监听这个dom的scroll事件
       const _this = this;
       window.addEventListener('scroll', _this.handleScroll); // Dom树加载完毕
+      document.getElementById('app').style.display = 'block';
+      document.getElementById('appLoading').style.display = 'none';
+      if(this.$route.path =="/") {
+        if (this._isMobile()) {
+            this.$router.replace('/puppycubes');
+          } else {
+            this.$router.replace('/');
+          }
+      }
+    
     },
 
     destroyed () {
@@ -51,7 +62,11 @@ export default {
             this.istabBar = false
             mainPart.style.paddingTop = "0px";
         }     
-      }
+      },
+      _isMobile() {
+        let flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+        return flag;
+      },
     }
     
 }

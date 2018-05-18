@@ -8,7 +8,7 @@
             <div id='divNews'>
               NEWS
             </div>
-            <div class="solutionName">新闻中心</div>
+            <div class="solutionName">媒体报道</div>
           </div>
 
           <div class="headerLine">

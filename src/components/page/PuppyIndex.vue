@@ -3,61 +3,60 @@
     <div>
       <Banner :slideLists="slideLists" :isAutoplay="true"></Banner>
     </div>
-     <div :class="pcMode?'newsCol':'newsCol_mobile'">
-      <div :class="pcMode?'newsContainer':'newsContainer_mobile'">
-        <div :class="pcMode?'techContainer':'techContainer_mobile'">
+     <div :class="!_isMobile()?'newsCol':'newsCol_mobile'">
+      <div :class="!_isMobile()?'newsContainer':'newsContainer_mobile'">
+        <div :class="!_isMobile()?'techContainer':'techContainer_mobile'">
           <div class="titleLine"></div>
           <div>
             <div class="mediaTitle">
               技术方案
-              <div class="moreInfo" :style="{marginRight: `${pcMode?40:0}px`}">
+              <!-- <div class="moreInfo" :style="{marginRight: `${!_isMobile()?40:0}px`}">
                 <a herf="">+更多</a>
-              </div>
+              </div> -->
             </div>
            
           </div>
-          <div v-for="(newsContent) in newsContents" :key="newsContent.id">
-            <div :class="pcMode? 'newsTabPC' : 'newsTabMobile'">
-              <News :newsContent="newsContent" />
-            </div>
-            <div class="newsSpace" v-if="pcMode"> 
+          <div>
+            <div :class="!_isMobile()? 'newsTabPC' : 'newsTabMobile'">
+              <Tech :contents="tech" :techId="'tech'"/>
             </div>
           </div>
         </div>
-        <div :class="pcMode?'productContainer':'productContainer_mobile'">
+        <div :class="!_isMobile()?'productContainer':'productContainer_mobile'">
           <div class="titleLine"></div>
           <div class="mediaTitle">
             产品列表
-            <div class="moreInfo">
+            <!-- <div class="moreInfo">
               <a herf="">+更多</a>
-            </div>
+            </div> -->
           </div>
-          <div v-for="(product, index) in productLists" :key="product.id">
-            <div :class="pcMode? 'newsTabPC' : 'newsTabMobile'">
-              <News :newsContent="product"/>
+          <div>
+            <div :class="!_isMobile()? 'newsTabPC' : 'newsTabMobile'">
+              <Tech :contents="productLists" :techId="'product'" />
             </div>
-            <div class="newsSpace" v-if="pcMode && (index < 1)"> 
-            </div>
+            
           </div>
         </div>
       </div>
     </div>
-    <div :class="pcMode? 'mediaReport' : 'mediaReport_mobile'">
-      <div :class="pcMode? 'mediaContainer':'mediaContainer_mobile'">
+    <div :class="!_isMobile()? 'mediaReport' : 'mediaReport_mobile'">
+      <div :class="!_isMobile()? 'mediaContainer':'mediaContainer_mobile'">
         <div class="titleLine"></div>
         <div class="mediaTitle">
           媒体报道
+            <router-link to="/newscenter">
             <div class="moreInfo">
-              <a herf="">+更多</a>
+              <a herf="#">+更多</a>
             </div>
+            </router-link>
         </div>
         <div>
-          <div :class="pcMode? 'mediaMain' : 'mediaMain_mobile'">
+          <div :class="!_isMobile()? 'mediaMain' : 'mediaMain_mobile'">
             <Media :mediaContent="mediaLists[0]" :mediaHeight="430"/>
           </div>
-          <div :class="pcMode? 'mediaSub' : 'mediaSub_mobile'">
-            <div :class="pcMode?'mediaSub1':'mediaSub1_mobile'"><Media :mediaContent="mediaLists[1]" :mediaHeight="200"/></div>  
-            <div :class="pcMode?'mediaSub2':'mediaSub2_mobile'"><Media :mediaContent="mediaLists[2]" :mediaHeight="200"/></div>
+          <div :class="!_isMobile()? 'mediaSub' : 'mediaSub_mobile'">
+            <div :class="!_isMobile()?'mediaSub1':'mediaSub1_mobile'"><Media :mediaContent="mediaLists[1]" :mediaHeight="200"/></div>  
+            <div :class="!_isMobile()?'mediaSub2':'mediaSub2_mobile'"><Media :mediaContent="mediaLists[2]" :mediaHeight="200"/></div>
           </div>
         </div>
       </div>
@@ -71,9 +70,16 @@
 import Banner from './../common/Banner'
 import News from './../common/News'
 import Media from './../common/Media'
+import Tech from './../common/Tech'
 
 export default {
   name: "PuppyIndex",
+  components: {
+    Banner,
+    News,
+    Media,
+    Tech,
+  },
   data() {
     return {
        slideLists: [
@@ -89,25 +95,21 @@ export default {
             backgroundColor: "#231f20",
             router: "/puppycube"
          },
-        //   {
-        //     id: 3,
-        //     img: require("./../../assets/3.jpg"),
-        //     router: "/puppycubes"
-        //  },
        ],
-       pcMode: window.innerWidth >= 1280,
-       newsContents: [
+       tech: [
           {
             id: 1,
             title: 'puppy亮相AI无人车技术，不只是无人车这么简单',
             subtitle: '新款小狗机器人1已发布',
             img: require("./../../assets/images/index/jsfa_01.png"),
+            path: '/robottech',
           },
           {
             id: 2,
             title: '小狗机器人技术，未来人工智能机器人的数量真的会超过人类？',
             subtitle: '新款小狗机器人2已发布',
             img: require("./../../assets/images/index/jsfa_02.png"),
+            path: '/aisighttech',
           }
        ],
        productLists: [
@@ -116,12 +118,14 @@ export default {
             title: '无论身在何处，哈奇智家APP都可掌控家中一切',
             subtitle: '新款小狗机器人3已发布',
             img: require("./../../assets/images/index/cplb_01.png"),
+            path: '/puppycubes',
           },
           {
             id: 2,
             title: '哈奇智能让生活更智慧',
             subtitle: '新款小狗机器人2已发布',
             img: require("./../../assets/images/index/cplb_02.png"),
+            path: '/hachiproduct',
           }
        ],
        mediaLists: [
@@ -146,23 +150,19 @@ export default {
        ]
     }
   },
-  mounted() {
-    const that = this;
-    window.onresize = function temp() {
-        that.pcMode = window.innerWidth >= 1280;
-    };
-  },
-  components: {
-    Banner,
-    News,
-    Media
-  },
+
+  methods: {
+    _isMobile() {
+      let flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+      return flag;
+    },
+  }
 
 }
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 .titleLine {
   width: 70px;
@@ -185,6 +185,10 @@ export default {
   font-size: 10pt;
   text-align: right;
   line-height: 40px;
+  color: black;
+  a:hover {
+    color: #929497;
+  }
 }
 
 .mediaReport {
@@ -301,11 +305,6 @@ export default {
   width: 100%;
 }
 
-.newsSpace {
-  width: 40px;
-  height: 220px;
-  float: left;
-}
 
 .newColMobile {
   width: 100%;
@@ -315,8 +314,8 @@ export default {
 
 .newsTabPC {
   float: left;
-  width: 290px;
-  box-shadow: 1px 1px 2px #e6e6e6;
+  width: 620px;
+
 }
 
 .newsTabMobile {

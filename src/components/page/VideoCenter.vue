@@ -8,7 +8,7 @@
             <div id='divNews'>
               VIDEO
             </div>
-            <div class="solutionName">视频中心</div>
+            <div class="solutionName">产品视频</div>
           </div>
 
           <div class="headerLine">
@@ -45,9 +45,12 @@ export default {
            videoLists: [
             {
                 id: 1,
-                date: 'May 24, 2018',
+                date: 'May 24, 2018, 09:10',
                 title: '小狗机器人真黑科技产品魔幻 上市: puppy cube s 光影魔屏 触手可及',
+                auth: 'puppy cube',
                 img: require("./../../assets/images/videocenter/div_01.jpg"),
+                article: '&nbsp;&nbsp;小狗机器人黑科技产品光影魔屏puppy cube s上市，未来触手可及。<br/><br/>于5月24日发布的小狗机器人puppy cube s智能化设备。',
+                video: require('./../../assets/video/puppy_demo_1.mp4'),
             },
             {
                 id: 2,
@@ -55,7 +58,7 @@ export default {
                 title: '智慧办公黑科技puppy cube s 协同书写，墙面秒变白板，视 频会议高效便捷',
                 img: require("./../../assets/images/videocenter/div_02.jpg"),
             }
-        ]    
+        ],
       }
   },
     components: {
@@ -114,7 +117,7 @@ $hachiSMB: 46px;
     }
 
     .newscontent {
-        margin-top: 30px;
+        // margin-top: 30px;
         width: 100%;
         position: relative;
     }

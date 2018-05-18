@@ -14,13 +14,13 @@
                         <ul>
                             <router-link to="/puppycubes">
                             <li>
-                                <img src="./../../assets/images/icon_puppy-cube-s.png">
+                                <img src="./../../assets/images/icon_cube_s.png">
                                 <a herf="">puppy cube s</a>
                             </li>    
                             </router-link>
                             <router-link to="/puppycube">
                             <li>
-                                <img src="./../../assets/images/icon_puppy-cube-s.png">
+                                <img src="./../../assets/images/icon_cube.png">
                                 <a herf="">puppy cube</a>
                             </li>    
                             </router-link>
@@ -65,12 +65,12 @@
                 <li>
                     <a herf="">AI技术方案</a>
                     <ul>
-                        <router-link to="">
+                        <!-- <router-link to="">
                         <li>
                             <a herf="">AI交互技术</a>
                         </li>  
-                        </router-link>
-                        <router-link to="">
+                        </router-link> -->
+                        <router-link to="/robottech">
                         <li>
                             <a herf="">机器人技术</a>
                         </li>    
@@ -90,22 +90,22 @@
                             <a herf="">品牌理念</a>
                         </li>  
                         </router-link> -->
-                        <router-link to="">
+                        <router-link to="/aboutus">
                         <li>
                             <a herf="">公司介绍</a>
                         </li>    
                         </router-link>
-                        <router-link to="">
+                        <!-- <router-link to="">
                         <li>
                             <a herf="">品牌历程</a>
                         </li>    
-                        </router-link>
-                        <router-link to="">
+                        </router-link> -->
+                        <!-- <router-link to="">
                         <li>
                             <a herf="">团队介绍</a>
                         </li>    
-                        </router-link>
-                        <router-link to="">
+                        </router-link> -->
+                        <router-link to="/contactus">
                         <li>
                             <a herf="">联系我们</a>
                         </li>    
@@ -117,15 +117,15 @@
                     <ul>
                         <router-link to="/newscenter">
                         <li>
-                            <a herf="">新闻中心</a>
+                            <a herf="">媒体报道</a>
                         </li>  
                         </router-link>
                         <router-link to="/videocenter">
                         <li>
-                            <a herf="">视频中心</a>
+                            <a herf="">产品视频</a>
                         </li>    
                         </router-link>
-                        <router-link to="">
+                        <!-- <router-link to="">
                         <li>
                             <a herf="">产品评测</a>
                         </li>    
@@ -134,7 +134,7 @@
                         <li>
                             <a herf="">产品图鉴</a>
                         </li>    
-                        </router-link>
+                        </router-link> -->
                     </ul>
                 </li>
                 <li>
@@ -165,7 +165,7 @@
                     <a herf="">puppy cube s</a>
                 </li>    
                 </router-link>
-                <router-link to="">
+                <router-link to="/puppycube">
                 <li @click="mobileMenuDisplay()">
                     <a herf="">puppy cube</a>
                 </li>    
@@ -454,7 +454,6 @@
         text-align: left;
         width:100%;
         background-color: $headerColor;
-        opacity: 0.9;
     }
 
     #mobileMenuList li{

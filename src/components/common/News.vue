@@ -1,19 +1,21 @@
 <template>
   <div :id="newsId" class="newsClass" :style="{height:`${newsImageHeight + 57}px !important`}">
-      <div id="newsBtm" :style="{height:`${newsImageHeight + 57}px !important`}">
-        <div class="newsImageContainer" :style="{height:`${newsImageHeight}px !important`}">
-            <div id="newsBtmImage" :style="{backgroundImage:`url(${newsContent?newsContent.img:''})`, height:`${newsImageHeight}px !important`} ">
+      <router-link :to="{path:'/newsdetail', query: {id: newsContent.id}}" target="_blank" class="clickable">
+        <div id="newsBtm" :style="{height:`${newsImageHeight + 57}px !important`}">
+            <div class="newsImageContainer" :style="{height:`${newsImageHeight}px !important`}">
+                <div id="newsBtmImage" :style="{backgroundImage:`url(${newsContent?newsContent.img:''})`, height:`${newsImageHeight}px !important`} ">
+                </div>
+            </div>
+            <div class="imageBtn" v-if="!newsBtnHide">
+                <img src="./../../assets/images/index/button_01.png">
+            </div>
+            <div class="newsTitle">
+                <div class="title">
+                    {{newsContent? newsContent.title : ''}}
+                </div>
             </div>
         </div>
-        <div class="imageBtn" v-if="!newsBtnHide">
-            <img src="./../../assets/images/index/button_01.png">
-        </div>
-        <div class="newsTitle">
-            <div class="title">
-                {{newsContent? newsContent.title : ''}}
-            </div>
-        </div>
-      </div>
+      </router-link>
   </div>
 </template>
 
@@ -87,6 +89,11 @@ export default {
         top: 105px;
         left: 20px;
         cursor: pointer;
+    }
+
+    .clickable {
+        cursor: pointer;
+        text-decoration-line: none;
     }
     
 

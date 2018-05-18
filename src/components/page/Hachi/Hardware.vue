@@ -235,6 +235,7 @@
                     <img src="./../../../assets/images/hachi/product/image_31.jpg"/>
                     <img src="./../../../assets/images/hachi/product/image_32.jpg"/>
                     <img src="./../../../assets/images/hachi/product/image_33.jpg"/>
+                    <img src="./../../../assets/images/hachi/product/image_40.jpg"/>
                 </div>
               </div>
           </div>

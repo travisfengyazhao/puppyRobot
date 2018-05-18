@@ -27,8 +27,10 @@
 
         <div class="newsImageContainer">
             <div id="newsBtmImage" :style="{backgroundImage:`url(${videoContent?videoContent.img:''})`}">
-                  <div class="imageBtn">
-                    <img src="./../../assets/images/videocenter/button_play.png">
+                <div class="imageBtn">
+                     <router-link :to="{path:'/videodetail',query: {id: videoContent.id}}" target="_blank">
+                        <img src="./../../assets/images/videocenter/button_play.png">
+                     </router-link>
                 </div>
             
             </div>

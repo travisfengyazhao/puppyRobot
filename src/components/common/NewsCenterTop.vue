@@ -4,16 +4,18 @@
 
       </div> -->
       <div id="newsBtm" :style="{height:`${newsHeight}px !important`}">
-        <div class="newsImageContainer" :style="{height:`${newsHeight-50}px !important`}">
-            <div id="newsBtmImage" :style="{backgroundImage:`url(${newsContent?newsContent.img:''})`,height:`${newsHeight-50}px !important`}">
+          <router-link :to="{path:'/newsdetail',query: {id: newsCenterId}}" target="_blank" class="clickable">
+            <div class="newsImageContainer" :style="{height:`${newsHeight-50}px !important`}">
+                <div id="newsBtmImage" :style="{backgroundImage:`url(${newsContent?newsContent.img:''})`,height:`${newsHeight-50}px !important`}">
+                </div>
             </div>
-        </div>
-        <div class="newsTitle">
-            <div class="space" v-if="isTitleTwoLine"></div>
-            <div :class="isTitleTwoLine ? 'title title_two_line' : 'title'">
-                {{newsContent? newsContent.title : ''}}
+            <div class="newsTitle">
+                <div class="space" v-if="isTitleTwoLine"></div>
+                <div :class="isTitleTwoLine ? 'title title_two_line' : 'title'">
+                    {{newsContent? newsContent.title : ''}}
+                </div>
             </div>
-        </div>
+          </router-link>
       </div>
   </div>
 </template>
@@ -54,7 +56,6 @@ export default {
         transition: all 1s;    
         background-size:100% 100%;
         -moz-background-size:100% 100%;
-        cursor: pointer;
     }
 
     #newsBtmImage:hover {
@@ -105,6 +106,11 @@ export default {
 
     .title_two_line {
         line-height: 20px;
+    }
+
+    .clickable {
+        cursor: pointer;
+        text-decoration-line: none;
     }
 
 </style>

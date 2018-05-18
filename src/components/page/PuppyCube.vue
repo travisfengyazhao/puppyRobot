@@ -9,7 +9,7 @@
             <div class="divMp4Words">
                 <div class="div_txt_btn">
                     
-                    <img src="./../../assets/images/puppy_cube/focus_title_01.png">
+                    <img class="div_words_img" src="./../../assets/images/puppy_cube/focus_title_01.png">
                     <br />
                     <br />
                     <div class="video_btn1">
@@ -78,6 +78,11 @@
         <!-- <div class="div_image_common" style="background-image: url('./../../assets/images/puppy_cube/div_cpcs_02.jpg'); height：910px !important;">
         </div> -->
     </div>
+    <div class="loading">
+        <span><img src="./../../../static/loading_a.gif"/></span>
+    </div>
+
+
   </div>
 
 </template>
@@ -192,6 +197,12 @@ export default {
             }
 
         };
+
+        document.querySelector("#bgvideo").addEventListener("canplay", function()
+        {
+            document.querySelector(".loading").style.display = "none";
+        });
+
     },
     methods: {
 
@@ -262,7 +273,7 @@ export default {
         min-width: 100%;
         width: 100%; 
         height: auto; 
-        z-index: -100;
+        // z-index: -100;
         //background: url(polina.jpg) no-repeat;
         background-size: cover; 
     }
@@ -298,7 +309,7 @@ export default {
         opacity: 0.6;
         text-align: center;
         vertical-align: middle;
-        z-index: -99;
+        // z-index: -99;
     }
 
     .divVideoPlayer {
@@ -356,6 +367,11 @@ export default {
         vertical-align: middle; 
         display: table-cell; 
         overflow: hidden; 
+        width: 100%;
+        .div_words_img {
+            max-width: 580px;
+            width: 100%;
+        }
     }
 
     .video_btn1 {
@@ -423,7 +439,8 @@ export default {
     .designImg {
         text-align: center;
         img {
-            width: 1280px;
+            max-width: 1280px;
+            width: 100%;
             display: block;  
             margin: 0 auto;
         }
@@ -449,6 +466,29 @@ export default {
         margin: 0 auto;
         background-repeat: no-repeat;
         background-position: center center;
+    }
+
+    .loading {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 99999;
+        top: 46px;
+        left: 0px;
+        background-color: white;
+        span {
+            position: absolute;
+            display: block;
+            font-size: 50px;
+            line-height: 50px;
+            top: 50%;
+            left: 50%;
+            width: 140px;
+            height: 110px;
+            -webkit-transform: translateY(-50%)  translateX(-50%);
+            transform: translateY(-50%)  translateX(-50%);
+        }
+
     }
 </style>
 
