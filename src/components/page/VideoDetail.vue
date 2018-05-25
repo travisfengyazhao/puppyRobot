@@ -41,7 +41,7 @@
                     <div class="speratLine"></div>
                     <div class="article" v-html="videoArticle.article"></div>
                     <div class="video">
-                        <video :src="videoArticle.video" id="article_video" preload="true" controls="controls" width="100%"></video>
+                        <video :src="videoArticle.video" :poster="videoArticle.img" id="article_video" preload="true" controls="controls" width="100%"></video>
                     </div>
                 </div>
             </div>
@@ -52,7 +52,6 @@
 </template>
 
 <script>
-
 import router from "./../../router/index"
 export default {
     data() {
@@ -63,20 +62,34 @@ export default {
                 {
                     id: '1',
                     date: 'May 24, 2018, 09:10',
-                    title: '小狗机器人真黑科技产品魔幻 上市: puppy cube s 光影魔屏 触手可及',
+                    title: '小狗机器人真黑科技产品魔幻: puppy cube s 光影魔屏 触手可及',
                     auth: 'puppy cube',
                     auth_img: require("./../../assets/images/videocenter/user.png"),
-                    img: require("./../../assets/images/videocenter/div_01.jpg"),
-                    article: '<p>&nbsp;&nbsp;&nbsp;&nbsp;小狗机器人黑科技产品光影魔屏puppy cube s上市，未来触手可及。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;于5月24日发布的小狗机器人puppy cube s智能化设备。</p>',
-                    video: require('./../../assets/video/puppy_demo_1.mp4'),
+                    img: require("./../../assets/video/videoload-cube-s-17s.jpg"),
+                    article: '<p style="text-indent: 2em">小狗机器人黑科技产品光影魔屏puppy cube s今日发布，未来触手可及。</p><p style="text-indent: 2em">小狗机器人黑科技产品将于5月24日发布，其是一部智能化设备。</p>',
+                    video: require('./../../assets/video/cube_s_17.mp4')
                 },
                 {
                     id: '2',
-                    date: 'May 24, 2018',
-                    title: '智慧办公黑科技puppy cube s 协同书写，墙面秒变白板，视 频会议高效便捷',
-                    img: require("./../../assets/images/videocenter/div_02.jpg"),
+                    date: 'May 24, 2018, 08:34',
+                    title: 'puppy cube 光影魔屏',
+                    auth: 'puppy cube',
+                    auth_img: require("./../../assets/images/videocenter/user.png"),
+                    img: require("./../../assets/video/videoload-cube.jpg"),
+                    article: '<p style="text-indent: 2em">小狗机器人黑科技产品光影魔屏puppy cube，未来触手可及。</p>',
+                    video: require('./../../assets/video/cube_final.mp4')
+                },
+                {
+                    id: '3',
+                    date: 'May 24, 2018, 07:15',
+                    title: '小狗机器人真黑科技产品魔幻: puppy cube s 应用场景',
+                    auth: 'puppy cube',
+                    auth_img: require("./../../assets/images/videocenter/user.png"),
+                    img: require("./../../assets/video/videoload-cube-s-100s.jpg"),
+                    article: '<p style="text-indent: 2em"></p>',
+                    video: require('./../../assets/video/cube_s_100.mp4')
                 }
-            ],
+            ]
         }
     },
 

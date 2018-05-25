@@ -150,6 +150,7 @@ $hachiSMB: 46px;
         margin: 0 auto;
         background-repeat: no-repeat;
         background-position: center center;
+        width: 100%;
     }
 
     .img_01 {

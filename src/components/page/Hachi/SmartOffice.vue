@@ -173,7 +173,7 @@ export default {
                 this.currOfficeIndex = 7
             }
         }
-    },
+    }
 }
 </script>
 
@@ -192,6 +192,7 @@ export default {
         margin: 0 auto;
         background-repeat: no-repeat;
         background-position: center center;
+        width: 100%;
     }
 
     .office_01_words {

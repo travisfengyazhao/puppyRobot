@@ -62,7 +62,7 @@
     </div>
   </div>
 </template>
-<script type="text/ecmascript-6">
+<script>
 import Hardware from './Hachi/Hardware';
 import SmartHomeApp from './Hachi/SmartHomeApp';
 import HachiApp from './Hachi/HachiApp';
@@ -86,7 +86,7 @@ export default {
     },
     currDispaly: function(index) {
         this.currDisIndex = index;
-    },
+    }
   }
 }
 </script>
@@ -200,6 +200,7 @@ $hachiSMB: 46px;
         margin: 0 auto;
         background-repeat: no-repeat;
         background-position: center center;
+        width: 100%;
     }
 
     .hachi_logo {

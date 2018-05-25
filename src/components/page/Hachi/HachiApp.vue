@@ -22,62 +22,62 @@
     </div>
   </div>
 </template>
+
 <script>
 export default {
-    name: 'hachiApp',
-
-
+    name: 'hachiApp'
 }
 </script>
 
 <style lang="scss" scoped>
     .contentMain {
-        max-width: 2580px;
-        height: 968px;
-        background-image: url("./../../../assets/images/hachi/product/hachiAPP/div_01.jpg");
-       
+      max-width: 2580px;
+      height: 820px;
+      background-image: url("./../../../assets/images/hachi/product/hachiAPP/div_01.jpg");
     }
 
     .imgBackCenter {
-        background-size: cover;
-        display: block;
-        position: relative;
-        overflow: hidden;
-        margin: 0 auto;
-        background-repeat: no-repeat;
-        background-position: center center;
+      background-size: cover;
+      display: block;
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto;
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 100%;
     }
 
     .hachi_logo {
-        margin-top: 120px;
+      margin-top: 100px;
     }
 
     .product_title {
-        margin-top: 45px;
-        font-size: 30pt;
+      margin-top: 45px;
+      font-size: 30pt;
     }
 
     .product_sub_title {
-        font-size: 16pt;
-        margin-top: 20px;
-        margin-bottom: 20px;
+      font-size: 16pt;
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
 
     .product_produce {
-        font-size: 12pt;
-        margin-top: 30px;
-        line-height: 25px;
+      font-size: 12pt;
+      margin-top: 30px;
+      line-height: 25px;
     }
 
     .product_download {
-        font-size: 12pt;
-        margin-top: 520px;
-        line-height: 25px;
+      font-size: 12pt;
+      margin-top: 365px;
+      line-height: 25px;
     }
 
     .whitespace {
-        width: 100%;
-        height: 155px;
+      width: 100%;
+      height: 155px;
     }
+
 
 </style>

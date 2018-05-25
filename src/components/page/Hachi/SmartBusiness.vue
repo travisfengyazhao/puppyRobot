@@ -146,6 +146,7 @@ export default {
         margin: 0 auto;
         background-repeat: no-repeat;
         background-position: center center;
+        width: 100%;
     }
 
     .business_01_words {

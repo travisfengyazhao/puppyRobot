@@ -29,7 +29,7 @@
             <div id="newsBtmImage" :style="{backgroundImage:`url(${videoContent?videoContent.img:''})`}">
                 <div class="imageBtn">
                      <router-link :to="{path:'/videodetail',query: {id: videoContent.id}}" target="_blank">
-                        <img src="./../../assets/images/videocenter/button_play.png">
+                        <img src="./../../assets/images/videocenter/play_01.png">
                      </router-link>
                 </div>
             
@@ -44,7 +44,7 @@
 <script>
 export default {
   name: 'Video',
-  props: ['videoId', 'videoContent' ],
+  props: ['videoId', 'videoContent' ]
 }
 
 </script>

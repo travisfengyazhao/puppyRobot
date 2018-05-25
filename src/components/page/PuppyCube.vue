@@ -2,7 +2,7 @@
   <div id="PuppyCubeS">
     <div class="video_container">
         <div class="box">
-            <video src="./../../assets/puppy_demo.mp4" id="bgvideo" autoplay loop width="100%" muted="true">
+            <video src="./../../assets/video/cube_30s.mp4" id="bgvideo" autoplay loop width="100%" muted="true" poster="./../../assets/video/videoload-cube.jpg">
             </video>
             <div class="divMp4Front">
             </div> 
@@ -16,71 +16,72 @@
                         <div class="video_btns" >
                             <div class="video_btn2" @click="PlayVideo()">
                                 <img class="imgPlay" src="./../../assets/images/puppy_cube_s/button_wzsp.png">
-                                <span class="span_b">观看完整视频</span>   
+                                <span class="span_b">完整视频</span>   
                             </div>
                             <div class="video_space"></div>
+                            <a href="https://trade-z.jd.com/funding/project_details.action?projectId=101098" target="_blank">
                             <div class="video_btn3">
                                 <img class="imgPlay" src="./../../assets/images/puppy_cube/button_jdzc.png">
                                 <span class="span_b">京东众筹</span>   
                             </div>
+                            </a>
                         </div>
                     </div>
                 </div>       
             </div>
         </div>
     </div>
-    <div class="divVideoPlayer" v-show="videoPlay" @click="displayVideoSelecter()">
-        <div class="closeBtn" @click="PlayVideo()">
-            X
-        </div>
-        <video src="./../../assets/video/puppy_demo_1.mp4" id="fullVideo" preload="true" loop controls="controls" width="100%">
+
+        <video v-show="videoPlay" src="./../../assets/video/cube_final.mp4" id="fullVideo" controls="controls" width="100%" poster="./../../assets/video/videoload-cube.jpg">
         </video>
-        <div class="videoSelect">
-            <img class="videoImage1" src="./../../assets/images/puppy_cube_s/video1.jpg" @click="selectVideo(1)">
-            <img class="videoImage2" src="./../../assets/images/puppy_cube_s/video2.jpg" @click="selectVideo(2)">
+
+    <div class="designImg" style="background-color:#dedede;">
+        <!-- <img src="./../../assets/images/puppy_cube/div_cpxt.jpg"  style="max-width:1440px;"> -->
+        <div class="div_image_common div_cpxt">
         </div>
     </div>
-    <div class="designImg" style="background-color:black; margin-top:-6px;">
-        <img src="./../../assets/images/puppy_cube_s/div_cpxt.jpg">
-        <!-- <div class="div_image_common" style="background-image: url('./../../assets/images/puppy_cube_s/div_cpxt.jpg');">
-        </div> -->
+    <div class="designImg">
+        <Banner :slideLists="designList" :swiperHeight="'1010px'"></Banner>
     </div>
-    <div class="designImg"><Banner :slideLists="designList" :swiperHeight="'680px'"></Banner></div>
-    <div><Banner :slideLists="smartHomeList" :swiperHeight="'680px'"></Banner></div>
-    <div><Banner :slideLists="smartOfficeList" :swiperHeight="'680px'"></Banner></div>
+    <div>
+        <Banner :slideLists="smartHomeList" :swiperHeight="'1010px'"></Banner>
+    </div>
+    <div>
+        <Banner :slideLists="smartOfficeList" :swiperHeight="'1010px'"></Banner>
+    </div>
 <div class="designImg" style="background-color:#FFFFFF;">
-        <img src="./../../assets/images/puppy_cube_s/div_aick.jpg">
-        <!-- <div class="div_image_common" style="background-image: url('./../../assets/images/puppy_cube_s/div_aick.jpg');">
-        </div> -->
+        <!-- <img src="./../../assets/images/puppy_cube/div_aick.jpg" style="max-width:2580px;"> -->
+        <div class="div_image_common div_aick">
+        </div>
     </div>
-    <div class="designImg" style="background-color:#f65b23;">
-        <img src="./../../assets/images/puppy_cube_s/div_aiyy.jpg">
-        <!-- <div class="div_image_common" style="background-image: url('./../../assets/images/puppy_cube_s/div_aiyy.jpg');">
-        </div> -->
+    <div class="designImg" style="background-color:#ff5a32;">
+        <!-- <img src="./../../assets/images/puppy_cube/div_aiyy.jpg" style="max-width:1440px;"> -->
+        <div class="div_image_common div_aiyy">
+        </div>
     </div>
     <div class="designImg" style="background-color:#121315;">
-        <img src="./../../assets/images/puppy_cube_s/div_cdj.jpg">
-        <!-- <div class="div_image_common" style="background-image: url('./../../assets/images/puppy_cube_s/div_cdj.jpg');">
-        </div> -->
+        <!-- <img src="./../../assets/images/puppy_cube/div_cdj.jpg" style="max-width:2580px;"> -->
+        <div class="div_image_common div_cdj">
+        </div>
     </div>
     <div class="designImg" style="background-color:#FFFFFF;">
-        <img src="./../../assets/images/puppy_cube_s/div_cpts.jpg">
-        <!-- <div class="div_image_common" style="background-image: url('./../../assets/images/puppy_cube/div_cpts.jpg');">
-        </div> -->
+        <!-- <img src="./../../assets/images/puppy_cube/div_cpts.jpg" style="max-width:2580px;"> -->
+        <div class="div_image_common div_cpts">
+        </div>
     </div>
     <div class="designImg" style="background-color:#000000;">
-        <img src="./../../assets/images/puppy_cube_s/div_cpcs_01.jpg">
-        <!-- <div class="div_image_common" style="background-image: url('./../../assets/images/puppy_cube/div_cpcs_01.jpg'); height：860px !important;">
-        </div> -->
+        <!-- <img src="./../../assets/images/puppy_cube/div_cpcs_01.jpg" style="max-width:1440px;"> -->
+        <div class="div_image_common div_cpcs_01">
+        </div>
     </div>
     <div class="designImg" style="background-color:#000000;">
-        <img src="./../../assets/images/puppy_cube_s/div_cpcs_02.jpg">
-        <!-- <div class="div_image_common" style="background-image: url('./../../assets/images/puppy_cube/div_cpcs_02.jpg'); height：910px !important;">
-        </div> -->
+        <!-- <img src="./../../assets/images/puppy_cube/div_cpcs_02.jpg" style="max-width:1440px;"> -->
+        <div class="div_image_common div_cpcs_02">
+        </div>
     </div>
-    <div class="loading">
+    <!-- <div class="loading">
         <span><img src="./../../../static/loading_a.gif"/></span>
-    </div>
+    </div> -->
 
 
   </div>
@@ -98,63 +99,74 @@ export default {
             {            
                 id: 1,
                 img: require("./../../assets/images/puppy_cube/div_sj_01.jpg"),
+                maxWidth: '2580px',
                 backgroundColor: "#ffffff",
             },
              {            
                 id: 2,
-                img: require("./../../assets/images/puppy_cube/div_sj_02.png"),
+                img: require("./../../assets/images/puppy_cube/div_sj_02.jpg"),
+                maxWidth: '2580px',
                 backgroundColor: "#000000",
             }, 
             {            
                 id: 3,
-                img: require("./../../assets/images/puppy_cube/div_sj_03.png"),
-                backgroundColor: "#F5F5F5",
-            },
+                img: require("./../../assets/images/puppy_cube/div_sj_03.jpg"),
+                maxWidth: '2580px',
+                backgroundColor: "#ffffff",
+            }
             ],
             smartHomeList: [
             {            
                 id: 1,
-                img: require("./../../assets/images/puppy_cube/div_zhjt_01.png"),
-                backgroundColor: "#F5F5F5",
+                img: require("./../../assets/images/puppy_cube/div_zhjt_01.jpg"),
+                maxWidth: '2580px',
+                backgroundColor: "#ffffff",
             },
              {            
                 id: 2,
-                img: require("./../../assets/images/puppy_cube/div_zhjt_02.png"),
-                backgroundColor: "#F5F5F5",
+                img: require("./../../assets/images/puppy_cube/div_zhjt_02.jpg"),
+                maxWidth: '2580px',
+                backgroundColor: "#ffffff",
             }, 
             {            
                 id: 3,
-                img: require("./../../assets/images/puppy_cube/div_zhjt_03.png"),
-                backgroundColor: "#e5e4ea",
+                img: require("./../../assets/images/puppy_cube/div_zhjt_03.jpg"),
+                maxWidth: '2580px',
+                backgroundColor: "#ffffff",
             },
             {            
                 id: 4,
-                img: require("./../../assets/images/puppy_cube/div_zhjt_04.png"),
-                backgroundColor: "#000000",
+                img: require("./../../assets/images/puppy_cube/div_zhjt_04.jpg"),
+                maxWidth: '2580px',
+                backgroundColor: "#ffffff",
             },
             {            
                 id: 5,
-                img: require("./../../assets/images/puppy_cube/div_zhjt_05.png"),
-                backgroundColor: "#000000",
-            },
+                img: require("./../../assets/images/puppy_cube/div_zhjt_05.jpg"),
+                maxWidth: '2580px',
+                backgroundColor: "#ffffff",
+            }
             ],
             smartOfficeList: [
             {            
                 id: 1,
-                img: require("./../../assets/images/puppy_cube_s/div_zhbg_01.png"),
-                backgroundColor: "#262a30",
+                img: require("./../../assets/images/puppy_cube/div_zhbg_01.jpg"),
+                maxWidth: '2580px',
+                backgroundColor: "#ffffff",
             },
              {            
                 id: 2,
-                img: require("./../../assets/images/puppy_cube_s/div_zhbg_02.png"),
-                backgroundColor: "#262a30",
+                img: require("./../../assets/images/puppy_cube/div_zhbg_02.jpg"),
+                maxWidth: '2580px',
+                backgroundColor: "#ffffff",
             }, 
             {            
                 id: 3,
-                img: require("./../../assets/images/puppy_cube_s/div_zhbg_03.png"),
-                backgroundColor: "#262a30",
-            },
-            ],
+                img: require("./../../assets/images/puppy_cube/div_zhbg_03.jpg"),
+                maxWidth: '2580px',
+                backgroundColor: "#ffffff",
+            }
+            ]
             
         }
     },
@@ -165,15 +177,7 @@ export default {
         document.querySelector(".divMp4Front").style.height = ((window.document.body.offsetWidth<1920?window.document.body.offsetWidth:1920) * (1080 /1920)).toFixed(2) + "px";
         document.querySelector(".divMp4Words").style.height = ((window.document.body.offsetWidth<1920?window.document.body.offsetWidth:1920) * (1080 /1920)).toFixed(2) + "px";
         document.querySelector(".div_txt_btn").style.height = document.querySelector(".divMp4Words").style.height;
-        document.querySelector(".videoSelect").style.width = (window.document.body.offsetWidth / 1920 * 192 * 2).toFixed(2) + "px";
-        document.querySelector(".videoSelect").style.height = ((window.document.body.offsetWidth / 1920 * 192 * 2) * (1080 /1920) * 2).toFixed(2) + "px"; 
-        document.querySelector(".videoSelect").style.top = (window.document.body.offsetWidth * (1080 /1920) - 
-                                                        (window.document.body.offsetWidth / 1920 * 192 * 2) * (1080 /1920) * 2 -30) + "px" ;
-        document.querySelector(".videoSelect").style.left = (window.document.body.offsetWidth - (window.document.body.offsetWidth / 1920 * 192 * 2) - 2) + "px" ;
-        document.querySelector(".videoImage1").style.width = (window.document.body.offsetWidth / 1920 * 192 * 2).toFixed(2) + "px";
-        document.querySelector(".videoImage1").style.height = ((window.document.body.offsetWidth / 1920 * 192 * 2) * (1080 /1920)).toFixed(2) + "px"; 
-        document.querySelector(".videoImage2").style.width = (window.document.body.offsetWidth / 1920 * 192 * 2).toFixed(2) + "px";
-        document.querySelector(".videoImage2").style.height = ((window.document.body.offsetWidth / 1920 * 192 * 2) * (1080 /1920)).toFixed(2) + "px"; 
+    
         window.onresize = function temp() {
             if(document.querySelector(".divMp4Front")){
                 document.querySelector(".divMp4Front").style.height = ((window.document.body.offsetWidth<1920?window.document.body.offsetWidth:1920) * (1080 /1920)).toFixed(2) + "px";
@@ -182,26 +186,23 @@ export default {
                 document.querySelector(".divMp4Words").style.height = ((window.document.body.offsetWidth<1920?window.document.body.offsetWidth:1920) * (1080 /1920)).toFixed(2) + "px";
             }
             if(document.querySelector(".div_txt_btn")){document.querySelector(".div_txt_btn").style.height = document.querySelector(".divMp4Words").style.height;}
-            if(document.querySelector(".videoSelect")){
-                document.querySelector(".videoSelect").style.width = (window.document.body.offsetWidth / 1920 * 192 * 2).toFixed(2) + "px";
-                document.querySelector(".videoSelect").style.height = ((window.document.body.offsetWidth / 1920 * 192 * 2) * (1080 /1920) * 2).toFixed(2) + "px"; 
-                document.querySelector(".videoSelect").style.top = (window.document.body.offsetWidth * (1080 /1920) - 
-                                                                (window.document.body.offsetWidth / 1920 * 192 * 2) * (1080 /1920) * 2 - 30) + "px" ;
-                document.querySelector(".videoSelect").style.left = (window.document.body.offsetWidth - (window.document.body.offsetWidth / 1920 * 192 * 2) - 2) + "px" ;
-            }
-            if(document.querySelector(".videoImage1") && document.querySelector(".videoImage2")) {
-                document.querySelector(".videoImage1").style.width = (window.document.body.offsetWidth / 1920 * 192 * 2).toFixed(2) + "px";
-                document.querySelector(".videoImage1").style.height = ((window.document.body.offsetWidth / 1920 * 192 * 2) * (1080 /1920)).toFixed(2) + "px"; 
-                document.querySelector(".videoImage2").style.width = (window.document.body.offsetWidth / 1920 * 192 * 2).toFixed(2) + "px";
-                document.querySelector(".videoImage2").style.height = ((window.document.body.offsetWidth / 1920 * 192 * 2) * (1080 /1920)).toFixed(2) + "px";
-            }
 
         };
 
-        document.querySelector("#bgvideo").addEventListener("canplay", function()
-        {
-            document.querySelector(".loading").style.display = "none";
-        });
+        document.addEventListener("fullscreenchange", function () { 
+            document.fullscreen? this.videoPlay =true : this.videoPlay = false;
+        }); 
+        
+        document.addEventListener("mozfullscreenchange", function () { 
+            document.mozFullScreen? this.videoPlay =true : this.videoPlay = false;
+        }); 
+        
+        document.addEventListener("webkitfullscreenchange", function () { 
+            document.webkitIsFullScreen? this.videoPlay =true : this.videoPlay = false;
+        }); 
+        document.addEventListener("msfullscreenchange", function () { 
+            document.msFullscreenElement? this.videoPlay =true : this.videoPlay = false;
+        }); 
 
     },
     methods: {
@@ -211,27 +212,28 @@ export default {
             return flag;
         },
         PlayVideo: function(){
-            this.videoPlay = !this.videoPlay;
-            if(this.videoPlay) {
-                document.querySelector(".videoSelect").style.opacity = 1;
-                // document.querySelector("#fullVideo").play();
-            } else {
-                document.querySelector("#fullVideo").pause();
+            var mVideo = document.querySelector("#fullVideo");
+            if (mVideo) {
+                if (mVideo.requestFullscreen) {
+                    mVideo.requestFullscreen();
+                }
+                else if (mVideo.msRequestFullscreen) {
+                    mVideo.msRequestFullscreen();
+                }
+                else if (mVideo.mozRequestFullScreen) {
+                    mVideo.mozRequestFullScreen();
+                }
+                else if (mVideo.webkitRequestFullScreen) {
+                    mVideo.webkitRequestFullScreen();
+                    /*
+                        *Kept here for reference: keyboard support in full screen
+                        * marioVideo.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+                    */
+                }
+                mVideo.play();
             }
         },
         selectVideo: function(index){
-            if(index == 1) {
-                document.querySelector("#fullVideo").pause();
-                document.querySelector("#fullVideo").style.src = "./../../assets/video/puppy_demo_1.mp4";
-                document.querySelector("#fullVideo").play();
-            } else {
-                document.querySelector("#fullVideo").pause();
-                document.querySelector("#fullVideo").style.src = "./../../assets/video/puppy_demo_1.mp4";
-                document.querySelector("#fullVideo").play();
-            }
-            
-            this.videoSelecterFadeOut();
-            
         },
         displayVideoSelecter: function(){
             document.querySelector(".videoSelect").style.opacity = 1;
@@ -287,6 +289,8 @@ export default {
     .box {
         display: inline-block;
         background-color: black;
+        width: 100%;
+        max-width: 1920px;
     }
 
     .videoImage1, .videoImage2 {
@@ -319,7 +323,7 @@ export default {
         width: 100%;
         background-color: black;
         text-align: center;
-        z-index: 99999;
+        z-index: 9999;
     }
 
     .videoSelect {
@@ -357,10 +361,11 @@ export default {
 
     .span_b {
         font-size: 11pt;
-        line-height: 40px;
+        line-height: 42px;
         color: black;
         white-space: nowrap;
         overflow:hidden;
+        margin-right: 15px;
     }
 
     .div_txt_btn {
@@ -389,10 +394,9 @@ export default {
     }
 
     .video_btn2 {
-        width: 140px;
-        height: 40px;
+        width: 120px;
+        height: 42px;
         cursor: pointer;
-        border-radius: 5px;
         text-align: center;
         float: left;
         margin: 0 auto;
@@ -407,10 +411,9 @@ export default {
     }
 
     .video_btn3 {
-        width: 140px;
-        height: 40px;
+        width: 120px;
+        height: 42px;
         cursor: pointer;
-        border-radius: 5px;
         text-align: center;
         float: left;
         margin: 0 auto;
@@ -422,19 +425,33 @@ export default {
        -webkit-filter: grayscale(1);  
        filter: grayscale(100%);  
        filter: gray;  
-       margin-bottom: 7px;
+       margin-top: 8px;
+       margin-bottom: 8px;
+       margin-left: 15px;
+       float: left;
+    }
+
+    .closeBtnContainer {
+        position: absolute;
+        top:0px;
+        left: 0px;
+        width: 100%;
+        height: $headerHeight;
+        z-index: 99999;
     }
 
     .closeBtn {
         height: $headerHeight;
         width: $headerHeight;
-        background-color: gray;
+        background-color: white;;
+        opacity: 0.4;
         float: right;
         margin: 1px;
         text-align: center;
         vertical-align: middle;
         line-height: $headerHeight;
         font-size: 25px;
+        cursor: pointer;
     }
     .designImg {
         text-align: center;
@@ -457,8 +474,7 @@ export default {
 
     .div_image_common {
         // min-width: 1280px;
-        max-width: 1280px;
-        height: 680px;
+        // max-width: 1280px;
         background-size: cover;
         display: block;
         position: relative;
@@ -468,11 +484,55 @@ export default {
         background-position: center center;
     }
 
+    .div_cpxt {
+        background-image: url('./../../assets/images/puppy_cube/div_cpxt.jpg');
+        height:1010px;
+        max-width:1440px;
+    }
+
+    .div_aick{
+        background-image: url('./../../assets/images/puppy_cube/div_aick.jpg');
+        height:1010px;
+        max-width:2580px;
+    }
+
+    .div_aiyy {
+        background-image: url('./../../assets/images/puppy_cube/div_aiyy.jpg');
+        height:1010px;
+        max-width:1440px;
+    }
+
+    .div_cdj {
+        background-image: url('./../../assets/images/puppy_cube/div_cdj.jpg');
+        height:1010px;
+        max-width:2580px;
+    }
+
+    .div_cpts {
+        background-image: url('./../../assets/images/puppy_cube/div_cpts.jpg');
+        height:1010px;
+        max-width:2580px;
+    }
+
+    .div_cpcs_01 {
+        background-image: url('./../../assets/images/puppy_cube/div_cpcs_01.jpg'); 
+        height:955px !important;
+        max-width:1440px;
+    }
+
+    .div_cpcs_02 {
+        background-image: url('./../../assets/images/puppy_cube/div_cpcs_02.jpg');
+        height:955px !important;
+        max-width:1440px;
+    }
+
+
+
     .loading {
         width: 100%;
         height: 100%;
         position: absolute;
-        z-index: 99999;
+        z-index: 99991;
         top: 46px;
         left: 0px;
         background-color: white;

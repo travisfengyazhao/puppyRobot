@@ -22,7 +22,7 @@
 <script>
 export default {
   name: 'News',
-  props: ['newsId', 'newsContent', 'newsWidth', 'newsImageHeight', 'newsBtnHide'],
+  props: ['newsId', 'newsContent', 'newsWidth', 'newsImageHeight', 'newsBtnHide']
 }
 
 </script>

@@ -4,7 +4,7 @@
 //   }
   
 export default {
-    orderProduct: `/api/order`,
+    orderProduct: `http://bbs.puppyrobot.com/api/order/`,
 }
   
   //也可以像下面这样，区分环境或者区分服务器等等

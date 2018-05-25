@@ -12,7 +12,7 @@
   </div>
 </template>
 
-<script type="text/ecmascript-6">
+<script>
 import PageHeader from './components/common/pageheader'
 import PageFooter from './components/common/pagefooter'
 let _ = require('lodash')
@@ -36,7 +36,7 @@ export default {
       document.getElementById('appLoading').style.display = 'none';
       if(this.$route.path =="/") {
         if (this._isMobile()) {
-            this.$router.replace('/puppycubes');
+            this.$router.replace('/m_puppycubes');
           } else {
             this.$router.replace('/');
           }
@@ -79,6 +79,7 @@ export default {
     font-family: 'Pingfang SC','Microsoft YaHei',Arial,Helvetica,sans-serif; 
     /* -webkit-font-smoothing: antialiased; */
     /* -moz-osx-font-smoothing: grayscale; */
+    /* font-weight: 200; */
     text-align: center;
     vertical-align: middle;
     /* margin-top: 60px; */

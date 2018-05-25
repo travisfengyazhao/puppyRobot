@@ -30,11 +30,11 @@
             <img src="./../../assets/images/index/button_01.png">
           </div>
         </transition>
-        <div class="newsTitle">
+        <!-- <div class="newsTitle">
           <div class="title">
             {{contents? contents[0].title : ''}}
           </div>
-        </div>
+        </div> -->
       </router-link>
     </div>
 
@@ -69,11 +69,11 @@
               <img src="./../../assets/images/index/button_01.png">
             </div>
           </transition>
-          <div class="newsTitle">
+          <!-- <div class="newsTitle">
             <div class="title">
               {{contents? contents[1].title : ''}}
             </div>
-          </div>
+          </div> -->
         </div>
       </router-link>
     </div>
@@ -145,12 +145,12 @@ export default {
 
     .newsImageContainer {
         width: 290px;
-        height: 163px;
+        height: 220px;
         overflow: hidden;
     }
 
     .newsBtm_1 {
-        width: 620px;
+        width: 290px;
         height: 220px;
         overflow: hidden;  
         position: absolute;
@@ -220,7 +220,7 @@ export default {
 
     .newsBtmImage {
         width: 290px;
-        height: 163px;
+        height: 220px;
         background-color: gray;
         background-repeat:no-repeat; 
         transition: all 2s;    
@@ -231,7 +231,7 @@ export default {
 
     .newsBtmImage_right {
         width: 290px;
-        height: 163px;
+        height: 220px;
         background-color: gray;
         background-repeat:no-repeat; 
         transition: all 2s;    
@@ -264,7 +264,7 @@ export default {
 
     .imageBtn {
         position: absolute;
-        top: 105px;
+        top: 162px;
         left: 20px;
         cursor: pointer;
     }
@@ -308,7 +308,7 @@ export default {
         transition: all 0.5s ease;
     }
     .hide-fade-leave-active {
-        transition: all 0.5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+        transition: all 0.3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
     }
     .hide-fade-enter, .hide-fade-leave-to
     /* .slide-fade-leave-active for below version 2.1.8 */ {
@@ -320,7 +320,7 @@ export default {
         transition: all 0.5s ease;
     }
     .hide-fade-right-leave-active {
-        transition: all 0.5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+        transition: all 0.3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
     }
     .hide-fade-right-enter, .hide-fade-right-leave-to
     /* .slide-fade-leave-active for below version 2.1.8 */ {

@@ -183,15 +183,15 @@
 <script>
 
 export default {
-  data() {
-      return {
-      }
-  },
+    data() {
+        return {
+        }
+    },
     components: {
     },
-  methods: {
+    methods: {
 
-  }
+    }
 }
 </script>
 
@@ -260,6 +260,7 @@ $hachiSMB: 46px;
         margin: 0 auto;
         background-repeat: no-repeat;
         background-position: center center;
+        width: 100%;
     }
 
     .img_01 {
@@ -468,7 +469,7 @@ $hachiSMB: 46px;
      }
 
     .img_05_back {
-        background-color: white;
+        background-color: #f2f2f2;
     }
 
     .img_05 {

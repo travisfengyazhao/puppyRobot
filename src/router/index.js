@@ -19,6 +19,9 @@ import AISightTech from './../components/page/AISightTech'
 import LegalNotices from './../components/page/LegalNotices'
 import PrivacyProtection from './../components/page/PrivacyProtection'
 
+import M_PuppyCube from './../components/page/M_PuppyCube'
+import M_PuppyCubeS from './../components/page/M_PuppyCubeS'
+
 Vue.use(Router)
 
 export default new Router({
@@ -27,6 +30,8 @@ export default new Router({
     { path: '/', name: 'PuppyIndex', component: PuppyIndex },
     { path: '/puppycube', name: 'PuppyCube', component: PuppyCube },
     { path: '/puppycubes', name: 'PuppyCubeS', component: PuppyCubeS },
+    { path: '/m_puppycube', name: 'M_PuppyCube', component: M_PuppyCube },
+    { path: '/m_puppycubes', name: 'M_PuppyCubeS', component: M_PuppyCubeS },
     { path: '/puppyrobot', name: 'PuppyRobot', component: PuppyRobot },
     { path: '/hachisolution', name: 'HachiSolution', component: HachiSolution },
     { path: '/hachicases', name: 'HachiCases', component: HachiCases },
@@ -41,7 +46,7 @@ export default new Router({
     { path: '/robottech', name: 'RobotTech', component: RobotTech},
     { path: '/aisighttech', name: 'AISightTech', component: AISightTech},
     { path: '/legalnotices', name: 'LegalNotices', component: LegalNotices},
-    { path: '/privacyprotection', name: 'PrivacyProtection', component: PrivacyProtection},
+    { path: '/privacyprotection', name: 'PrivacyProtection', component: PrivacyProtection}
   ],
 
   scrollBehavior: function (to, from, savedPosition) {

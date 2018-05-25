@@ -21,7 +21,7 @@
         <div class="img_01_back">
             <div class="img_01 imgBackCenter">
                 <div class="content_01">
-                        无人驾驶是最近两年的最热的热点
+                        无人驾驶是最近两年最热的热点
                 </div>
             </div>
         </div>
@@ -31,23 +31,23 @@
                         随着AI技术的快速发展
                 </div>
                 <div class="content_03">
-                        无人驾驶作为一个会改变未来世界的科技吸引了无数巨头，投资，<br/>和满怀梦想的创业者投身到这个领域中来。  
+                        无人驾驶作为一个会改变未来世界的科技吸引了无数巨头，投资者，<br/>和满怀梦想的创业者投身到这个领域中来。  
                 </div>
                 <div class="content_04">
                     <div class="content_04_1">
                         <div class="content_04_left">
                          </div>   
                          <div class="content_04_right">
-                             <div>无人驾驶的落地场景主要包括：城市开放道路的无人驾驶，代表有美国Google 公司的Waymo 出租车，美国Tesla 的自自动驾驶模式，国内的Apollo 打造的开放道路无人驾驶业态。</div>
+                             <div>无人驾驶的落地场景主要包括：城市开放道路的无人驾驶，代表有美国Google 公司的Waymo 出租车，美国Tesla 的自动驾驶模式，国内的Apollo 打造的开放道路无人驾驶生态。</div>
                          </div>   
                         
                     </div>
                 </div>
                 <div class="content_05">
-                        无人驾驶的落地另外一个重要场景
+                        无人驾驶落地的重要场景
                 </div>
                 <div class="content_06">
-                        是一些重复劳动的劳动密集型行业，卡车，送货：
+                        重复劳动密集型行业：卡车、送货。
                 </div>
             </div>
         </div>
@@ -57,7 +57,7 @@
                         最适合无人驾驶大规模商用的场景
                 </div>
                 <div class="content_08">
-                        是封闭社区或者景区的
+                        封闭社区或者景区的
                         <span>摆渡车</span>
                 </div>
                 <div class="content_09">
@@ -65,7 +65,7 @@
                         <div class="content_09_left">
                          </div>   
                          <div class="content_09_right">
-                             <div>puppy 技术团队正在和国内，国外的技术领先公司在一起研发适合于实地地产，富力地产以及旗下景区的无人摆渡车，来给业主以及景区的会员提供更高品质的生活体验和使用便利性。年底会推出符合量产要求的养车，明年3月份，量产100台。9月份量产1000台无人车。</div>
+                             <div>puppy 技术团队正在和国内，国外的技术领先公司研发适合于实地地产，富力地产以及旗下景区的无人摆渡车，来给业主以及景区的会员提供更高品质的生活体验和便利性。年底会推出符合量产要求的样车。明年3月份，量产100台，年底份量产1000台无人车。</div>
                          </div>   
                         
                     </div>
@@ -79,15 +79,15 @@
 <script>
 
 export default {
-  data() {
-      return { 
-      }
-  },
+    data() {
+        return { 
+        }
+    },
     components: {
     },
-  methods: {
+    methods: {
 
-  }
+    }
 }
 </script>
 
@@ -155,10 +155,11 @@ $hachiSMB: 46px;
         margin: 0 auto;
         background-repeat: no-repeat;
         background-position: center center;
+        width: 100%;
     }
 
     .img_01 {
-        max-width: 1280px;
+        max-width: 2580px;
         height: 800px;
         background-image: url("./../../assets/images/robot/div_01.jpg");
     }

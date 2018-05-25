@@ -95,7 +95,7 @@
 
 
 
-<script type="text/ecmascript-6">
+<script>
 import SmartBusiness from './Hachi/SmartBusiness'
 import SmartOffice from './Hachi/SmartOffice'
 import SmartHome from './Hachi/SmartHome'
@@ -120,7 +120,7 @@ export default {
     },
     currDispaly: function(index) {
     this.currDisIndex = index;
-    },
+    }
   }
 }
 </script>
@@ -292,6 +292,7 @@ $hachiSMB: 46px;
         height: 810px;
         position: relative;
         overflow: hidden;
+        width: 100%;
         
     }
 
@@ -302,6 +303,7 @@ $hachiSMB: 46px;
         height: 1070px;
         position: relative;
         overflow: hidden;
+        width: 100%;
     }
 
     .hachi_community_01_01 {
@@ -330,6 +332,7 @@ $hachiSMB: 46px;
         margin: 0 auto;
         background-repeat: no-repeat;
         background-position: center center;
+        width: 100%;
     }
 
 

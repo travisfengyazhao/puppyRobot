@@ -32,9 +32,7 @@
 
 <script>
 export default {
-    name: 'SmartHome',
-
-
+    name: 'SmartHome'
 }
 </script>
 
@@ -58,6 +56,7 @@ export default {
         height: 900px;
         position: relative;
         overflow: hidden;
+        width: 100%;
     }
 
     .home_01_01 {

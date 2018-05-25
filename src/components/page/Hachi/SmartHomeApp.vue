@@ -25,7 +25,7 @@
 <style lang="scss" scoped>
     .contentMain {
         max-width: 2580px;
-        height: 968px;
+        height: 815px;
         background-image: url("./../../../assets/images/hachi/product/smarthomeAPP/div_01.jpg");
        
     }
@@ -38,10 +38,11 @@
         margin: 0 auto;
         background-repeat: no-repeat;
         background-position: center center;
+        width: 100%;
     }
 
     .hachi_logo {
-        margin-top: 120px;
+        margin-top: 100px;
     }
 
     .product_title {
@@ -63,7 +64,7 @@
 
     .product_download {
         font-size: 12pt;
-        margin-top: 500px;
+        margin-top: 365px;
         line-height: 25px;
     }
 

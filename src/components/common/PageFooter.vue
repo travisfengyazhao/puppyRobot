@@ -15,9 +15,7 @@
                     <div class="footerLeft_div">
                         <span>在线购买</span>
                         <div>
-                            <router-link to="">
-                                <a herf="#">京东旗舰店</a>
-                            </router-link>
+                            <a href="https://trade-z.jd.com/funding/project_details.action?projectId=101098" target="_blank">京东众筹</a>
                         </div>
                     </div>
                     <div class="footerLeft_div">
@@ -32,7 +30,7 @@
                                 <a herf="#">法律声明</a>
                             </router-link>
                         </div>
-                        <div>
+                        <div v-if="!_isMobile()">
                             <router-link to="/privacyprotection">
                                 <a herf="#">隐私保护</a>
                             </router-link>
@@ -52,7 +50,7 @@
                         </div>
                     </div>
                 </div>
-                <div :class="!_isMobile()?'footerMid':'footerMid-mobile'">
+                <!-- <div :class="!_isMobile()?'footerMid':'footerMid-mobile'">
                     <div class="footerMid_1">
                         <div class="footerMid_img">
                             <div class="footerMid_left">
@@ -69,10 +67,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div :class="!_isMobile()?'footerRight':'footerRight-mobile'">
                     <div>
-                        <a herf="#">全国统一服务热线：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                        <a herf="#">全国统一服务热线：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
                         <span class="serviceNum">400-000-1320&nbsp;</span>
                         <br/>
                         <a herf="#">工作时间：周一至周日 9:00-18:00（仅收市话费）</a>
@@ -84,7 +82,7 @@
         </div>
       </div>
         <div class="recordInfo">
-            <p>Copyright © 2018 Puppy Robot</p>
+            <p>Copyright © 2018 puppyrobot</p>
             <!-- <p v-if="!_isMobile()">Copyright © 2018 Puppy Robot  |  京公网络备案号 | 网络文化经营许可证备案号</p>
             <p v-else>Copyright © 2018 Puppy Robot  <br />  京公网络备案号 | 网络文化经营许可证备案号</p> -->
         </div>
@@ -93,10 +91,10 @@
 <script>
 export default {
     methods: {
-            _isMobile() {
+        _isMobile() {
             let flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
             return flag;
-        },
+        }
     }
 }
 </script>
@@ -173,7 +171,7 @@ export default {
             width: 100%;
 
             .footerMid_img {
-            width: 50%;
+            width: 100%;
             margin-top: 20px;
             height:140px;
             float: left;
@@ -223,12 +221,12 @@ export default {
     }
 
     .footerLeft-mobile {
-        height: $footerHeight;
+        height: 55px;
         width: 100%;
         .footerLeft_div {
             width: 33.3%;
             margin-top: 20px;
-            height: 140px;
+            // height: 140px;
             float: left;
             text-align: center;
         }

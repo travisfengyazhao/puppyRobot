@@ -2,7 +2,7 @@
   <div id='pageheader'>
     <div :class="this._isMobile()? 'pageheaderMid_mobile' : 'pageheaderMid'">
         <div id='divLogo'>
-            <router-link to="/">
+            <router-link :to="!this._isMobile()? '/' :''">
             <img id='pageheaderlogo' src="./../../assets/images/header/puppy_logo.svg">
             </router-link>
         </div>
@@ -75,7 +75,7 @@
                             <a herf="">机器人技术</a>
                         </li>    
                         </router-link>
-                        <router-link to="">
+                        <router-link to="/aisighttech">
                         <li>
                             <a herf="">智能视觉技术</a>
                         </li>    
@@ -160,12 +160,12 @@
         </div>
         <div v-show="isDisplay" @touchmove.prevent>
             <ul id="mobileMenuList">    
-                <router-link to="/puppycubes">
+                <router-link to="/m_puppycubes">
                 <li @click="mobileMenuDisplay()">
                     <a herf="">puppy cube s</a>
                 </li>    
                 </router-link>
-                <router-link to="/puppycube">
+                <router-link to="/m_puppycube">
                 <li @click="mobileMenuDisplay()">
                     <a herf="">puppy cube</a>
                 </li>    
@@ -176,14 +176,14 @@
   </div>
 </template>
 
-<script type="text/ecmascript-6">
+<script>
 
     export default {
         name: 'PageHeader',
         data () {
             return {
                 isDisplay: false,
-                cubeSecMenuDisp: false,
+                cubeSecMenuDisp: false
             }
         },
 
@@ -265,17 +265,19 @@
         display: inline-block;
         cursor: pointer;
         line-height: $headerHeight;
-        padding-left: 15px;
-        padding-right: 15px;
+        // padding-left: 15px;
+        // padding-right: 15px;
         right: 0;
         top: 0px;
         bottom: 0px;
-        width: 110px;
+        width: 130px;
+        font-size: 11pt;
         list-style-type: none;
     } 
 
     li:hover {
         background-color:white;
+        // width: 110px;
         // box-shadow: 1px 1px 1px #e6e6e6;
         // opacity: 1;
     }
@@ -295,12 +297,12 @@
     ul ul {
         position: absolute;
         top: $headerHeight;
-        margin-left: -15px;
         padding: 0px;
         text-align: center;
         line-height: 44px !important;
         display: none;
         z-index: 9999;
+        background-color: white;
         box-shadow: 2px 2px 2px #e6e6e6;
     }
 
@@ -335,15 +337,13 @@
     }
 
     ul ul li {
-        width: 110px;
+        width: 130px;
         height: $menuSec;
         position: relative;
         margin: 0px;
         background-color: white;
         display: inline-block;
         line-height: $menuSec !important;
-        padding-left: 15px;
-        padding-right: 15px;
         right: 0;
         top: 0px;
         bottom: 0px;
@@ -444,6 +444,7 @@
         background-color: #000;
         border-radius: 2px;
         transition: transform .2s;
+
     }
 
     #mobileMenuList {
@@ -454,6 +455,9 @@
         text-align: left;
         width:100%;
         background-color: $headerColor;
+        a {
+            margin-left: 5px;
+        }
     }
 
     #mobileMenuList li{

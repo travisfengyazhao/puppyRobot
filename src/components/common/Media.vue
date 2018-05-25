@@ -24,7 +24,7 @@
 <script>
 export default {
   name: 'Media',
-  props: ['mediaId', 'mediaContent', 'mediaHeight', 'mediaWidth'],
+  props: ['mediaId', 'mediaContent', 'mediaHeight', 'mediaWidth']
 }
 
 </script>
