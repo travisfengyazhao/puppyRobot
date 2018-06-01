@@ -36,8 +36,12 @@
         </video>
 
     <div class="designImg" style="background-color:#dedede;">
-        <!-- <img src="./../../assets/images/puppy_cube/div_cpxt.jpg"  style="max-width:1440px;"> -->
         <div class="div_image_common div_cpxt">
+            <div class="img_descrip word_position_cpxt">
+                <div class="descrip_title">产品形态</div>
+                <div class="descrip_slogan">触摸未来，定义AI空间</div>
+                <div class="descrip_content">智能交互不再被屏幕束缚，<br/>生活中的每一处都可能成为你的AI入口，<br/>puppy cube 将任意平面变为触摸界面，<br/>提供一个全新的智慧AI空间。</div>
+            </div>
         </div>
     </div>
     <div class="designImg">
@@ -50,40 +54,278 @@
         <Banner :slideLists="smartOfficeList" :swiperHeight="'1010px'"></Banner>
     </div>
 <div class="designImg" style="background-color:#FFFFFF;">
-        <!-- <img src="./../../assets/images/puppy_cube/div_aick.jpg" style="max-width:2580px;"> -->
         <div class="div_image_common div_aick">
+            <div class="img_descrip word_position_aick">
+                <div class="descrip_title aick_title">AI触控</div>
+                <div class="descrip_slogan aick_slogan">AnyTouch，激发生活灵感</div>
+                <div class="descrip_content aick_content">AnyTouch空间触控，将多点触控与投影技术完美结合，使空间任意平面变为触摸屏，<br/>创造出丰富的交互灵感和奇妙体验。</div>
+            </div>
         </div>
     </div>
     <div class="designImg" style="background-color:#ff5a32;">
-        <!-- <img src="./../../assets/images/puppy_cube/div_aiyy.jpg" style="max-width:1440px;"> -->
         <div class="div_image_common div_aiyy">
+             <div class="img_descrip word_position_aick">
+                <div class="descrip_title aick_title">AI 语音</div>
+                <div class="descrip_slogan aick_slogan">唤醒你的智慧伙伴</div>
+                <div class="descrip_content aick_content">人工智能语音技术，让puppy cube s成为你家中的智慧新成员。无需遥控远场对话，<br/>多场景语音操控功能，为家人提供无微不至的关怀与服务。</div>
+            </div>
         </div>
     </div>
     <div class="designImg" style="background-color:#121315;">
-        <!-- <img src="./../../assets/images/puppy_cube/div_cdj.jpg" style="max-width:2580px;"> -->
         <div class="div_image_common div_cdj">
+            <div class="div_word">
+                <div class="img_descrip word_position_cdj">
+                    <div class="descrip_title cdj_title">超短焦</div>
+                    <div class="descrip_slogan cdj_slogan">放在电视柜上的巨幕影院</div>
+                    <div class="descrip_content cdj_content">先进的超短焦技术，让你拥有一个巨幕影院成为可能。自动对焦和图像调节功能，<br/>使画面在任何场景都清晰呈现。</div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="designImg" style="background-color:#FFFFFF;">
-        <!-- <img src="./../../assets/images/puppy_cube/div_cpts.jpg" style="max-width:2580px;"> -->
         <div class="div_image_common div_cpts">
+             <div class="img_descrip word_position_cpts">
+                <div class="descrip_title cpts_title">产品图赏</div>
+            </div>
         </div>
     </div>
     <div class="designImg" style="background-color:#000000;">
-        <!-- <img src="./../../assets/images/puppy_cube/div_cpcs_01.jpg" style="max-width:1440px;"> -->
-        <div class="div_image_common div_cpcs_01">
+        <div class="para_height_width div_image_common">
+            <div>
+                <div class="paraLeft">
+                    <div class="descrip">
+                        <div class="productType">puppy&nbsp;&nbsp;cube</div>
+                        <div class="para">产品参数</div>
+                    </div>
+                    <div class="topLine"></div>
+                    <img class="puppy_logo" src="./../../assets/images/logo.png">
+                    <div class="div_product">
+                        <img class="img_product" src="./../../assets/images/puppy_cube/cube.png">
+                    </div>
+                </div>
+                <div class="paraRight">
+                    <div>
+                        <div class="para_title">基本信息</div>
+                        <div class="para_detail">
+                            <div class="detail_line"></div>
+                            <div class="detail">
+                                <div class="detail_key">名称</div>
+                                <div class="detail_value">puppy cube</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail_key">型号</div>
+                                <div class="detail_value">puppy cube</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail_key">产品尺寸</div>
+                                <div class="detail_value">132 x 86 x 213（mm）</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail_key">产品重量</div>
+                                <div class="detail_value">1.6 KG</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail_key">产品颜色</div>
+                                <div class="detail_value">星空灰</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail_key">产品材质</div>
+                                <div class="detail_value">高透光覆膜玻璃面板+铝合金+PC/ABS</div>
+                            </div>
+                        </div>    
+                        <div class="para_title para_margin_top">系统参数</div>
+                        <div class="para_detail para_margin_top">
+                            <div class="detail_line"></div>
+                            <div class="detail">
+                                <div class="detail_key">CPU</div>
+                                <div class="detail_value">Mstar 6A938</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail_key">RAM</div>
+                                <div class="detail_value">4GB</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail_key">内置存储</div>
+                                <div class="detail_value">32GB eMMC</div>
+                            </div>
+                        </div>    
+                        <div class="para_title para_margin_top">系统功能</div>
+                        <div class="para_detail para_margin_top">
+                            <div class="detail_line"></div>
+                            <div class="detail">
+                                <div class="detail_key">OS</div>
+                                <div class="detail_value">puppyUI 1.0</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail_key">Android系统</div>
+                                <div class="detail_value">Android 6.0及以上</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail_key">动态图像</div>
+                                <div class="detail_value">HDR</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail_key">多屏互动</div>
+                                <div class="detail_value">Airplay/DLNA/Miracast</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail_key">人工智能</div>
+                                <div class="detail_value">讯飞AIUI</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail_key height_50">Wi-Fi</div>
+                                <div class="detail_value">Wi-Fi: 2.4G/5GHz 双频<br/>802.11 a/b/g/n/ac<br/>2 x 2 双天线 双发双收</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail_key">Bluetooth</div>
+                                <div class="detail_value">BT 4.0及以上/BLE 独立天线</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail_key">Camera</div>
+                                <div class="detail_value">5M camera模组</div>
+                            </div>
+                        </div>
+                        <div class="para_title para_margin_top">投影参数</div>
+                        <div class="para_detail para_margin_top">
+                            <div class="detail_line"></div>
+                            <div class="detail">
+                                <div class="detail_key">投射比</div>
+                                <div class="detail_value">0.39:1</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail_key">画面尺寸</div>
+                                <div class="detail_value">20英寸~100英寸</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail_key">推荐尺寸</div>
+                                <div class="detail_value">23英寸~40英寸</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail_key">偏轴</div>
+                                <div class="detail_value">100%及以上</div>
+                            </div>
+                             <div class="detail">
+                                <div class="detail_key">梯形校正</div>
+                                <div class="detail_value">支持自动垂直梯形校正</div>
+                            </div>
+                             <div class="detail">
+                                <div class="detail_key">投影方式</div>
+                                <div class="detail_value">桌面投射，可水平和垂直放置</div>
+                            </div>
+                             <div class="detail">
+                                <div class="detail_key">对焦方式</div>
+                                <div class="detail_value">自动对焦并可通过遥控器人工调节</div>
+                            </div>
+                        </div>
+                        <div class="para_title para_margin_top">光学参数</div>
+                        <div class="para_detail para_margin_top">
+                            <div class="detail_line"></div>
+                            <div class="detail">
+                                <div class="detail_key">标准分辨率</div>
+                                <div class="detail_value">1280 x 720</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail_key">兼容分辨率</div>
+                                <div class="detail_value">1080p/2K/4K</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail_key">显示技术</div>
+                                <div class="detail_value">0.3* DMD</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail_key">镜头</div>
+                                <div class="detail_value">高透光镀膜镜头</div>
+                            </div>
+                             <div class="detail">
+                                <div class="detail_key">中心亮度</div>
+                                <div class="detail_value">300ANSI</div>
+                            </div>
+                             <div class="detail">
+                                <div class="detail_key">色域</div>
+                                <div class="detail_value">>=100%NTSC</div>
+                            </div>
+                             <div class="detail">
+                                <div class="detail_key">中心对比度</div>
+                                <div class="detail_value">600:1</div>
+                            </div>
+                        </div>
+                        <div class="para_title para_margin_top">音频</div>
+                        <div class="para_detail para_margin_top">
+                            <div class="detail_line"></div>
+                            <div class="detail">
+                                <div class="detail_key">声道</div>
+                                <div class="detail_value">2.0声道</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail_key">喇叭单元</div>
+                                <div class="detail_value">全频36mm x 2</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail_key">功率</div>
+                                <div class="detail_value">5W x 2</div>
+                            </div>
+                        </div>  
+                        <div class="para_title para_margin_top">端口</div>
+                        <div class="para_detail para_margin_top">
+                            <div class="detail_line"></div>
+                            <div class="detail">
+                                <div class="detail_key">输入</div>
+                                <div class="detail_value">USB 3.0 Host x 1/HDMI 2.0 Input x 1/DC-in</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail_key">输出</div>
+                                <div class="detail_value">3.5mm耳机接口 x 1</div>
+                            </div>
+                        </div> 
+                        <div class="para_title para_margin_top">传感器</div>
+                        <div class="para_detail para_margin_top">
+                            <div class="detail_line"></div>
+                            <div class="detail">
+                                <div class="detail_key">位置感应</div>
+                                <div class="detail_value">加速度传感器</div>
+                            </div>
+                        </div> 
+                        <div class="para_title para_margin_top">控制</div>
+                        <div class="para_detail para_margin_top">
+                            <div class="detail_line"></div>
+                            <div class="detail">
+                                <div class="detail_key">按键</div>
+                                <div class="detail_value">电源键、复位键、音量加减</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail_key">遥控器</div>
+                                <div class="detail_value">蓝牙遥控器</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail_key">交互式</div>
+                                <div class="detail_value">可以通过操作投射平面进行触控，支持10点和手势</div>
+                            </div>
+                        </div>  
+                        <div class="para_title para_margin_top">电气规格</div>
+                        <div class="para_detail para_margin_top">
+                            <div class="detail_line"></div>
+                            <div class="detail">
+                                <div class="detail_key">噪音</div>
+                                <div class="detail_value">&lt; 30db</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail_key">功耗</div>
+                                <div class="detail_value">20 ~ 40W</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail_key">内置电池</div>
+                                <div class="detail_value">11.1v 5000mAh</div>
+                            </div>
+                             <div class="detail">
+                                <div class="detail_key">电源</div>
+                                <div class="detail_value">AC100-240V, 50/60Hz</div>
+                            </div>                           
+                        </div>                                
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="designImg" style="background-color:#000000;">
-        <!-- <img src="./../../assets/images/puppy_cube/div_cpcs_02.jpg" style="max-width:1440px;"> -->
-        <div class="div_image_common div_cpcs_02">
-        </div>
-    </div>
-    <!-- <div class="loading">
-        <span><img src="./../../../static/loading_a.gif"/></span>
-    </div> -->
-
-
   </div>
 
 </template>
@@ -496,10 +738,100 @@ export default {
         max-width:2580px;
     }
 
+    .img_descrip {
+        width: 400px;
+        height: 300px;
+        margin: 0 auto;
+        color: black;
+        font-weight: 200;
+        text-align: left;
+        .descrip_title {
+            font-size: 16pt;
+            margin-top: 15px;
+        }
+
+        .descrip_slogan {
+            font-size: 30pt;
+            margin-top: 18px;
+        }
+
+        .descrip_content {
+            margin-top: 35px;
+            line-height: 25px;
+            font-weight: normal;
+        }
+    }
+
+    .word_position_cpxt {
+        margin-top: 75px;
+        margin-left: 760px;
+    }
+
+    .img_aick {
+        max-width: 2580px;
+        height: 1010px;
+        background-image: url("./../../assets/images/puppy_cube_s/div_aick.jpg");
+    }
+
+    .word_position_aick {
+        margin-top: 80px;
+        color: black !important;
+        text-align: center;
+        font-weight: 300 !important;
+        width: 650px;
+        .aick_title{
+            font-size: 20pt;
+        }
+
+        .aick_slogan {
+            font-size: 32pt;
+        }
+
+        .aick_content {
+            font-weight: normal;
+        }
+    }
+
+    .div_word{
+        width: 1440px;
+        margin: 0 auto;
+    }
+
+    .word_position_cdj {
+        margin-top: 310px;
+        margin-left: 830px;
+        color: white !important;
+        text-align: left;
+        font-weight: 100 !important;
+        width: 650px;
+        .cdj_title{
+            font-size: 20pt;
+        }
+
+        .cdj_slogan {
+            font-size: 32pt;
+        }
+
+        .cdj_content {
+            font-weight: 200;
+        }
+    }
+
+     .word_position_cpts {
+        margin-top: 220px;
+        color: black !important;
+        text-align: center;
+        font-weight: 100 !important;
+        width: 650px;
+        .cpts_title{
+            font-size: 30pt;
+        }
+    }
+
     .div_aiyy {
         background-image: url('./../../assets/images/puppy_cube/div_aiyy.jpg');
         height:1010px;
-        max-width:1440px;
+        max-width: 2580px;;
     }
 
     .div_cdj {
@@ -526,29 +858,107 @@ export default {
         max-width:1440px;
     }
 
+    .para_height_width {
+        width: 1440px;
+    }
 
-
-    .loading {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: 99991;
-        top: 46px;
-        left: 0px;
-        background-color: white;
-        span {
-            position: absolute;
-            display: block;
-            font-size: 50px;
-            line-height: 50px;
-            top: 50%;
-            left: 50%;
-            width: 140px;
-            height: 110px;
-            -webkit-transform: translateY(-50%)  translateX(-50%);
-            transform: translateY(-50%)  translateX(-50%);
+    .paraLeft{
+        width: 530px;
+        height: 70px;
+        margin-top: 150px;
+        color: white;
+        font-weight: 100;
+        float: left;
+        .puppy_logo {
+            float: right;
+            width: 95px;
+        }
+        .div_product {
+            width: 530px;
+            margin-top: 1010px;
+            .img_product {
+                width: 323px;
+                float: right;
+            }
         }
 
+        .topLine{
+            height: 71px;
+            width: 4px;
+            background-color: #b3b3b3;
+            float: right;
+            margin: 0px 25px 0px 25px;
+        }
+        .descrip {
+            width: 165px;
+            float: right;
+            text-align: left;
+        }
+        .productType {
+            font-size: 18pt;
+            margin-top: -8px;
+        }
+
+        .para {
+            font-size: 31pt;
+            margin-left: -3px;
+        }
+    }
+
+    .paraRight {
+        width: 800px;
+        // height: 2000px;
+        color: white;
+        float:left;
+        margin-top: 150px;
+        margin-bottom: 150px;
+        .para_title {
+            float: left;
+            margin-left: 60px;
+            text-align: left;
+            font-size: 13pt;
+            width: 70px;
+            line-height: 26px;
+            border-bottom: 2px solid white;
+        }
+
+        .para_detail {
+            float: left;
+            margin-left: 10px;
+            .detail_line{
+                width: 560px;
+                height: 26px;
+                border-bottom: 1px solid #808080;
+            }
+
+            .detail {
+                font-size: 10pt;
+                font-weight: 200;
+                line-height: 23px;
+                .detail_key{
+                    float: left;
+                    margin-left: 18px;
+                    width: 140px;
+                    border-bottom: 1px solid #333333;
+                }
+
+                .detail_value{
+                    float: left;
+                    width: 385px;
+                    margin-left: 15px;
+                    border-bottom: 1px solid #333333;
+                }
+            }
+        }
+
+        .para_margin_top {
+            margin-top: 8px;
+        }
+
+        .height_50 {
+            height: 69px;
+            line-height: 69px;
+        }
     }
 </style>
 

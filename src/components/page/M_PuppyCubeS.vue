@@ -211,7 +211,7 @@ export default {
                 maxWidth: '1440px',
                 backgroundColor: "#ffffff",
                 title: '设计',
-                slogan: '背板集线放呆设计',
+                slogan: '背板集线防呆设计',
                 description: '立卧姿态轻松转换，即使连线使用，也不会受到线缆的影响，同时起到收纳线缆的美观作用。'
             }
             ],

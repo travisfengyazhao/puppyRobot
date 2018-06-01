@@ -40,6 +40,33 @@
           <div class="designImg">
             <div class="hachi_jjfa_01">
               <img src="./../../assets/images/hachi/solution/Hachi_jjfa_01.jpg">
+              <div class="hachi_slogan1">哈奇致力于成为国内领先的智慧空间解决方案提供商</div>
+              <div class="hachi_slogan2">用<span class="slogan_red">智慧住宅</span>科技缔造<span class="slogan_red">智慧人居</span>生活</div>
+              <div class="hachi_solu1">
+                <div class="mid">
+                  <div class="mid_1" @click="currDispaly(1)">
+                    <img src="./../../assets/images/hachi/solution/icon_01.png">
+                    <div class="title_home">智慧家庭</div>
+                  </div>
+                  <div class="mid_1" @click="currDispaly(2)">
+                    <img src="./../../assets/images/hachi/solution/icon_02.png">
+                    <div class="title_community">智慧社区</div>
+                  </div>
+                  <div class="mid_1" @click="currDispaly(3)">
+                    <img src="./../../assets/images/hachi/solution/icon_03.png">
+                    <div class="title_hotel">智慧酒店</div>
+                  </div>
+                  <div class="mid_1" @click="currDispaly(4)">
+                    <img src="./../../assets/images/hachi/solution/icon_04.png">
+                    <div class="title_office">智慧办公</div>
+                  </div>
+                  <div class="mid_1" @click="currDispaly(5)">
+                    <img src="./../../assets/images/hachi/solution/icon_05.png">
+                    <div class="title_business">智慧商业</div>
+                  </div>
+                </div>
+              </div>
+            
             </div>
           </div>
           <div class="designImg" style="background-color: #060b11;">
@@ -261,7 +288,7 @@ $hachiSMB: 46px;
     .hachi_jjfa_02 {
         // min-width: 1280px;
         max-width: 2580px;
-        height: 800px;
+        height: 880px;
         background-image: url("./../../assets/images/hachi/solution/Hachi_jjfa_02.jpg");
         background-size: cover;
         display: block;
@@ -289,10 +316,82 @@ $hachiSMB: 46px;
         background-image:url('./../../assets/images/hachi/solution/div_bg_01.png'); 
         background-repeat: repeat-y;
         background-size: 100% 100%;
-        height: 810px;
+        height: 740px;
         position: relative;
         overflow: hidden;
         width: 100%;
+        .hachi_slogan1 {
+          width: 100%;
+          text-align: center;
+          font-size: 32pt;
+          font-weight:lighter;
+          position: absolute;
+          top: 182px;
+        }
+
+        .hachi_slogan2 {
+          width: 100%;
+          text-align: center;
+          font-size: 20pt;
+          position: absolute;
+          top: 250px;
+
+          .slogan_red {
+          color: #d7202d;
+          }
+        }
+
+        .hachi_solu1 {
+          width: 100%;
+          text-align: center;
+          font-size: 20pt;
+          position: absolute;
+          top: 340px;
+          .mid {
+            width: 743px;
+            margin: 0 auto;
+            .mid_1{
+              width: 148px;
+              cursor: pointer;
+              float:left;
+              .title_home {
+                margin-top: 3px;
+                margin-left: -8px;
+                color: #d7202d;
+                font-size: 16pt;
+              }
+
+              .title_community {
+                margin-top: 3px;
+                margin-left: -7px;
+                color: #d7202d;
+                font-size: 16pt;
+              }
+
+              .title_hotel {
+                margin-top: 3px;
+                margin-left: 3px;
+                color: #d7202d;
+                font-size: 16pt;
+              }
+
+              .title_office {
+                margin-top: 3px;
+                margin-left: 11px;
+                color: #d7202d;
+                font-size: 16pt;
+              }
+
+              .title_business {
+                margin-top: 3px;
+                margin-left: 19px;
+                color: #d7202d;
+                font-size: 16pt;
+              }
+              
+            }
+          }
+        }
         
     }
 

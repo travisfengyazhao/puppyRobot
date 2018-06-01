@@ -54,7 +54,7 @@
             if(this.isAutoplay) {
                 var mySwiper = new Swiper('.swiper-container', {
                     centeredSlides: true,
-                    speed: 3000,
+                    speed: 5000,
                     delay: 8000,
                     autoplay: true,
                     autoplay: {
@@ -72,8 +72,8 @@
             } else {
                 var mySwiper = new Swiper('.swiper-container', {
                     centeredSlides: true,
-                    speed: 3000,
-                    delay: 7000,
+                    speed: 2000,
+                    delay: 8000,
                     autoplay: this._isMobile() ? false : true,
                     loop: true,
                     effect: this._isMobile() ? 'slide' : 'fade',
