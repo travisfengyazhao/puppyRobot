@@ -17,7 +17,7 @@
                                 <span class="span_b">完整视频</span>   
                             </div>
                             <div class="video_space"></div>
-                            <a href="https://trade-z.jd.com/funding/project_details.action?projectId=101098" target="_blank">
+                            <a href="https://z.jd.com/project/details/101098.html" target="_blank">
                             <div class="video_btn3">
                                 <img class="imgPlay" src="./../../assets/images/puppy_cube/button_jdzc.png">
                                 <span class="span_b">京东众筹</span>   

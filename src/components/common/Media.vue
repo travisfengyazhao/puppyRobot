@@ -3,17 +3,17 @@
       <!-- <div id="newsTop">
 
       </div> -->
-    <router-link :to="{path:'/newsdetail', query: {id: mediaContent.id}}" target="_blank" class="clickable">
+    <router-link :to="{path:'/newsdetail', query: {id: mediaContent.nid}}" target="_blank" class="clickable">
       <div id="newsBtm" :style="{height:`${mediaHeight}px !important`}">
         <div class="newsImageContainer" :style="{height:`${mediaHeight}px !important`}">
-            <div id="newsBtmImage" :style="{backgroundImage:`url(${mediaContent?mediaContent.img:''})`,height:`${mediaHeight}px !important`}">
+            <div id="newsBtmImage" :style="{backgroundImage:`url(${mediaContent.img[0]}`,height:`${mediaHeight}px !important`}">
             </div>
         </div>
         <div class="newsTitle" :style="{top:`${mediaHeight - 57}px !important`}">
         </div>
         <div class="newsTitleWord" :style="{top:`${mediaHeight - 57}px !important`}">
             <div class="title">
-                {{mediaContent? mediaContent.title : ''}}
+                {{mediaContent.title}}
             </div>
         </div>
       </div>
@@ -24,7 +24,7 @@
 <script>
 export default {
   name: 'Media',
-  props: ['mediaId', 'mediaContent', 'mediaHeight', 'mediaWidth']
+  props: ['mediaId', 'mediaContent', 'mediaHeight', 'mediaWidth', 'isIndex']
 }
 
 </script>

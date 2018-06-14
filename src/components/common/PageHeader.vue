@@ -252,8 +252,8 @@
     }
 
     #pageheaderlogo {
-        height: 35px;
-        margin-top: $headerHeight/2 - 35px/2; 
+        height: 30px;
+        margin-top: $headerHeight/2 - 30px/2; 
     }
 
     #divPCNav {

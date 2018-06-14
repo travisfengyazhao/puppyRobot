@@ -15,7 +15,7 @@
                     <div class="footerLeft_div">
                         <span>在线购买</span>
                         <div>
-                            <a href="https://trade-z.jd.com/funding/project_details.action?projectId=101098" target="_blank">京东众筹</a>
+                            <a href="https://z.jd.com/project/details/101098.html" target="_blank">京东众筹</a>
                         </div>
                     </div>
                     <div class="footerLeft_div">

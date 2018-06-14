@@ -6,7 +6,7 @@
       <div id="newsBtm" :style="{height:`${newsHeight}px !important`}">
           <router-link :to="{path:'/newsdetail',query: {id: newsCenterId}}" target="_blank" class="clickable">
             <div class="newsImageContainer" :style="{height:`${newsHeight-50}px !important`}">
-                <div id="newsBtmImage" :style="{backgroundImage:`url(${newsContent?newsContent.img:''})`,height:`${newsHeight-50}px !important`}">
+                <div id="newsBtmImage" :style="{backgroundImage:`url(${newsContent?newsContent.img[1]:''})`,height:`${newsHeight-50}px !important`}">
                 </div>
             </div>
             <div class="newsTitle">

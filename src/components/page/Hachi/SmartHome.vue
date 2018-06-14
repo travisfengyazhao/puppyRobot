@@ -3,12 +3,16 @@
     <div class="designImg">
       <div class="hachi_home_01">
          <div class="hachi_home home_01_01">
+             <div class="hachi_slogan1">哈奇智慧家庭解决方案</div>
+              <div class="hachi_slogan2">聚焦智慧创新，为你带来安全、舒适、便捷和艺术的高品质居家生活体验</div>
         </div>
       </div>
     </div>
     <div class="designImg">
       <div class="hachi_home_02">
          <div class="hachi_home home_02_01">
+             <div class="hachi_slogan3">4种控制方式 任意选择</div>
+              <div class="hachi_slogan4">满足不同场景和不同人群的需求</div>
         </div>
       </div>
     </div>
@@ -66,6 +70,42 @@ export default {
         background-image: url("./../../../assets/images/hachi/home/div_01.jpg");
     }
 
+     .hachi_slogan1 {
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 32pt;
+        font-weight:lighter;
+        margin-top: 182px;
+    }
+
+    .hachi_slogan2 {
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 18pt;
+        font-weight: lighter;
+        margin-top: 10px;
+
+    }
+
+    .hachi_slogan3 {
+        width: 100%;
+        text-align: center;
+        font-size: 34pt;
+        font-weight:lighter;
+        margin-top: 180px;
+    }
+
+    .hachi_slogan4 {
+        width: 100%;
+        text-align: center;
+        font-size: 18pt;
+        font-weight: lighter;
+        margin-top: 10px;
+
+    }
+
     .hachi_home_02 {
         background-image:url('./../../../assets/images/hachi/home/div_02_01.jpg'); 
         background-repeat: repeat-y;
@@ -101,7 +141,7 @@ export default {
 
     .home_03 {
         max-width: 1440px;
-        height: 890px;
+        height: 888px;
         background-image: url("./../../../assets/images/hachi/home/div_03.jpg");
     }
 
@@ -113,7 +153,7 @@ export default {
 
     .home_04 {
         max-width: 1440px;
-        height: 1205px;
+        height: 1035px;
         background-image: url("./../../../assets/images/hachi/home/div_05.jpg");
     }
 

@@ -732,7 +732,7 @@ export default {
         width: 100%;
         //height: 100%;
         background-color: black;
-        opacity: 0.6;
+        opacity: 0.4;
         text-align: center;
         vertical-align: middle;
         // z-index: -99;

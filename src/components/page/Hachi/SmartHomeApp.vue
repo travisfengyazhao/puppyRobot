@@ -48,12 +48,12 @@
     .product_title {
         margin-top: 45px;
         font-size: 30pt;
+        font-weight: lighter;
     }
 
     .product_sub_title {
         font-size: 16pt;
         margin-top: 20px;
-        margin-bottom: 20px;
     }
 
     .product_produce {

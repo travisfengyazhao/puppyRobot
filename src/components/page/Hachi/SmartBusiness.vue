@@ -3,10 +3,8 @@
 <div id="hc_business">
     <div class="designImg" style="background-color:#c7d1d3;">
         <div class="hachi_business_01">
-            <!-- <div class="office_01_words">
-                <div class="office_01_title">哈奇智慧办公解决方案</div>
-                <div class="office_01_sub">提升员工办公及企业节能和管理效率的同时，营造科技调性的办公氛围</div>
-            </div> -->
+            <div class="hachi_slogan1">哈奇智慧商业解决方案</div>
+            <div class="hachi_slogan2">商场和案场专属智慧方案<br/>助力优化商业服务、管理方式、品牌营销和用户体验</div>
         </div>
     </div>
     <div class="designImg">
@@ -133,6 +131,10 @@ export default {
 
 
 <style lang="scss" scoped>
+.designImg {
+    text-align: center;
+    width: 100%;
+}
 
     .hachi_business_01 {
         // min-width: 1280px;
@@ -317,4 +319,20 @@ export default {
         }
 
     }
+
+.hachi_slogan1 {
+    width: 100%;
+    text-align: center;
+    font-size: 34pt;
+    font-weight:lighter;
+    margin-top: 180px;
+}
+
+.hachi_slogan2 {
+    width: 100%;
+    text-align: center;
+    font-size: 17pt;
+    line-height: 35px;
+    margin-top: 15px;
+}
 </style>

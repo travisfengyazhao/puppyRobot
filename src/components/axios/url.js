@@ -5,6 +5,7 @@
   
 export default {
     orderProduct: `http://bbs.puppyrobot.com/api/order/`,
+    getNewsInfo: `http://cms.puppyrobot.com/restful/api/`,
 }
   
   //也可以像下面这样，区分环境或者区分服务器等等

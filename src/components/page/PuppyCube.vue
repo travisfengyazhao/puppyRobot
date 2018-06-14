@@ -19,7 +19,7 @@
                                 <span class="span_b">完整视频</span>   
                             </div>
                             <div class="video_space"></div>
-                            <a href="https://trade-z.jd.com/funding/project_details.action?projectId=101098" target="_blank">
+                            <a href="https://z.jd.com/project/details/101098.html" target="_blank">
                             <div class="video_btn3">
                                 <img class="imgPlay" src="./../../assets/images/puppy_cube/button_jdzc.png">
                                 <span class="span_b">京东众筹</span>   
@@ -552,7 +552,7 @@ export default {
         width: 100%;
         //height: 100%;
         background-color: black;
-        opacity: 0.6;
+        opacity: 0.4;
         text-align: center;
         vertical-align: middle;
         // z-index: -99;

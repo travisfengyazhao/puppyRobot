@@ -1,9 +1,9 @@
 <template>
   <div :id="newsId" class="newsClass" :style="{height:`${newsImageHeight + 57}px !important`}">
-      <router-link :to="{path:'/newsdetail', query: {id: newsContent.id}}" target="_blank" class="clickable">
+      <router-link :to="{path:'/newsdetail', query: {id: newsContent.nid}}" target="_blank" class="clickable">
         <div id="newsBtm" :style="{height:`${newsImageHeight + 57}px !important`}">
             <div class="newsImageContainer" :style="{height:`${newsImageHeight}px !important`}">
-                <div id="newsBtmImage" :style="{backgroundImage:`url(${newsContent?newsContent.img:''})`, height:`${newsImageHeight}px !important`} ">
+                <div id="newsBtmImage" :style="{backgroundImage:`url(${newsContent?newsContent.img[0]:''})`, height:`${newsImageHeight}px !important`} ">
                 </div>
             </div>
             <div class="imageBtn" v-if="!newsBtnHide">

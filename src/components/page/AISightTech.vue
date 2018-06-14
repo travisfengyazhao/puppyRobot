@@ -8,7 +8,6 @@
             <div id='divNews'>
               智 能 视 觉 技 术
             </div>
-            <!-- <div class="solutionName">机器人技术</div> -->
           </div>
 
           <div class="headerLine">
@@ -34,6 +33,16 @@
         </div>
         <div class="img_03_back">
             <div class="img_03 imgBackCenter">
+                <div class="con_01">
+                    <div class="left">
+                        属性提取
+                        <div class="descrip">精确识别人脸、人体属性，<br/>如性别、年龄、饰品、胡须、<br/>服装颜色和样式等。</div>
+                    </div>
+                    <div class="right">
+                        关键点定位
+                        <div class="descrip">精准定位人脸、人体关键点。<br/>如人脸的五官及轮廓，<br/>人体四肢的关节点。<br/>可适用于大幅形变的人脸和人体。 </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="img_04_back">
@@ -48,6 +57,16 @@
         </div>
         <div class="img_05_back">
             <div class="img_05 imgBackCenter">
+                <div class="con_02">
+                    <div class="left">
+                        轨迹分析
+                        <div class="descrip">结合GIS地理信息系统，<br/>可将图像内人员位置映射到物理空间，<br/>并统计分析行动轨迹。</div>
+                    </div>
+                    <div class="right">
+                        边缘计算
+                        <div class="descrip">基于高效模型压缩和加速技术，<br/>可将复杂计算前置于设备端，<br/>提升实时性，<br/>节约网络通讯、后端计算成本。 </div>
+                    </div>
+                </div>
                 <div class="content_06">
                     <img src="./../../assets/images/aisight/A.gif"/>
                 </div>
@@ -221,6 +240,56 @@ $hachiSMB: 46px;
         margin-top: 350px;
         img{
             margin-left: -500px;
+        }
+    }
+
+    .con_01 {
+        width: 1010px;
+        margin-top: 132px;
+        text-align: center;
+        .left {
+            float: left;
+            width: 470px;
+            font-size: 34pt;
+            font-weight: lighter;
+        }
+
+        .descrip {
+            margin-top: 23px;
+            font-size: 14pt;
+        }
+
+        .right{
+            float: left;
+            padding-left:55px;
+            width: 470px;
+            font-size: 34pt;
+            font-weight: lighter;
+        }
+    }
+
+    .con_02 {
+        width: 1010px;
+        margin-top: 87px;
+        text-align: center;
+        .left {
+            float: left;
+            width: 505px;
+            font-size: 34pt;
+            font-weight: lighter;
+        }
+
+        .descrip {
+            margin-top: 35px;
+            font-size: 14pt;
+        }
+
+        .right{
+            float: left;
+            // padding-left:55px;
+            width: 505px;
+            font-size: 34pt;
+            font-weight: lighter;
         }
     }
 

@@ -184,12 +184,12 @@
             left: 0px;
             right: 0px;
             .video_class {
-                height: 85%;
+                height: 70%;
                 position: absolute;
                 max-height: 800px;
-                left: 27%;
+                left: 25%;
                 z-index: 1;
-                top: 70px;
+                top: 130px;
             }
         }
 

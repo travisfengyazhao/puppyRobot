@@ -71,6 +71,30 @@
           </div>
           <div class="designImg" style="background-color: #060b11;">
             <div class="hachi_jjfa_02">
+              <div class="hachi_slogan3">全新价值</div>
+              <div class="hachi_slogan4">采用现代化网络技术和信息集成技术，通过互联互通平台实现资源共享， <br/>为客户打造<span class="slogan_normal">智慧人居体验</span>，为<span class="slogan_normal">地产增值</span>。</div>
+              <div class= "btm_word">
+                <div class="btm_word_center">
+                    <div class="word_1">
+                      <div class="title">统一经营管理</div>
+                      <div class="content">依托云平台互联互通，资源共享，促进地产集团化运营管理</div>
+                    </div>
+                     <div class="word_1">
+                      <div class="title">彰显品牌实力</div>
+                      <div class="content">技术结合运营，打造差异化 高品质地产项目，助力销售</div>
+                    </div>
+                    <div class="word_1">
+                      <div class="title">实现资产增值</div>
+                      <div class="content">智能家居、生活消费、教育、 医疗等各类资源对接，实现 地产及物业增值</div>
+                    </div>
+                    <div class="word_1">
+                      <div class="title">提升人居体验</div>
+                      <div class="content">智慧系统形成各种形式的 信息交互，以达到更加快 捷和舒适的生活体验</div>
+                    </div>
+                </div>
+              </div>
+            
+            
             </div>
           </div>
         </div>
@@ -78,36 +102,10 @@
           <SmartHome/>
         </div>
         <div id="hachiCommunity" v-show="currDisIndex==2">
-          <div class="designImg">
-            <div class="hachi_community_01">
-              <div class="hachi_community_01_01">
-              </div>
-            </div>
-          </div>
-          <div class="designImg" style="background-color:#FFFFFF;">
-            <img src="./../../assets/images/hachi/community/div_03.jpg">
-          </div>
-          <div class="designImg" style="background-color:#FFFFFF;">
-            <img src="./../../assets/images/hachi/community/div_04.jpg">
-          </div>
-          <div class="designImg" style="background-color:#FFFFFF;">
-            <img src="./../../assets/images/hachi/community/div_05.jpg">
-          </div>
+          <SmartCommunity/>
         </div>
         <div id="hachiHotel" v-show="currDisIndex==3">
-          <div class="designImg" style="background-color:#93a3ba;">
-            <div class="hachi_hotel_01">
-            </div>
-          </div>
-          <div class="designImg" style="background-color:#FFFFFF;">
-            <img src="./../../assets/images/hachi/hotel/div_02.jpg">
-          </div>
-          <div class="designImg" style="background-color:#f2f2f2;">
-            <img src="./../../assets/images/hachi/hotel/div_03.jpg">
-          </div>
-          <div class="designImg" style="background-color:#FFFFFF;">
-            <img src="./../../assets/images/hachi/hotel/div_04.jpg">
-          </div>
+          <SmartHotel/>
         </div>
         <div id="hachioffice" v-show="currDisIndex==4">
           <SmartOffice />
@@ -126,6 +124,8 @@
 import SmartBusiness from './Hachi/SmartBusiness'
 import SmartOffice from './Hachi/SmartOffice'
 import SmartHome from './Hachi/SmartHome'
+import SmartCommunity from './Hachi/SmartCommunity'
+import SmartHotel from './Hachi/SmartHotel'
 
 export default {
   name: 'HachiSolution',
@@ -138,6 +138,8 @@ export default {
       SmartBusiness,
       SmartOffice,
       SmartHome,
+      SmartCommunity,
+      SmartHotel
   },
 
   methods: {
@@ -297,6 +299,57 @@ $hachiSMB: 46px;
         margin: 0 auto;
         background-repeat: no-repeat;
         background-position: center center;
+
+        .hachi_slogan3 {
+          width: 100%;
+          text-align: center;
+          font-size: 32pt;
+          font-weight:lighter;
+          margin-top: 190px;
+          color: white;
+        }
+
+        .hachi_slogan4 {
+          width: 100%;
+          text-align: center;
+          font-size: 19pt;
+          font-weight: lighter;
+          line-height: 45px;
+          margin-top: 30px;
+          color: white;
+          .slogan_normal {
+            font-weight: normal;
+          }
+        }
+
+        .btm_word{
+          color: white;
+          width: 100%;
+          margin-top: 200px;
+          .btm_word_center {
+            width: 840px;
+            margin: 0 auto;
+
+            .word_1 {
+              width: 210px;
+              font-weight: lighter;
+              float: left;
+              .title {
+                font-size: 18pt;
+              }
+
+              .content {
+                margin-top: 20px;
+                margin-left: 35px;
+                margin-right: 35px;
+                font-size: 11pt;
+                line-height: 16px;
+              }
+
+            }
+
+            }
+        }
     }
 
     .background_image_common {
@@ -394,46 +447,6 @@ $hachiSMB: 46px;
         }
         
     }
-
-    .hachi_community_01 {
-        background-image:url('./../../assets/images/hachi/community/div_01.png'); 
-        background-repeat: repeat-y;
-        background-size: 100% 100%;
-        height: 1070px;
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-    }
-
-    .hachi_community_01_01 {
-        min-width: 1280px;
-        max-width: 1800px;
-        height: 1070px;
-        background-image: url("./../../assets/images/hachi/community/div_02.jpg");
-        background-size: cover;
-        display: block;
-        position: relative;
-        overflow: hidden;
-        margin: 0 auto;
-        background-repeat: no-repeat;
-        background-position: center center;
-    }
-
-    .hachi_hotel_01 {
-        min-width: 1280px;
-        max-width: 2580px;
-        height: 1000px;
-        background-image: url("./../../assets/images/hachi/hotel/div_01.jpg");
-        background-size: cover;
-        display: block;
-        position: relative;
-        overflow: hidden;
-        margin: 0 auto;
-        background-repeat: no-repeat;
-        background-position: center center;
-        width: 100%;
-    }
-
 
 
     .pageConent {

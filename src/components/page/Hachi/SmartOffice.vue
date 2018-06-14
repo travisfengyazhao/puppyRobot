@@ -19,8 +19,8 @@
       <div class="" style="height:1160px">
         <div class="hachi_office_03">
           <div class="office_03_words">
-            <div class="office_01_title">新时代智慧办公场景</div>
-            <div class="office_01_sub">高效节能，打造科技调性的办公氛围</div>
+            <div class="office_title">新时代智慧办公场景</div>
+            <div class="office_title_sub">高效节能，打造科技调性的办公氛围</div>
           </div>
           <div class="office_03_picture">
             <div class="picture_left">
@@ -196,15 +196,26 @@ export default {
     }
 
     .office_01_words {
-        margin-top: 430px;
+        margin-top: 380px;
         color: white;
     }
 
     .office_01_title {
-        font-size: 26pt;
+        font-size: 32pt;
+        font-weight: lighter;
     }
 
     .office_01_sub {
+        margin-top: 20px;
+        font-size: 15pt;
+        font-weight: lighter;
+    }
+
+    .office_title {
+        font-size: 26pt;
+    }
+
+    .office_title_sub {
         margin-top: 20px;
         font-size: 15pt;
     }

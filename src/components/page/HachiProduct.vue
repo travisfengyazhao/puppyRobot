@@ -209,7 +209,8 @@ $hachiSMB: 46px;
 
     .product_title {
         margin-top: 45px;
-        font-size: 30pt;
+        font-size: 32pt;
+        font-weight: lighter;
     }
 
     .product_sub_title {
