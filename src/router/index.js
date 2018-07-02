@@ -18,6 +18,9 @@ import RobotTech from './../components/page/RobotTech'
 import AISightTech from './../components/page/AISightTech'
 import LegalNotices from './../components/page/LegalNotices'
 import PrivacyProtection from './../components/page/PrivacyProtection'
+import Cooperate from './../components/page/Cooperate'
+import AIoT from './../components/page/AIoT'
+import Smart37 from './../components/page/Smart37/Smart37'
 
 import M_PuppyCube from './../components/page/M_PuppyCube'
 import M_PuppyCubeS from './../components/page/M_PuppyCubeS'
@@ -46,7 +49,10 @@ export default new Router({
     { path: '/robottech', name: 'RobotTech', component: RobotTech},
     { path: '/aisighttech', name: 'AISightTech', component: AISightTech},
     { path: '/legalnotices', name: 'LegalNotices', component: LegalNotices},
-    { path: '/privacyprotection', name: 'PrivacyProtection', component: PrivacyProtection}
+    { path: '/privacyprotection', name: 'PrivacyProtection', component: PrivacyProtection},
+    { path: '/cooperate', name: 'Cooperate', component: Cooperate},
+    { path: '/aiot', name: 'AIoT', component: AIoT},
+    { path: '/smart37', name: 'Smart37', component: Smart37},
   ],
 
   scrollBehavior: function (to, from, savedPosition) {

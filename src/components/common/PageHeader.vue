@@ -65,11 +65,11 @@
                 <li>
                     <a herf="">AI技术方案</a>
                     <ul>
-                        <!-- <router-link to="">
+                        <router-link to="/aiot">
                         <li>
-                            <a herf="">AI交互技术</a>
+                            <a herf="">AIoT技术</a>
                         </li>  
-                        </router-link> -->
+                        </router-link>
                         <router-link to="/robottech">
                         <li>
                             <a herf="">机器人技术</a>
@@ -100,11 +100,11 @@
                             <a herf="">品牌历程</a>
                         </li>    
                         </router-link> -->
-                        <!-- <router-link to="">
+                        <router-link to="/cooperate">
                         <li>
-                            <a herf="">团队介绍</a>
+                            <a herf="">商务合作</a>
                         </li>    
-                        </router-link> -->
+                        </router-link>
                         <router-link to="/contactus">
                         <li>
                             <a herf="">联系我们</a>

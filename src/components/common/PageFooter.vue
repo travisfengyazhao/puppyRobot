@@ -20,11 +20,11 @@
                     </div>
                     <div class="footerLeft_div">
                         <span>站点地图</span>
-                        <!-- <div>
-                            <router-link to="">
+                        <div v-if="!_isMobile()">
+                            <router-link to="/smart37">
                                 <a herf="#">友情链接</a>
                             </router-link>
-                        </div> -->
+                        </div>
                         <div>
                             <router-link to="/legalnotices">
                                 <a herf="#">法律声明</a>
@@ -69,9 +69,12 @@
                     </div>
                 </div> -->
                 <div :class="!_isMobile()?'footerRight':'footerRight-mobile'">
-                    <div>
+                    <div class="service">
                         <a herf="#">全国统一服务热线：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
                         <span class="serviceNum">400-000-1320&nbsp;</span>
+                        <br/>
+                        <a herf="#">产品技术服务热线：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                        <span class="serviceNum">400-666-0390&nbsp;</span>
                         <br/>
                         <a herf="#">工作时间：周一至周日 9:00-18:00（仅收市话费）</a>
                     </div>
@@ -278,5 +281,9 @@ export default {
         :hover {
             color: #929497;
         }
+    }
+
+    .service {
+        line-height: 25px;
     }
 </style>

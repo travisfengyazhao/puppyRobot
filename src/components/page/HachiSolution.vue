@@ -47,22 +47,27 @@
                   <div class="mid_1" @click="currDispaly(1)">
                     <img src="./../../assets/images/hachi/solution/icon_01.png">
                     <div class="title_home">智慧家庭</div>
+                    <div class="content">居家安防系统<br/>语音控制<br/>移动端开锁<br/>智能灯光控制<br/>红外感应</div>
                   </div>
                   <div class="mid_1" @click="currDispaly(2)">
                     <img src="./../../assets/images/hachi/solution/icon_02.png">
                     <div class="title_community">智慧社区</div>
+                    <div class="content">动态人脸识别系统<br/>Smart ID 手环系统<br/>社区Wi-Fi<br/>连接社群<br/>楼宇呼叫系统</div>
                   </div>
                   <div class="mid_1" @click="currDispaly(3)">
                     <img src="./../../assets/images/hachi/solution/icon_03.png">
                     <div class="title_hotel">智慧酒店</div>
+                    <div class="content">智能门锁<br/>智能窗帘<br/>智能家电控制<br/>智能魔镜<br/>智能灯光控制</div>
                   </div>
                   <div class="mid_1" @click="currDispaly(4)">
                     <img src="./../../assets/images/hachi/solution/icon_04.png">
                     <div class="title_office">智慧办公</div>
+                    <div class="content margin_correcting">智能灯光<br/>智能Wi-Fi<br/>人脸考勤<br/>智能访客<br/>办公APP</div>
                   </div>
                   <div class="mid_1" @click="currDispaly(5)">
                     <img src="./../../assets/images/hachi/solution/icon_05.png">
                     <div class="title_business">智慧商业</div>
+                    <div class="content margin_correcting">媒体机<br/>声光电技术<br/>商场电子导购系统<br/>VR看房<br/>AR沙盘</div>
                   </div>
                 </div>
               </div>
@@ -148,7 +153,7 @@ export default {
             return flag;
     },
     currDispaly: function(index) {
-    this.currDisIndex = index;
+      this.currDisIndex = index;
     }
   }
 }
@@ -414,6 +419,12 @@ $hachiSMB: 46px;
                 font-size: 16pt;
               }
 
+              .content {
+                font-size: 10pt;
+                line-height: 29px;
+                margin-top: 19px;
+              }
+
               .title_community {
                 margin-top: 3px;
                 margin-left: -7px;
@@ -430,16 +441,20 @@ $hachiSMB: 46px;
 
               .title_office {
                 margin-top: 3px;
-                margin-left: 11px;
+                margin-left: 12px;
                 color: #d7202d;
                 font-size: 16pt;
               }
 
               .title_business {
                 margin-top: 3px;
-                margin-left: 19px;
+                margin-left: 20px;
                 color: #d7202d;
                 font-size: 16pt;
+              }
+
+              .margin_correcting {
+                margin-left: 11px;
               }
               
             }
